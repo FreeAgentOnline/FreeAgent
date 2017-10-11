@@ -39,11 +39,11 @@ exports.login = function(req, res, next) {
 //========================================
 exports.register = function(req, res, next) {
   // Check for registration errors
-  const email = req.body.email;
+  const email = req.body.email.toLowerCase();
   const first = req.body.first;
   const last = req.body.last;
   const password = req.body.password;
-  const username = req.body.username;
+  const username = req.body.username.toLowerCase();
 
   // Return error if no email provided
   if (!email) {
@@ -81,7 +81,8 @@ exports.register = function(req, res, next) {
       let user = new User({
         email: email,
         password: password,
-        name: { first: first, last: last }
+        name: { first: first, last: last },
+        username: username
       });
 
       user.save(function(err, user) {

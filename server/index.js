@@ -5,6 +5,7 @@ const bodyParser = require('body-parser');
 const logger = require('morgan');
 const mongoose = require('mongoose');
 const config = require('./config/main');
+const router = require('./router');
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
@@ -26,3 +27,5 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Credentials", "true");
   next();
 });
+
+router(app);
