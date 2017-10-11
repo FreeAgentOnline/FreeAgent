@@ -23,8 +23,8 @@ const UserSchema = new Schema({
     required: true
   },
   name: {
-    firstName: { type: String },
-    lastName: { type: String }
+    first: { type: String },
+    last: { type: String }
   },
   bio: String,
   events: [String],
