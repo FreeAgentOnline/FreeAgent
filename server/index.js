@@ -3,12 +3,15 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 const logger = require('morgan');
+const path = require("path");
 const mongoose = require('mongoose');
 const config = require('./config/main');
 const router = require('./router');
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
+
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 // Start the server
 const server = app.listen(config.port);
@@ -26,6 +29,10 @@ app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept, Authorization, Access-Control-Allow-Credentials");
   res.header("Access-Control-Allow-Credentials", "true");
   next();
+});
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 });
 
 router(app);
