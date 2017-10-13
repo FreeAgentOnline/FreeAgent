@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Register extends Component {
   constructor(props) {
@@ -41,9 +42,9 @@ class Register extends Component {
   }
   render() {
     return (
-      <div className="container container-fluid">
+      <div className="container">
         <div className="card p-3">
-          <h2>Register</h2>
+          <h2 className="text-center">Register</h2>
           <div className="">
             <div className="form-group">
               <input type="email" className="form-control" id="loginEmail" placeholder="Email address" value={this.state.email} onChange={this.handleEmail}/>
@@ -63,7 +64,10 @@ class Register extends Component {
             <div className="form-group">
               <input type="password" className="form-control" id="loginPasswordCheck" placeholder="Confirm password" value={this.state.passwordCheck} onChange={this.handlePasswordCheck}/>
             </div>
-            <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Submit</button>
+            <div className="text-center">
+              <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Register</button>
+              <p className="mt-3 mb-0">Already have an account? <Link to="/login">Login here!</Link></p>
+            </div>
           </div>
         </div>
       </div>

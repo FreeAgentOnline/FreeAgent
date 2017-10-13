@@ -5,9 +5,11 @@ import Footer from './Footer';
 class BaseLayout extends Component {
   render() {
     return (
-      <div className="container container-fluid">
+      <div className="">
         <Header />
-        {this.props.children}
+        <div className="p-3">
+          {this.props.children}
+        </div>
         <Footer />
       </div>
     );
