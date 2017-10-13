@@ -4,7 +4,7 @@ class Header extends Component {
   render() {
     return (
       <div className="container-fluid" id="site-header">
-        <h1>FreeAgent</h1>
+        <h4>FreeAgent</h4>
       </div>
     );
   }
