@@ -1,0 +1,21 @@
+#site-header {
+  background: black;
+  color: white;
+}
+#site-header h1 {
+  margin-bottom: 0;
+}
+#site-footer {
+  background: #999;
+  color: #666;
+}
+
+#searchQuery {
+  border-bottom-right-radius: 0;
+  border-top-right-radius: 0;
+  border-right: 0;
+}
+#searchButton {
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
+}
