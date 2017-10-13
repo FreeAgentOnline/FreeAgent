@@ -34,28 +34,10 @@ let user = {
 };
 let records = [
   {
-    date: '11/3/2017',
-    location: 'Atlanta, GA',
+    date: '9/21/2017',
+    location: 'Brooklyn, NY',
     result: {
-      amount: 13.39,
-      measurement: 'm'
-    },
-    source: 'http://google.com'
-  },
-  {
-    date: '10/17/2017',
-    location: 'Nashville, TN',
-    result: {
-      amount: 13.36,
-      measurement: 'm'
-    },
-    source: 'http://google.com'
-  },
-  {
-    date: '10/5/2017',
-    location: 'New York, NY',
-    result: {
-      amount: 13.37,
+      amount: 13.34,
       measurement: 'm',
     },
     source: 'http://google.com'
@@ -70,11 +52,29 @@ let records = [
     source: 'http://google.com'
   },
   {
-    date: '9/21/2017',
-    location: 'Brooklyn, NY',
+    date: '10/5/2017',
+    location: 'New York, NY',
     result: {
-      amount: 13.34,
+      amount: 13.37,
       measurement: 'm',
+    },
+    source: 'http://google.com'
+  },
+  {
+    date: '10/17/2017',
+    location: 'Nashville, TN',
+    result: {
+      amount: 13.36,
+      measurement: 'm'
+    },
+    source: 'http://google.com'
+  },
+  {
+    date: '11/3/2017',
+    location: 'Atlanta, GA',
+    result: {
+      amount: 13.39,
+      measurement: 'm'
     },
     source: 'http://google.com'
   }
@@ -122,7 +122,7 @@ class Profile extends Component {
           </div>
           <div className="jumbotron p-3 mb-3">
             <h4>Records</h4>
-            <RecordGraph />
+            <RecordGraph data={records}/>
             <div className="row font-weight-bold">
               <div className="col-3">Date</div>
               <div className="col-4">Location</div>

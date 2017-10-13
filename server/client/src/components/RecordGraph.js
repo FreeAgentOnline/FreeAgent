@@ -4,30 +4,33 @@ import ReactDOM from 'react-dom';
 
 class RecordGraph extends Component {
   componentDidMount() {
+    let data = this.props.data;
+    let labelsArr = [];
+    let dataArr = [];
+    this.props.data.forEach(one => {
+      labelsArr.push(one.date);
+      dataArr.push(one.result.amount)
+    })
+
     let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
     let ctx = canvas.getContext('2d');
     let myLineChart = new Chart(ctx, {
       type: 'line',
       data: {
-        labels: ["9/14/2017","9/30/2017","10/13/17", "10/27./17", "11/3/17"],
+        labels: labelsArr,
         datasets: [{
           label: 'Disance (m)',
-          data: [13.34, 13.37, 13.36, 13.38, 13.39]
-        }]
+          data: dataArr
+        }],
+        backgroundColor: 'red'
       },
       options: {}
     });
   }
   render() {
-    // let newCanvas = document.createElement('canvas');
-    // newCanvas.setAttribute('width', '400');
-    // newCanvas.setAttribute('height', '400');
-
-    // console.log('newCanvas', newCanvas);
     return (
-      <div id="canvasContainer">
-      <canvas width="400" height="100" ref="myCanvas" />
-
+      <div id="canvasContainer" className="pl-3">
+        <canvas width="400" height="100" ref="myCanvas" />
       </div>
     );
   }
