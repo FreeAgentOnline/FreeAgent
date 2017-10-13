@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Chart from 'chart.js';
 import ReactDOM from 'react-dom';
 
-class RecordGraph extends Component {
+class ResultGraph extends Component {
   componentDidMount() {
     let data = this.props.data;
     let labelsArr = [];
@@ -36,4 +36,4 @@ class RecordGraph extends Component {
   }
 }
 
-export default RecordGraph;
+export default ResultGraph;
