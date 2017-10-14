@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import { user, results } from '../data/mockdata';
 
 import ResultEdit from './ResultEdit';
+import ResultNew from './ResultNew';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -33,6 +34,9 @@ class Dashboard extends Component {
               <h4>Results</h4>
             </li>
             {resultsRender}
+            <li className="list-group-item">
+              <ResultNew />
+            </li>
           </ul>
         </div>
       </div>
