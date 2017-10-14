@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import { user, results } from '../data/mockdata';
 
+import ResultEdit from './ResultEdit';
+
 class Dashboard extends Component {
   constructor(props) {
     super(props);
@@ -12,6 +14,13 @@ class Dashboard extends Component {
   }
   render() {
     let user = this.state.user;
+    let resultsRender = this.state.results.events[0].data.results.map((one, i) => {
+      return (
+        <li key={i} className="list-group-item">
+          <ResultEdit data={one} />
+        </li>
+      )
+    })
     return (
       <div className="container">
         <h2>{user.name.first} {user.name.last}</h2>
@@ -23,8 +32,7 @@ class Dashboard extends Component {
             <li className="list-group-item">
               <h4>Results</h4>
             </li>
-            <li className="list-group-item">Dapibus ac facilisis in</li>
-            <li className="list-group-item">Vestibulum at eros</li>
+            {resultsRender}
           </ul>
         </div>
       </div>
