@@ -38,8 +38,8 @@ class ResultEdit extends Component {
   render() {
     console.log('this.props on ResultEdit', this.props);
     return (
-      <div id="" className="">
-        {/*<input name="event" type="text" placeholder="event" onChange={this.handleEvent} value={this.state.event} />*/}
+      <div id="" className="d-flex">
+        <input name="event" type="text" placeholder="event" onChange={this.handleEvent} value={this.state.event} />
         <input name="date" type="text" placeholder="date" onChange={this.handleDate} value={this.state.date} />
         <input name="location" type="text" placeholder="location" onChange={this.handleLocation} value={this.state.location} />
         <input name="value" type="number" placeholder="value" onChange={this.handleValue} value={this.state.value} />
