@@ -5,6 +5,10 @@
 #site-header h1 {
   margin-bottom: 0;
 }
+#site-header a {
+  color: white;
+  text-decoration: none;
+}
 #site-footer {
   background: #999;
   color: #666;
@@ -18,4 +22,7 @@
 #searchButton {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+#sim-link {
+  cursor: pointer;
 }

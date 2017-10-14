@@ -5,11 +5,12 @@ import ReactDOM from 'react-dom';
 class ResultGraph extends Component {
   componentDidMount() {
     let data = this.props.data;
+    console.log('data on ResultGraph', data);
     let labelsArr = [];
     let dataArr = [];
-    this.props.data.forEach(one => {
+    data.forEach(one => {
       labelsArr.push(one.date);
-      dataArr.push(one.result.amount)
+      dataArr.push(one.value)
     })
 
     let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
@@ -29,7 +30,7 @@ class ResultGraph extends Component {
   }
   render() {
     return (
-      <div id="canvasContainer" className="pl-3">
+      <div id="canvasContainer" className="">
         <canvas width="400" height="100" ref="myCanvas" />
       </div>
     );
