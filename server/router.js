@@ -27,4 +27,10 @@ module.exports = function(app) {
 
   // Set url for API group routes
   app.use('/api', apiRoutes);
+
+  let router = express.Router();
+
+  router.get('/', (req, res) => {
+    res.status(200).send('We are up and running');
+  })
 };

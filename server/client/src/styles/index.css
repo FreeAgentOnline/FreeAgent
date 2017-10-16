@@ -1,13 +1,22 @@
 #site-header {
-  background: black;
+  background: #333;
   color: white;
 }
 #site-header h1 {
   margin-bottom: 0;
 }
+#site-header a {
+  border-radius: 2px;
+  color: white;
+  text-decoration: none;
+  padding: 1px 10px;
+}
 #site-footer {
   background: #999;
   color: #666;
+}
+.selected {
+  background: black;
 }
 
 #searchQuery {
@@ -18,4 +27,7 @@
 #searchButton {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+#sim-link {
+  cursor: pointer;
 }
