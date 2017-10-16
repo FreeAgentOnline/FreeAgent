@@ -19,7 +19,7 @@ describe('GET /meet/save', () => {
 
 let createdSaveId;
 
-describe('POST /meet/:meetId/save', () => {
+describe('POST /meet/:meetId/save/user/:userId', () => {
   test('Should create a new result', () => {
     return request(app)
       .post('/api/meet/' + meetId '/save/user/' + userId)
