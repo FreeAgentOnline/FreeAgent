@@ -2,6 +2,8 @@ const express = require('express');
 const router = express.Router();
 const User = require('../models/User');
 const Result = require('../models/Result');
+const Meet = require('../models/Meet');
+
 
 router.get('/', (req, res) => {
   res.status(200).send('FreeAgent API');
@@ -114,5 +116,14 @@ router.delete('/result/:_id', (req, res) => {
   .then(data => { res.status(200).send(data) })
   .catch(err => { res.status(500).send(err) })
 })
+
+// *************************************
+//  Meet-specifc routes
+// *************************************
+// router.post('/meet', (req, res) => {
+//     Meet.create
+// })
+
+
 
 module.exports = router;
