@@ -23,17 +23,17 @@ describe('POST /meet', () => {
       .post('/api/meet')
       .type('form')
       .send({
-          name : 'sampleMEET',
-          date_start : '2017-03-16T04:00:00.000Z',
-          date_end : '2017-03-18T04:00:00.000Z',
-          location_name : 'blah',
-          street : 'blah',
-          city : 'Somewhere',
-          state : 'PD',
-          country : 'USO',
-          zip : 'blah',
-          cost : 'blah',
-          url : 'http://google.com'
+          name: 'sampleMEET',
+          date_start: '2017-03-16T04:00:00.000Z',
+          date_end: '2017-03-18T04:00:00.000Z',
+          location_name: 'blah',
+          street: 'blah',
+          city: 'Somewhere',
+          state: 'PD',
+          country: 'USO',
+          zip: 'blah',
+          cost: 20,
+          url: 'http://google.com'
       })
       .expect(200)
       .then(res => {
@@ -42,9 +42,15 @@ describe('POST /meet', () => {
         expect(res.body).toHaveProperty('date_start')
         expect(res.body).toHaveProperty('date_end')
         expect(res.body).toHaveProperty('country')
+        expect(res.body).toHaveProperty('location_name')
+        expect(res.body).toHaveProperty('state')
+        expect(res.body).toHaveProperty('cost')
+        expect(res.body).toHaveProperty('city')
+        expect(res.body).toHaveProperty('street')
+        expect(res.body).toHaveProperty('zip')
+        expect(res.body).toHaveProperty('url')
 
-
-      })
+        })
   })
 })
 

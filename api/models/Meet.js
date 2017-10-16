@@ -7,30 +7,25 @@ const meetSchema = new mongoose.Schema({
     },
     date_start: {
         type: String,
-        required: true,
+        required: true
     },
     date_end: {
         type: String,
-        required: true,
+        required: true
     },
-    location_name: {
-        type: String,
-    },
-    street: {
-        type: String,
-    },
+    location_name: String,
+    street: String,
     city: String,
     state: String,
     country: {
         type: String,
         required: true
     },
-    cost: {
-        type: Number,
-    },
-    url: Number
-    });
+    zip: String,
+    cost: Number,
+    url: String
+});
 
-    const Meet = mongoose.model('Meet', meetSchema);
+const Meet = mongoose.model('Meet', meetSchema);
 
-    module.exports = Meet;
+module.exports = Meet;
