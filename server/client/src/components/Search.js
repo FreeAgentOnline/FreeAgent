@@ -14,7 +14,7 @@ export default class Search extends Component {
 
     }
 
-    handQuery = e => {
+    handleQuery = e => {
         this.setState({ query : ''})
     }
 

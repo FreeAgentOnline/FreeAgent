@@ -29,6 +29,8 @@
   border-top-left-radius: 0;
 }
 
+
+
 #searchPage {
     display: flex;
     flex-direction: row;
@@ -40,13 +42,13 @@
     /*border-right: solid;
     border-color: red;*/
 }
-
+/*
 #middleBar {
     width: .5%;
     height: 60000px;
     background-color: black;
 
-}
+}*/
 
 #searchPage #right {
     width: 49.75%;
