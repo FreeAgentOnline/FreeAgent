@@ -13,7 +13,7 @@ router.get('/meet/save', (req, res) => {
   .catch(err => res.send(err))
 })
 // Create a new save
-router.post('/meet/:meetIt/save/user/:userId', (req, res) => {
+router.post('/meet/:meetId/save/user/:userId', (req, res) => {
   SavedMeet.create({
     userId: req.params.userId,
     meetId: req.params.meetId,
@@ -22,13 +22,13 @@ router.post('/meet/:meetIt/save/user/:userId', (req, res) => {
     date_start: req.body.date_start,
     date_end: req.body.date_end,
     country: req.body.country,
-    location_name: req.body.location_name,
-    street: req.body.street,
-    city: req.body.city,
-    state: req.body.state,
-    zip: req.body.zip,
-    cost: req.body.cost,
-    url: req.body.url,
+    location_name: req.body.location_name || '',
+    street: req.body.street || '',
+    city: req.body.city || '',
+    state: req.body.state || '',
+    zip: req.body.zip || '',
+    cost: req.body.cost || '',
+    url: req.body.url || '',
   })
   .then(data => { res.status(200).send(data) })
   .catch(err => { res.send(err) })
@@ -41,14 +41,17 @@ router.get('/meet/save/user/:userId', (req, res) => {
 })
 // Toggle isScheduled on specific save
 router.patch('/meet/save/:_id', (req, res) => {
-  SavedMeet.find({ _id: req.params._id }}
-  })
+  SavedMeet.findOne({ _id: req.params._id })
   .then(item => {
-    SavedMeet.findOneAndUpdate({ _id: req.params.id }, {
-      $set: { isScheduled: !item.isScheduled }
-    })
+
+    SavedMeet.findOneAndUpdate({ _id: req.params._id }, {
+      $set: {
+        isScheduled: !item.isScheduled
+      }
+    }, { new: true })
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
+    
   })
   .catch(err => { res.send(err) })
 })

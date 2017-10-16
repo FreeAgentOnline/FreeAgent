@@ -13,7 +13,7 @@ const savedMeetSchema = new mongoose.Schema({
     type: Boolean,
     required: true,
     default: false
-  }
+  },
   name: {
     type: String,
     required: true
