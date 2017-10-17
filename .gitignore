@@ -1,4 +1,4 @@
 /_tut/client/node_modules/
-/server/node_modules/
-/server/client/node_modules/
+/node_modules/
+/client/node_modules/
 /api/node_modules/
