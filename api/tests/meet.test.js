@@ -1,21 +1,21 @@
 const request = require('supertest')
 const app = require('../server')
 
-// .set({"Authorization": "Basic YW5uZTphbm5l"})
 
-// describe('GET /meet', () => {
-//   test('Should display meets', () => {
-//     return request(app)
-//       .get('/api/user')
-//       .expect(200)
-//       .then(res => {
-//         expect(res.body).toBeTruthy()
-//       })
-//   })
-// })
+describe('GET /meet', () => {
+  test('Should display meets', () => {
+    return request(app)
+      .get('/api/meet')
+      .expect(200)
+      .then(res => {
+        expect(res.body).toBeTruthy()
+      })
+  })
+})
 
 
 let createdMeetId;
+let newMeetId = "1234567890098765432asdfghjkjhgfd"
 
 describe('POST /meet', () => {
   test('Should create a new meet', () => {
@@ -54,27 +54,56 @@ describe('POST /meet', () => {
   })
 })
 
-// describe('PATCH /user/:_id', () => {
-//   test('Should update user details', () => {
-//     return request(app)
-//       .patch('/api/user/' + createdUserId)
-//       .type('form')
-//       .send({
-//         first_name: 'T.',
-//         last_name: 'T.',
-//         bio: 'Updated biography'
-//       })
-//       .expect(200)
-//       .then(res => {
-//         expect(res.body).toHaveProperty('_id')
-//         expect(res.body._id).toBeTruthy()
-//         expect(res.body).toHaveProperty('first_name')
-//
-//       })
-//   })
-// })
+describe('GET /meet/:id', () => {
+  test('Should display specific meet with specified id', () => {
+    return request(app)
+      .get('/api/meet/' + createdMeetId)
+      .expect(200)
+      .then(res => {
+        expect(res.body).toBeTruthy()
+        expect(res.body._id).toBe(createdMeetId)
 
-describe('DELETE /meet/:_id', () => {
+      })
+  })
+})
+console.log("this is the createdMeetId: ", createdMeetId);
+
+describe('PUT /meet/:id', () => {
+  test('Should update meet details', () => {
+    return request(app)
+      .put('/api/meet/' + createdMeetId)
+      .type('form')
+      .send({
+          name: 'change1',
+          date_start: '2018-03-16T04:00:00.000Z',
+          date_end: '2018-03-18T04:00:00.000Z',
+          location_name: 'blah',
+          street: 'blah',
+          city: 'Somewhere',
+          state: 'PD',
+          country: 'USO',
+          zip: 'blah',
+          cost: 30,
+          url: 'http://yahoo.com'
+      })
+      .expect(200)
+      .then(res => {
+        expect(res.body).toHaveProperty("n")
+        expect(res.body).toHaveProperty("ok")
+        expect(res.body).toHaveProperty("nModified")
+        expect(res.body.n).toBe(1)
+        expect(res.body.ok).toBe(1)
+        expect(res.body.nModified).toBe(1)
+
+
+
+
+
+      })
+  })
+})
+
+describe('DELETE /meet/:id', () => {
   test('should delete specified meet by id', () => {
     return request(app)
       .delete('/api/meet/' + createdMeetId)
