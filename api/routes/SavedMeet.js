@@ -33,7 +33,7 @@ router.post('/meet/:meetId/save/user/:userId', (req, res) => {
   .then(data => { res.status(200).send(data) })
   .catch(err => { res.send(err) })
 })
-// View a saves from specific user
+// View a save from specific user
 router.get('/meet/save/user/:userId', (req, res) => {
   SavedMeet.find({ userId: req.params.userId })
   .then(data => { res.status(200).send(data) })
