@@ -10,7 +10,8 @@ class Register extends Component {
       username: '',
       email: '',
       password: '',
-      passwordCheck: ''
+      passwordCheck: '',
+      error: ''
     };
   }
   handleEmail = e => {
@@ -32,7 +33,7 @@ class Register extends Component {
     this.setState({ username: e.target.value });
   }
   handleSubmit = () => {
-    if (this.state.password === this.state.passwordCheck) {
+    if (this.state.first && this.state.last && this.state.username && this.state.email && this.state.password === this.state.passwordCheck) {
       // post to login api
       let formBody = {
         first: this.state.first,
@@ -43,6 +44,7 @@ class Register extends Component {
       };
       fetch('/api/auth/register', {
         method: 'POST',
+        // Form body needs to be turned into a string before sent to the server
         body: JSON.stringify(formBody),
         headers: {
           'Content-Type': 'application/json'
@@ -51,10 +53,12 @@ class Register extends Component {
       .then(res => console.log(res))
       .catch(err => console.log(err))
 
-      this.setState({ first: '', last: '', username: '', email: '', password: '', passwordCheck: '' });
+      this.setState({ first: '', last: '', username: '', email: '', password: '', passwordCheck: '', error: '' });
+      this.props.history.push('/login');
     } else {
-      this.setState({ password: '', passwordCheck: '' });
-      alert('Passwords do not match');
+      this.setState({ password: '', passwordCheck: '', error: 'Passwords do not match' });
+      // Do more with error flashing:
+      // https://getbootstrap.com/docs/4.0/components/forms/#server-side
     }
   }
   render() {
@@ -82,6 +86,7 @@ class Register extends Component {
               <input type="password" className="form-control" id="loginPasswordCheck" placeholder="Confirm password" value={this.state.passwordCheck} onChange={this.handlePasswordCheck}/>
             </div>
             <div className="text-center">
+              <p>{this.state.error}</p>
               <button type="submit" className="btn btn-primary" onClick={this.handleSubmit}>Register</button>
               <p className="mt-3 mb-0">Already have an account? <Link to="/login">Login here!</Link></p>
             </div>
