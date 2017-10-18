@@ -7,18 +7,13 @@ export default class Search extends Component {
         this.state = {
             query: this.props.query
         }
-
-
-
-
-
     }
 
     handleQuery = e => {
-        this.setState({ query : ''})
+        this.setState({ query : e.target.value})
     }
 
-    handleSearch = () => {
+    handleSearch = e => {
       // search for events
       this.setState({ query: '' });
     }
