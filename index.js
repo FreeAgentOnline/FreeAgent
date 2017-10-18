@@ -6,7 +6,13 @@ const logger = require('morgan');
 const path = require("path");
 const mongoose = require('mongoose');
 const config = require('./config/main');
-const router = require('./router');
+
+// Import routers
+const routerAuth = require('./routerAuth');
+const routerUser = require('./routerUser');
+const routerResult = require('./routerResult');
+const routerMeet = require('./routerMeet');
+const routerSavedMeet = require('./routerSavedMeet');
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
@@ -35,4 +41,11 @@ app.use(function(req, res, next) {
 //   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 // });
 
-router(app);
+// Implementing routers
+routerAuth(app);
+routerUser(app);
+routerResult(app);
+// Unless we rework the endpoints,
+// routerSavedMeet MUST come before routerMeet
+routerSavedMeet(app);
+routerMeet(app);

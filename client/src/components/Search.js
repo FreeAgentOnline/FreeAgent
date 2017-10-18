@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import MyFancyComponent from './Map';
 
 export default class Search extends Component {
     constructor(props){
@@ -10,17 +11,14 @@ export default class Search extends Component {
     }
 
     handleQuery = e => {
-        this.setState({ query : ''})
-    }fgf
+        this.setState({ query : e.target.value})
+    }
 
-    handleSearch = () => {
-        // search for events
-        this.setState({ query: '' });
+    handleSearch = e => {
+      // search for events
+      this.setState({ query: '' });
     }
     render(){
-
-
-
 
         return (
             <div id="searchPage">
@@ -31,19 +29,7 @@ export default class Search extends Component {
                         {/*<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHxd9VPfDLGh5BJwhRWIJwdnL7r0my160&callback=initMap"
                         type="text/javascript"></script>*/}
                         <div id="map">
-                            <script>
-                            function initMap() {
-                                var uluru = {lat: -25.363, lng: 131.044};
-                                var map = new google.maps.Map(document.getElementById('map'), {
-                                    zoom: 4,
-                                    center: uluru
-                                });
-                                var marker = new google.maps.Marker({
-                                    position: uluru,
-                                    map: map
-                                });
-                            }
-                            </script>
+                            <MyFancyComponent/>
                         </div>
                     </div>
                 </div>

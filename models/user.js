@@ -22,19 +22,10 @@ const UserSchema = new Schema({
     type: String,
     required: true
   },
-  name: {
-    first: { type: String },
-    last: { type: String }
-  },
+  first_name: String,
+  last_name: String,
   bio: String,
-  events: [String],
-  records: [{
-    date: Date,
-    eventName: String,
-    performance: String,
-    location: String,
-    reference: String,
-  }],
+  tagline: String,
   resetPasswordToken: { type: String },
   resetPasswordExpires: { type: Date }
 },
