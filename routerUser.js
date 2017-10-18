@@ -47,7 +47,8 @@ module.exports = function(app) {
       $set: {
         first_name: req.body.first_name,
         last_name: req.body.last_name,
-        bio: req.body.bio
+        bio: req.body.bio,
+        tagline: req.body.tagline
       }
     }, { new: true })
     .then(data => { res.status(200).send(data) })
@@ -60,6 +61,6 @@ module.exports = function(app) {
     .catch(err => { res.status(500).send(err) })
   })
 
-  app.use(router);
+  app.use('/api', router);
 
 };

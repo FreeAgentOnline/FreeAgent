@@ -10,6 +10,8 @@ const config = require('./config/main');
 // Import routers
 const routerAuth = require('./routerAuth');
 const routerUser = require('./routerUser');
+const routerResult = require('./routerResult');
+
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
@@ -40,3 +42,4 @@ app.use(function(req, res, next) {
 
 routerAuth(app);
 routerUser(app);
+routerResult(app);
