@@ -17,6 +17,7 @@ app.use('/api', require('./routes/index'));
 app.use('/api', require('./routes/SavedMeet'));
 app.use('/api', require('./routes/User'));
 app.use('/api', require('./routes/Result'));
+app.use('/api', require('./routes/Meet'));
 
 app.use(morgan('dev'));
 

@@ -23,6 +23,10 @@ export default class Search extends Component {
       this.setState({ query: '' });
     }
     render(){
+
+
+
+
         return (
             <div id="searchPage">
                 <div id="left" className="panel panel-default">
@@ -35,11 +39,51 @@ export default class Search extends Component {
 
                 </div>
                 <div id="middleBar">
-
                 </div>
 
                 <div id="right" className="panel panel-default">
                     <div className="panel-body">
+                    <h1>Available Meets</h1>
+                    <div classname = "Results">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="card">
+                                  <div class="card-block">
+                                    <h3 class="card-title">Special title treatment</h3>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                  <div class="card-block">
+                                    <h3 class="card-title">Special title treatment</h3>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                  <div class="card-block">
+                                    <h3 class="card-title">Special title treatment</h3>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="card">
+                                  <div class="card-block">
+                                    <h3 class="card-title">Special title treatment</h3>
+                                    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+                                    <a href="#" class="btn btn-primary">Go somewhere</a>
+                                  </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     </div>
 
                 </div>
