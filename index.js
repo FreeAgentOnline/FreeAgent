@@ -6,7 +6,10 @@ const logger = require('morgan');
 const path = require("path");
 const mongoose = require('mongoose');
 const config = require('./config/main');
-const router = require('./router');
+
+// Import routers
+const routerAuth = require('./routerAuth');
+const routerUser = require('./routerUser');
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
@@ -35,4 +38,5 @@ app.use(function(req, res, next) {
 //   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
 // });
 
-router(app);
+routerAuth(app);
+routerUser(app);
