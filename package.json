@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "concurrently \"nodemon index.js\" \"cd client && npm run start\""
   },
   "keywords": [],
   "author": "",
@@ -21,5 +22,8 @@
     "passport-jwt": "^3.0.0",
     "passport-local": "^1.0.0",
     "path": "^0.12.7"
+  },
+  "devDependencies": {
+    "concurrently": "^3.5.0"
   }
 }

@@ -25,12 +25,15 @@ module.exports = function(app) {
   // Login route
   authRoutes.post('/login', requireLogin, AuthenticationController.login);
 
+  apiRoutes.get('/testing', (req, res) => {
+    res.status(200).send('We are up and running');
+  })
   // Set url for API group routes
   app.use('/api', apiRoutes);
 
-  let router = express.Router();
-
-  router.get('/', (req, res) => {
-    res.status(200).send('We are up and running');
-  })
+  // let router = express.Router();
+  //
+  // router.get('/testing', (req, res) => {
+  //   res.status(200).send('We are up and running');
+  // })
 };

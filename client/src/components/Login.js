@@ -16,7 +16,25 @@ class Login extends Component {
     this.setState({ password: e.target.value });
   }
   handleSubmit = () => {
-    // post to login api
+    // Check if form is completed
+    if (this.state.email && this.state.password) {
+      // Create object to stringify
+      let formBody = {
+        email: this.state.email,
+        password: this.state.password
+      }
+      // post to login api
+      fetch('/api/auth/login', {
+        method: 'POST',
+        body: JSON.stringify(formBody),
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(res => console.log(res))
+      .catch(err => console.log(err))
+      this.props.history.push('/dashboard');
+    }
     this.setState({ email: '', password: '' });
   }
   render() {

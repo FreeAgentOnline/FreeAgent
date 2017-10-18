@@ -11,7 +11,7 @@ const router = require('./router');
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
 
-app.use(express.static(path.resolve(__dirname, 'client/build')));
+// app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 // Start the server
 const server = app.listen(config.port);
@@ -31,8 +31,8 @@ app.use(function(req, res, next) {
   next();
 });
 
-app.get('*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
+// });
 
 router(app);
