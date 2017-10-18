@@ -9,6 +9,4 @@ FreeAgent is for professional athletes looking to make their mark in the world o
 - Mongoose
 
 ## API
-To set up the API on your computer, create a new MongoDB database called `free-agent-api`. The collections will be created by the schema models when you run the application.
-
-The server is set up to run on [localhost:8080](http://localhost:8080).
+To set up the API on your computer, create a new MongoDB database called `free-agent`. The collections will be created by the schema models when you run the application.
