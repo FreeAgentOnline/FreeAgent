@@ -15,7 +15,7 @@ export default class Search extends Component {
 
     handleSearch = e => {
       // search for events
-      this.setState({ query: e.target.value });
+      this.setState({ query: '' });
     }
     render(){
 
