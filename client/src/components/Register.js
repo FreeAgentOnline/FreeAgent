@@ -70,11 +70,13 @@ class Register extends Component {
             <div className="form-group">
               <input type="email" className="form-control" id="loginEmail" placeholder="Email address" value={this.state.email} onChange={this.handleEmail}/>
             </div>
-            <div className="form-group">
-              <input type="first" className="form-control" id="loginFirst" placeholder="First name" value={this.state.first} onChange={this.handleFirst}/>
-            </div>
-            <div className="form-group">
-              <input type="last" className="form-control" id="loginLast" placeholder="Last name" value={this.state.last} onChange={this.handleLast}/>
+            <div className="row mb-3">
+              <div className="col">
+                <input type="first" className="form-control" id="loginFirst" placeholder="First name" value={this.state.first} onChange={this.handleFirst}/>
+              </div>
+              <div className="col">
+                <input type="last" className="form-control" id="loginLast" placeholder="Last name" value={this.state.last} onChange={this.handleLast}/>
+              </div>
             </div>
             <div className="form-group">
               <input type="text" className="form-control" id="loginUsername" placeholder="Choose a username" value={this.state.username} onChange={this.handleUsername}/>
