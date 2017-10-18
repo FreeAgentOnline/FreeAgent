@@ -14,8 +14,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 
 app.use('/api', require('./routes/index'));
+app.use('/api', require('./routes/SavedMeet'));
+app.use('/api', require('./routes/User'));
+app.use('/api', require('./routes/Result'));
 app.use('/api', require('./routes/Meet'));
-app.use('/api', require('./routes/savedMeet'));
 
 app.use(morgan('dev'));
 
