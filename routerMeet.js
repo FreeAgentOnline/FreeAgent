@@ -24,7 +24,7 @@ module.exports = function(app) {
   router.get('/meet/:id', (req, res) => {
     Meet.findById({_id: req.params.id})
     .then(data => { res.status(200).send(data) })
-    .catch(err => { res.status(500).send(data) })
+    .catch(err => { res.status(500).send(err) })
   })
 
   router.post('/meet', (req, res) => {
