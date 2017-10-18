@@ -1,5 +1,5 @@
 let meets = [
-    "meet" : {
+    "meet" :
         {
             "name" : "49er Classic",
             "date_start" : "2017-03-16T04:00:00.000Z",
@@ -2210,7 +2210,7 @@ let meets = [
             "cost" : 15,
             "url" : ""
         }
-    }
+    
 ]
 
 module.exports = meets

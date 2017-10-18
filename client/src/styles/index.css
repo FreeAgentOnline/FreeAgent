@@ -60,3 +60,14 @@
 .col-sm-6 {
     padding-top: 16px;
 }
+
+
+/*Styles for Admin Dashboard*/
+#adminViewMeet {
+    color: white;
+    text-decoration: none;
+
+}
+#adminViewMeet :visited {
+    text-decoration: none;
+}

@@ -11,7 +11,11 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
+import AdminDashboard from './components/AdminDashboard';
 import Profile from './components/Profile';
+
+//import data
+import meets from './data/meets'
 
 // Import containers
 
@@ -25,6 +29,8 @@ ReactDOM.render(
         <Route path="/search" component={Search} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/profile" component={Profile} />
+        <Route path="/adminDashboard" component={AdminDashboard} />
+
       </Switch>
     </BaseLayout>
   </BrowserRouter>
