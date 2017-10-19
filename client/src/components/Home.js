@@ -38,7 +38,7 @@ class Home extends Component {
         <p className="lead">FreeAgent is for professional athletes looking to make their mark in the world of track & field. FreeAgent helps you find meets in your area, provides registration information, and allows you to track and share your personal records with potential sponsors.</p>
         <div className="d-flex">
           <input type="text" className="form-control" id="searchQuery" placeholder="Search for meets" value={this.state.query} onChange={this.handleQuery}/>
-          <button className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</button>
+          <Link to="/search" className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</Link>
         </div>
       </div>
     );
