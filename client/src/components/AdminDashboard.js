@@ -36,7 +36,7 @@ export default class AdminDashboard extends Component {
 
                 </div>
                 <div className="row justify-content-md-center">
-                <table class="table">
+                <table className="table">
                     <thead>
                         <tr>
                             <th></th>
