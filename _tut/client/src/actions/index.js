@@ -41,8 +41,8 @@ export function loginUser({ email, password }) {
     .catch((error) => {
       errorHandler(dispatch, error.response, AUTH_ERROR)
     });
-    }
   }
+}
 
 export function registerUser({ email, first, last, username, password }) {
   return function(dispatch) {

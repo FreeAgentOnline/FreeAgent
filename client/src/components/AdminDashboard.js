@@ -21,7 +21,7 @@ export default class AdminDashboard extends Component {
                             <td>{meet.name}</td>
                             <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
                             <td>{meet.country}</td>
-                            <td><button  className="btn btn-primary"> <a id="adminViewMeet" href="/adminDashboard">View Meet</a> </button></td>
+                            <td><button  className="btn btn-primary"> <a id="adminViewMeet" href="/admin/dashboard">View Meet</a> </button></td>
                         </tr>
             )
         })
