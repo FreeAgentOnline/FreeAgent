@@ -6,9 +6,11 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "chart.js": "^2.7.0",
+    "moment": "2.19.1",
     "react": "^16.0.0",
     "react-chartjs": "^0.8.0",
     "react-dom": "^16.0.0",
+    "react-google-maps": "9.0.1",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
     "react-scripts": "1.0.14"

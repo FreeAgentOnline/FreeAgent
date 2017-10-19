@@ -28,9 +28,7 @@
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
-
-
-
+/*Styles for the Search Page*/
 #searchPage {
     display: flex;
     flex-direction: row;
@@ -39,22 +37,37 @@
 #searchPage #left {
     width: 49.75%;
     height: 60000px;
-    /*border-right: solid;
-    border-color: red;*/
 }
-/*
-#middleBar {
-    width: .5%;
-    height: 60000px;
-    background-color: black;
 
-}*/
+#searchQuery{
+    width: 80%;
+}
+
 
 #searchPage #right {
     width: 49.75%;
     height: 60000px;
 }
 
+.panel-body {
+    padding: 20px;
+}
+
 .p-3 {
     padding: 0;
+}
+
+.col-sm-6 {
+    padding-top: 16px;
+}
+
+
+/*Styles for Admin Dashboard*/
+#adminViewMeet {
+    color: white;
+    text-decoration: none;
+
+}
+#adminViewMeet :visited {
+    text-decoration: none;
 }
