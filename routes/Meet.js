@@ -1,7 +1,7 @@
 const express = require('express');
-const passportService = require('./config/passport');
+const passportService = require('../config/passport');
 const passport = require('passport');
-const Meet = require('./models/Meet');
+const Meet = require('../models/Meet');
 
 // Middleware to require login/auth
 const requireAuth = passport.authenticate('jwt', { session: false });

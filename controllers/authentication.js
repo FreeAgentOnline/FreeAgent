@@ -39,9 +39,10 @@ exports.login = function(req, res, next) {
 //========================================
 exports.register = function(req, res, next) {
   // Check for registration errors
+  console.log('req.body on register', req.body);
   const email = req.body.email.toLowerCase();
-  const first = req.body.first;
-  const last = req.body.last;
+  const first = req.body.first_name;
+  const last = req.body.last_name;
   const password = req.body.password;
   const username = req.body.username.toLowerCase();
 
@@ -81,9 +82,12 @@ exports.register = function(req, res, next) {
       let user = new User({
         email: email,
         password: password,
-        name: { first: first, last: last },
+        first_name: first,
+        last_name: last,
         username: username
       });
+
+      console.log('new User', user);
 
       user.save(function(err, user) {
         if (err) { return next(err); }

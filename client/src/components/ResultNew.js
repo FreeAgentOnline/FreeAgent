@@ -1,33 +1,58 @@
 import React, { Component } from 'react';
 
+import user from '../data/user';
+
 class ResultNew extends Component {
   constructor(props) {
     super(props);
     this.state = {
       event: '',
       measurement: '',
-      units: '',
+      unit: '',
       date: '',
+      performance: '',
       location: '',
-      value: '',
-      source: ''
+      reference: '',
+      user: user
     }
   }
   handleEvent = e => { this.setState({ event: e.target.value }) }
-  handleValue = e => { this.setState({ value: e.target.value }) }
-  handleLocation = e => { this.setState({ location: e.target.value }) }
-  handleDate = e => { this.setState({ date: e.target.value }) }
-  handleSource = e => { this.setState({ source: e.target.value }) }
   handleMeasurement = e => { this.setState({ measurement: e.target.value }) }
-  handleUnits = e => { this.setState({ units: e.target.value }) }
+  handleUnit = e => { this.setState({ unit: e.target.value }) }
+  handleDate = e => { this.setState({ date: e.target.value }) }
+  handlePerformance = e => { this.setState({ performance: e.target.value }) }
+  handleLocation = e => { this.setState({ location: e.target.value }) }
+  handleReference = e => { this.setState({ reference: e.target.value }) }
+
+  handleClear = () => {
+    this.setState({
+      event: '', date: '', location: '', performance: '', reference: '', measurement: '', unit: ''
+    })
+  }
 
   handleSave = () => {
     // Post to database
-  }
-  handleClear = () => {
-    this.setState({
-      event: '', date: '', location: '', value: '', source: '', measurement: '', units: ''
+    let formBody = {
+      event: this.state.event,
+      measurement: this.state.measurement,
+      unit: this.state.unit,
+      date: this.state.date,
+      performance: this.state.performance,
+      location: this.state.location,
+      reference: this.state.reference
+    }
+    fetch(`/api/result/user/${this.state.user._id}`, {
+      method: 'POST',
+      body: JSON.stringify(formBody),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
+    .then(() => {
+      alert('Result added');
+      this.handleClear();
+    })
+    .catch(err => console.log(err))
   }
   render() {
     return (
@@ -38,18 +63,20 @@ class ResultNew extends Component {
           <option value="time">Time</option>
           <option value="distance">Distance</option>
           <option value="height">Height</option>
+          <option value="points">Points</option>
         </select>
-        <input name="value" type="number" placeholder="value" onChange={this.handleValue} value={this.state.value} />
-        <select name="units" onChange={this.handleUnits} placeholder="Units:">
+        <input name="performance" type="number" placeholder="Performance" onChange={this.handlePerformance} value={this.state.performance} />
+        <select name="unit" onChange={this.handleUnit} placeholder="Units:">
           <option selected disabled>Units:</option>
           <option value="m">Meters (m)</option>
           <option value="in">Inches (in)</option>
           <option value="sec">Seconds (sec)</option>
           <option value="min">Minutes (min)</option>
+          <option value="pts">Points (pts)</option>
         </select>
         <input name="date" type="text" placeholder="date" onChange={this.handleDate} value={this.state.date} />
         <input name="location" type="text" placeholder="location" onChange={this.handleLocation} value={this.state.location} />
-        <input name="source" type="text" placeholder="source" onChange={this.handleSource} value={this.state.source} />
+        <input name="reference" type="text" placeholder="Reference URL" onChange={this.handleReference} value={this.state.reference} />
         <button type="button" className="btn btn-outline-success btn-sm" onClick={() => this.handleSave()}>Save</button>
         <button type="button" className="btn btn-outline-danger btn-sm" onClick={() => this.handleClear()}>Clear</button>
       </div>
