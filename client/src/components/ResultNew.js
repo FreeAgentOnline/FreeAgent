@@ -1,33 +1,58 @@
 import React, { Component } from 'react';
 
+import user from '../data/user';
+
 class ResultNew extends Component {
   constructor(props) {
     super(props);
     this.state = {
       event: '',
       measurement: '',
-      units: '',
+      unit: '',
       date: '',
       location: '',
-      value: '',
-      source: ''
+      performance: '',
+      source: '',
+      user: user
     }
   }
   handleEvent = e => { this.setState({ event: e.target.value }) }
-  handleValue = e => { this.setState({ value: e.target.value }) }
+  handlePerformance = e => { this.setState({ performance: e.target.value }) }
   handleLocation = e => { this.setState({ location: e.target.value }) }
   handleDate = e => { this.setState({ date: e.target.value }) }
   handleSource = e => { this.setState({ source: e.target.value }) }
   handleMeasurement = e => { this.setState({ measurement: e.target.value }) }
-  handleUnits = e => { this.setState({ units: e.target.value }) }
+  handleUnit = e => { this.setState({ unit: e.target.value }) }
+
+  handleClear = () => {
+    this.setState({
+      event: '', date: '', location: '', performance: '', source: '', measurement: '', unit: ''
+    })
+  }
 
   handleSave = () => {
     // Post to database
-  }
-  handleClear = () => {
-    this.setState({
-      event: '', date: '', location: '', value: '', source: '', measurement: '', units: ''
+    let formBody = {
+      event: this.state.event,
+      measurement: this.state.measurement,
+      unit: this.state.unit,
+      date: this.state.date,
+      location: this.state.location,
+      performance: this.state.performance,
+      source: this.state.source
+    }
+    fetch(`/api/result/user/${this.state.user._id}`, {
+      method: 'POST',
+      body: JSON.stringify(formBody),
+      headers: {
+        'Content-Type': 'application/json'
+      }
     })
+    .then(data => {
+      console.log(data);
+      this.handleClear();
+    })
+    .catch(err => console.log(err))
   }
   render() {
     return (
@@ -39,8 +64,8 @@ class ResultNew extends Component {
           <option value="distance">Distance</option>
           <option value="height">Height</option>
         </select>
-        <input name="value" type="number" placeholder="value" onChange={this.handleValue} value={this.state.value} />
-        <select name="units" onChange={this.handleUnits} placeholder="Units:">
+        <input name="value" type="number" placeholder="value" onChange={this.handlePerformance} value={this.state.performance} />
+        <select name="unit" onChange={this.handleUnit} placeholder="Units:">
           <option selected disabled>Units:</option>
           <option value="m">Meters (m)</option>
           <option value="in">Inches (in)</option>

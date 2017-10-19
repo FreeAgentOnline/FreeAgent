@@ -36,8 +36,8 @@ class Register extends Component {
     if (this.state.first && this.state.last && this.state.username && this.state.email && this.state.password === this.state.passwordCheck) {
       // post to login api
       let formBody = {
-        first: this.state.first,
-        last: this.state.last,
+        first_name: this.state.first,
+        last_name: this.state.last,
         username: this.state.username,
         email: this.state.email,
         password: this.state.password
