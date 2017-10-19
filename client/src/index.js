@@ -6,7 +6,8 @@ import registerServiceWorker from './registerServiceWorker';
 
 // Redux imports
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux';
+import { createStore, applyMiddleware, compose } from 'redux';
+import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
 // Import components
@@ -24,20 +25,43 @@ import meets from './data/meets'
 
 // Import containers
 
-ReactDOM.render(
-  <BrowserRouter>
-    <BaseLayout>
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="/login" component={Login} />
-        <Route path="/register" component={Register} />
-        <Route path="/search" component={Search} />
-        <Route path="/dashboard" component={Dashboard} />
-        <Route path="/profile" component={Profile} />
-        <Route path="/admin/dashboard" component={AdminDashboard} />
+// Create store for redux and apply middleware
+// Check for Chrome before including Redux DevTools extension
+let store;
+if (window.navigator.userAgent.includes('Chrome')) {
+  store = createStore(
+    reducers,
+    compose(
+      applyMiddleware(reduxThunk),
+      window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+    )
+  );
+} else {
+  store = createStore(
+    reducers,
+    compose(
+      applyMiddleware(reduxThunk)
+    )
+  );
+}
+// const createStoreWithMiddleware = applyMiddleware()(createStore);
 
-      </Switch>
-    </BaseLayout>
-  </BrowserRouter>
+ReactDOM.render(
+  <Provider store={store}>
+    <BrowserRouter>
+      <BaseLayout>
+        <Switch>
+          <Route exact path="/" component={Home} />
+          <Route path="/login" component={Login} />
+          <Route path="/register" component={Register} />
+          <Route path="/search" component={Search} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route path="/profile" component={Profile} />
+          <Route path="/admin/dashboard" component={AdminDashboard} />
+
+        </Switch>
+      </BaseLayout>
+    </BrowserRouter>
+  </Provider>
   , document.getElementById('root'));
 registerServiceWorker();

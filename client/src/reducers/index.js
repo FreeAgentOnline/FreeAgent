@@ -8,7 +8,7 @@ const initialState = {
   meets: []
 }
 
-const reducter = (state = initialState, action) => {
+const reducer = (state = initialState, action) => {
   switch (action.type) {
     case SET_USER:
       return update(state, {
