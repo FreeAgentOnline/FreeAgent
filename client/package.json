@@ -6,14 +6,19 @@
   "dependencies": {
     "bootstrap": "^3.3.7",
     "chart.js": "^2.7.0",
+    "immutability-helper": "^2.4.0",
     "moment": "2.19.1",
     "react": "^16.0.0",
     "react-chartjs": "^0.8.0",
     "react-dom": "^16.0.0",
     "react-google-maps": "^9.0.1",
+    "react-redux": "^5.0.6",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
-    "react-scripts": "1.0.14"
+    "react-scripts": "1.0.14",
+    "recompose": "^0.26.0",
+    "redux": "^3.7.2",
+    "redux-thunk": "^2.2.0"
   },
   "scripts": {
     "start": "react-scripts start",

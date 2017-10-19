@@ -34,13 +34,15 @@ module.exports = function(app) {
   })
   // Update team information
   router.patch('/team/:_id', (req, res) => {
-    Team.updateOne({ _id: req.params._id }, {
-      name: req.body.name,
-      location: req.body.location,
-      year_start: req.body.year_start,
-      year_end: req.body.year_end || '',
-      // events: eventsArr || '',
-      description: req.body.description || ''
+    Team.findOneAndUpdate({ _id: req.params._id }, {
+      $set: {
+        name: req.body.name,
+        location: req.body.location,
+        year_start: req.body.year_start,
+        year_end: req.body.year_end || '',
+        // events: eventsArr || '',
+        description: req.body.description || ''
+      }
     }, { new: true })
     .then(data => res.status(200).send(data))
     .catch(err => res.status(500). send(err))

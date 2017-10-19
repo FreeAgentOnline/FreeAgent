@@ -4,6 +4,11 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import './styles/index.css';
 import registerServiceWorker from './registerServiceWorker';
 
+// Redux imports
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
+import reducers from './reducers';
+
 // Import components
 import BaseLayout from './components/BaseLayout';
 import Search from './components/Search'
@@ -14,7 +19,7 @@ import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import Profile from './components/Profile';
 
-//import data
+// Import data
 import meets from './data/meets'
 
 // Import containers
@@ -29,7 +34,7 @@ ReactDOM.render(
         <Route path="/search" component={Search} />
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/profile" component={Profile} />
-        <Route path="/adminDashboard" component={AdminDashboard} />
+        <Route path="/admin/dashboard" component={AdminDashboard} />
 
       </Switch>
     </BaseLayout>
