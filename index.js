@@ -13,6 +13,8 @@ const routerUser = require('./routerUser');
 const routerResult = require('./routerResult');
 const routerMeet = require('./routerMeet');
 const routerSavedMeet = require('./routerSavedMeet');
+const routerTeam = require('./routes/Team');
+
 
 // Database Connection
 mongoose.connect(config.database, { useMongoClient: true });
@@ -49,3 +51,4 @@ routerResult(app);
 // routerSavedMeet MUST come before routerMeet
 routerSavedMeet(app);
 routerMeet(app);
+routerTeam(app);
