@@ -32,7 +32,6 @@ class ResultNew extends Component {
 
   handleSave = () => {
     // Post to database
-    console.log('this.state', this.state);
     let formBody = {
       event: this.state.event,
       measurement: this.state.measurement,
@@ -49,8 +48,7 @@ class ResultNew extends Component {
         'Content-Type': 'application/json'
       }
     })
-    .then(data => {
-      console.log(data);
+    .then(() => {
       this.handleClear();
     })
     .catch(err => console.log(err))

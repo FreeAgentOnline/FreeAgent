@@ -20,6 +20,24 @@ class ResultEdit extends Component {
   handleReference = e => { this.setState({ reference: e.target.value }) }
   handleUpdate = () => {
     // Update in database
+    let formBody = {
+      event: this.state.event,
+      measurement: this.state.measurement,
+      unit: this.state.unit,
+      date: this.state.date,
+      performance: this.state.performance,
+      location: this.state.location,
+      reference: this.state.reference
+    }
+    fetch(`/api/result/${this.props.data._id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(formBody),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(data => alert('Result updated'))
+    .catch(err => console.log(err))
   }
   handleDelete = () => {
     // Delete in database
