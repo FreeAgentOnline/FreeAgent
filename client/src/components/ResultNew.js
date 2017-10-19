@@ -49,6 +49,7 @@ class ResultNew extends Component {
       }
     })
     .then(() => {
+      alert('Result added');
       this.handleClear();
     })
     .catch(err => console.log(err))
