@@ -19,13 +19,17 @@ class Dashboard extends Component {
     fetch(`/api/result/user/${this.state.user._id}`)
     .then(res => res.json())
     .then(data => {
-      console.log('data', data);
+      // Update state with fetched data
       this.setState({ results: data });
     })
     .catch(err => console.log(err))
   }
-  render() {
 
+  // Fetch saved meets for user
+
+  render() {
+    // Currently uses this.state.user,
+    // but should be updated with Redux
     let resultsRender = this.state.results.map((one, i) => {
       return (
         <li key={i} className="list-group-item">
@@ -36,8 +40,12 @@ class Dashboard extends Component {
     return (
       <div className="container">
         <h2>Dashboard</h2>
-        <p><Link to="/profile" className="btn btn-secondary mr-2">Profile</Link><Link to="/" className="btn btn-secondary">Settings</Link></p>
+        <p>
+          <Link to="/profile" className="btn btn-secondary mr-2">Profile</Link>
+          <Link to="/" className="btn btn-secondary">Settings</Link>
+        </p>
         <h4>Scheduled events</h4>
+        {/* Render Saved Meets */}
         <h4>Starred events</h4>
         <div className="card">
           <ul className="list-group list-group-flush">
