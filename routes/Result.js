@@ -1,7 +1,7 @@
 const express = require('express');
-const passportService = require('./config/passport');
+const passportService = require('../config/passport');
 const passport = require('passport');
-const Result = require('./models/Result');
+const Result = require('../models/Result');
 
 // Middleware to require login/auth
 const requireAuth = passport.authenticate('jwt', { session: false });
@@ -33,7 +33,10 @@ module.exports = function(app) {
       location: req.body.location || '',
       reference: req.body.reference || ''
     })
-    .then(data => { res.status(200).send(data) })
+    .then(data => {
+      console.log('data', data);
+      res.status(200).send(data)
+    })
     .catch(err => { res.send(err) })
   })
   // View all results for given user
