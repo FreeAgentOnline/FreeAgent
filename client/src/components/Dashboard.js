@@ -35,7 +35,7 @@ class Dashboard extends Component {
     })
     return (
       <div className="container">
-        <h2>{user.first_name} {user.last_name}</h2>
+        <h2>Dashboard</h2>
         <p><Link to="/profile" className="btn btn-secondary mr-2">Profile</Link><Link to="/" className="btn btn-secondary">Settings</Link></p>
         <h4>Scheduled events</h4>
         <h4>Starred events</h4>
