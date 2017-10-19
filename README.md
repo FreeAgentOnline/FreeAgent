@@ -35,9 +35,9 @@ Unregistered users are able to visit the site, set their locations, and make exe
 Registered users may do all that unregistered can, and can also make personal profiles, toggle privacy on those profiles, as well as input user-specific information about their track and field records, upcoming events, and saved events.
 
 #### Admins
-Upon login, admins can view a dashboard that allows them to view different data sets from the site. They can CRUD both meets and users from the front end, as well as view the number of meets and users on the main dashboard. 
+Upon login, admins can view a dashboard that allows them to view different data sets from the site. They can CRUD both meets and users from the front end, as well as view the number of meets and users on the main dashboard.
 
-###Endpoints
+### Endpoints
 All client endpoints are listed below.
 - `/` home page of the site
 - `/login` for user login
