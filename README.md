@@ -18,6 +18,7 @@ All API endpoints are routed through `/api`. Beyond that, there is a specific pa
 - `/result` for user result CRUD
 - `/meet` for meet CRUD (Admin only)
 - `/meet/save` for saved/scheduled meet CRUD
+- `/team` for user team CRUD
 
 In most cases, the `_id` for the entry will be added after the endpoint above, *e.g.* `/user/:userId`.
 

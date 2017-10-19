@@ -8,11 +8,11 @@ const mongoose = require('mongoose');
 const config = require('./config/main');
 
 // Import routers
-const routerAuth = require('./routerAuth');
-const routerUser = require('./routerUser');
-const routerResult = require('./routerResult');
-const routerMeet = require('./routerMeet');
-const routerSavedMeet = require('./routerSavedMeet');
+const routerAuth = require('./routes/Auth');
+const routerUser = require('./routes/User');
+const routerResult = require('./routes/Result');
+const routerMeet = require('./routes/Meet');
+const routerSavedMeet = require('./routes/SavedMeet');
 const routerTeam = require('./routes/Team');
 
 
