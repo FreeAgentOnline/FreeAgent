@@ -10,14 +10,13 @@ export default class AdminDashboard extends Component {
         this.state = {
             meets: meets
         }
-        console.log(this.state.meets);
     }
 
     render(){
 
         let meetData = this.state.meets.map((meet, index)=>{
             return(
-                        <tr key= {index + 1}>
+                        <tr key= {index}>
                             <th scope="row">{index + 1}</th>
                             <td>{meet.name}</td>
                             <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>

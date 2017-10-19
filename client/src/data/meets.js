@@ -2210,7 +2210,7 @@ let meets = [
             "cost" : 15,
             "url" : ""
         }
-    
+
 ]
 
 module.exports = meets
