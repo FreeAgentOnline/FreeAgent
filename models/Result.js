@@ -12,7 +12,7 @@ const resultSchema = new mongoose.Schema({
   measurement: {
     type: String,
     required: true,
-    enum: ['Distance', 'Height', 'Time', 'Points']
+    enum: ['distance', 'height', 'time', 'points']
   },
   unit: {
     type: String,
