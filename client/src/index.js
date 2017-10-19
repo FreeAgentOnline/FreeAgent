@@ -19,6 +19,7 @@ import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import Profile from './components/Profile';
+import ProfileEdit from './components/ProfileEdit';
 
 // Import data
 import meets from './data/meets'
@@ -56,6 +57,7 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
+          <Route path="/profile/edit" component={ProfileEdit} />
           <Route path="/profile" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
 

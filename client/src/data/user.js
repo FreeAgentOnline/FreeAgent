@@ -5,6 +5,10 @@ const user = {
   "email" : "imani@oliver.com",
   "password" : "$2a$05$VXdZGJP6ZSl/A6QgVu1qp.WhW.JCzS.Ggw3YrY3lxM207aB3SeDpO",
   "username" : "imanioliver",
+  "bio" : "Short biography",
+  "tagline" : "Triple jumper",
+  "first_name" : "Imani",
+  "last_name" : "Oliver",
   "__v" : 0
 }
 
