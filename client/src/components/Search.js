@@ -39,7 +39,7 @@ export default class Search extends Component {
                 <div id="right" className="panel panel-default">
                     <div className="panel-body">
                         <h1>Available Meets</h1>
-                        <div classname = "Results">
+                        <div className = "Results">
                             <div className="row">
                                 <div className="col-sm-6">
                                     <div className="card">
