@@ -2,9 +2,6 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import user from '../data/user';
 
-import Results from './Results';
-import History from './History';
-
 class ProfileEdit extends Component {
   constructor(props) {
     super(props);
@@ -21,13 +18,26 @@ class ProfileEdit extends Component {
   handleLastName = e => { this.setState({ last_name: e.target.value })};
   handleTagline = e => { this.setState({ tagline: e.target.value })};
   handleBio = e => { this.setState({ bio: e.target.value }) };
-  handleSubmit = e => {
+
+  handleUpdate = e => {
     // Patch request
     let formBody = {
       bio: this.state.bio,
       tagline: this.state.tagline,
+      first_name: this.state.first_name,
+      last_name: this.state.last_name
     }
+    fetch(`/api/user/${user._id}`, {
+      method: 'PATCH',
+      body: JSON.stringify(formBody),
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(data => alert('Profile updated'))
+    .catch(err => console.log(err))
   }
+
   render() {
     return (
       <div className="container">
@@ -66,10 +76,5 @@ class ProfileEdit extends Component {
     );
   }
 }
-
-// <div className="d-flex">
-// <h4>Events</h4>
-// <p className="ml-1">{eventsRender}</p>
-// </div>
 
 export default ProfileEdit;
