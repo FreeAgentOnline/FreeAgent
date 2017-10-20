@@ -29,12 +29,16 @@ class Results extends Component {
     });
     let linkRender = [];
     linkRender.push(
-      <button className="btn btn-primary btn-sm" onClick={this.changeFilter}>All</button>
+      <li className="nav-item">
+        <span className="nav-link" onClick={this.changeFilter}>All</span>
+      </li>
     )
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
         linkRender.push(
-          <button className="btn btn-primary btn-sm" onClick={this.changeFilter}>{property}</button>
+          <li className="nav-item">
+            <span className="nav-link" onClick={this.changeFilter}>{property}</span>
+          </li>
         )
       }
     }
@@ -64,18 +68,24 @@ class Results extends Component {
     }
 
     return (
-      <div>
-        {linkRender}
+      <div className="card">
+        <div className="card-header">
+          <ul className="nav nav-tabs card-header-tabs">
+            {linkRender}
+          </ul>
+        </div>
+        <div className="card-body p-3">
         <h4 className="text-center">{this.state.filter}</h4>
-        <div className="">
-          <div className="row font-weight-bold py-2">
-            <div className="col">Event</div>
-            <div className="col">Date</div>
-            <div className="col">Performance</div>
-            <div className="col">Location</div>
-            <div className="col">Reference</div>
+          <div className="">
+            <div className="row font-weight-bold p-2">
+              <div className="col">Event</div>
+              <div className="col">Date</div>
+              <div className="col">Performance</div>
+              <div className="col">Location</div>
+              <div className="col">Reference</div>
+            </div>
+            {resultRender}
           </div>
-          {resultRender}
         </div>
       </div>
     );
