@@ -22,9 +22,11 @@ module.exports = function(app) {
   })
 
 
-//find meet by search query
-  router.get('/search/meet', (req, res) => {
-    Meet.find({ $text: { $search: "city" } }
+//find a meet by search query
+  router.get('/search/meet/:query', (req, res) => {
+    let query = req.params.query;
+
+    Meet.find({ $text: { $search: query } }
         )
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.status(500).send(err) })
