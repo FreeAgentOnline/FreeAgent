@@ -16,7 +16,7 @@ class Dashboard extends Component {
   }
   // Fetch results for user
   componentDidMount() {
-    fetch(`/api/result/user/${this.state.user._id}`)
+    fetch(`/api/result/user/${this.state.user.username}`)
     .then(res => res.json())
     .then(data => {
       // Update state with fetched data

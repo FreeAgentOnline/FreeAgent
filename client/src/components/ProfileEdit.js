@@ -67,7 +67,7 @@ class ProfileEdit extends Component {
         <div className="form-group">
           <div className="d-flex">
             <label className="mr-2" htmlFor="bio">Biography</label>
-            <small id="bioHelp" className="form-text text-muted">Give some details about who you are and what you are hoping to achieve</small>
+            <small id="bioHelp" className="form-text text-muted">Give some details about who you are and what you hope to achieve</small>
           </div>
           <textarea className="form-control" name="bio" aria-describedby="bioHelp" value={this.state.bio} onChange={this.handleBio}></textarea>
         </div>

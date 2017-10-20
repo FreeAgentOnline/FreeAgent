@@ -41,7 +41,7 @@ class ResultNew extends Component {
       location: this.state.location,
       reference: this.state.reference
     }
-    fetch(`/api/result/user/${this.state.user._id}`, {
+    fetch(`/api/result/user/${this.state.user.username}`, {
       method: 'POST',
       body: JSON.stringify(formBody),
       headers: {
@@ -58,7 +58,7 @@ class ResultNew extends Component {
     return (
       <div id="" className="">
         <input name="event" type="text" placeholder="event" onChange={this.handleEvent} value={this.state.event} />
-        <select name="measurement" onChange={this.handleMeasurement} value="Measurement:">
+        <select name="measurement" onChange={this.handleMeasurement} defaultValue="Measurement:">
           <option disabled>Measurement:</option>
           <option value="time">Time</option>
           <option value="distance">Distance</option>
@@ -66,7 +66,7 @@ class ResultNew extends Component {
           <option value="points">Points</option>
         </select>
         <input name="performance" type="number" placeholder="Performance" onChange={this.handlePerformance} value={this.state.performance} />
-        <select name="unit" onChange={this.handleUnit} placeholder="Units:" value="Units:">
+        <select name="unit" onChange={this.handleUnit} placeholder="Units:" defaultValue="Units:">
           <option disabled>Units:</option>
           <option value="m">Meters (m)</option>
           <option value="in">Inches (in)</option>
