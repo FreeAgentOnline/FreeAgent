@@ -16,7 +16,7 @@ class ResultDashboard extends Component {
     }
   }
   // Fetch results for user
-  componentWillMount() {
+  componentDidMount() {
     this.props.fetchUserResults(this.state.user.username);
   }
 

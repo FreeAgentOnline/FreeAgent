@@ -11,10 +11,19 @@ export const SET_RESULTS = 'SET_RESULTS';
 export const DISPLAY_RESULTS = 'DISPLAY_RESULTS';
 export const SAVE_QUERY = 'SAVE_QUERY';
 export const STORE_MEETS = 'STORE_MEETS';
+export const SET_FILTER = 'SET_FILTER';
 
 export function setUser(payload) {
   return {
     type: SET_USER,
+    payload
+  }
+}
+
+// Set filter on user profile results
+export function setFilter(payload) {
+  return {
+    type: SET_FILTER,
     payload
   }
 }

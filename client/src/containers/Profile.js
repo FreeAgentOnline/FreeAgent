@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { fetchUserResults } from '../actions';
+
 import { user, results } from '../data/mockdata';
 
 import ProfileBasic from '../components/ProfileBasic';
@@ -11,21 +13,38 @@ class Profile extends Component {
     super(props);
     this.state = {
       profile: '',
-      results: '',
+      results: [],
       teams: '',
       user
     }
+  }
+  // Fetch results for current profile
+  componentDidMount() {
+    this.props.fetchUserResults(this.props.match.params.username);
   }
   render() {
 
     return (
       <div className="container">
         <ProfileBasic match={this.props.match}/>
-        <Results data={results}/>
+        <Results data={this.props.results}/>
         <TeamProfile match={this.props.match}/>
       </div>
     );
   }
 }
 
-export default Profile;
+function mapStateToProps(state) {
+  console.log('state on Profile', state);
+  return {
+    results: state.results
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchUserResults: (username) => dispatch(fetchUserResults(username))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Profile);
