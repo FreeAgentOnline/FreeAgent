@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setFilter } from '../actions';
 
-
+import ResultRow from './ResultRow';
 import ResultGraph from './ResultGraph';
 
 class Results extends Component {
@@ -18,7 +18,6 @@ class Results extends Component {
     this.setState({ filter: e.target.textContent })
   }
   render() {
-    // console.log('this.state', this.state);
     let data = this.props.data;
     let eventsObj = {};
     data.forEach(one => {
@@ -29,10 +28,11 @@ class Results extends Component {
       }
     });
     let linkRender = [];
+    linkRender.push(
+      <button className="btn btn-primary btn-sm" onClick={this.changeFilter}>All</button>
+    )
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
-        // do stuff
-        console.log('property', property);
         linkRender.push(
           <button className="btn btn-primary btn-sm" onClick={this.changeFilter}>{property}</button>
         )
@@ -45,40 +45,38 @@ class Results extends Component {
     //     </li>
     //   )
     // })
-    let filter = this.state.filter;
 
     let resultRender = [<div>No results saved</div>];
     if (data.length > 0) {
-      resultRender = eventsObj['Long Jump'].map((one, i) => {
-        return (
-          <tr key={i}>
-            <td>{one.date}</td>
-            <td>
-              {one.performance}
-              {one.unit}
-            </td>
-            <td>{one.location}</td>
-            <td>{ one.reference ? <Link to={one.reference}>Link</Link> : 'None listed' }</td>
-          </tr>
-        )
-      })
+      if (this.state.filter === 'All') {
+        resultRender = data.map((one, i) => {
+          return (
+            <ResultRow key={i} data={one} />
+          )
+        })
+      } else {
+        resultRender = eventsObj[this.state.filter].map((one, i) => {
+          return (
+            <ResultRow key={i} data={one} />
+          )
+        })
+      }
     }
+
     return (
       <div>
         {linkRender}
-        <table className="table table-bordered">
-          <thead>
-            <tr>
-              <th scope="col">Date</th>
-              <th scope="col">Result</th>
-              <th scope="col">Location</th>
-              <th scope="col">Reference</th>
-            </tr>
-          </thead>
-          <tbody>
-            {resultRender}
-          </tbody>
-        </table>
+        <h4 className="text-center">{this.state.filter}</h4>
+        <div className="">
+          <div className="row font-weight-bold py-2">
+            <div className="col">Event</div>
+            <div className="col">Date</div>
+            <div className="col">Performance</div>
+            <div className="col">Location</div>
+            <div className="col">Reference</div>
+          </div>
+          {resultRender}
+        </div>
       </div>
     );
   }
