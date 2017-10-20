@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { updateResult, deleteResult } from '../actions';
 
 class ResultEdit extends Component {
   constructor(props) {
     super(props);
+    console.log('this.props', this.props);
     this.state = {
       event: this.props.data.event,
       date: this.props.data.date,
@@ -29,23 +32,12 @@ class ResultEdit extends Component {
       location: this.state.location,
       reference: this.state.reference
     }
-    fetch(`/api/result/${this.props.data._id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(formBody),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(data => alert('Result updated'))
-    .catch(err => console.log(err))
+    this.props.updateResult(this.props.data._id, formBody, this.props.user.username);
   }
   handleDelete = () => {
     // Delete in database
-    fetch(`/api/result/${this.props.data._id}`, { method: 'DELETE' })
-    .then()
-    this.setState({
-      event: '', measurement: '', unit: '', date: '', location: '', performance: '', reference: ''
-    })
+    console.log('my _id', this.props.data._id);
+    this.props.deleteResult(this.props.data._id, this.props.user.username);
   }
   render() {
     return (
@@ -74,4 +66,17 @@ class ResultEdit extends Component {
   }
 }
 
-export default ResultEdit;
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    updateResult: (resultId, formBody, username) => dispatch(updateResult(resultId, formBody, username)),
+    deleteResult: (resultId, username) => dispatch(deleteResult(resultId, username))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ResultEdit);
+
+// export default ResultEdit;

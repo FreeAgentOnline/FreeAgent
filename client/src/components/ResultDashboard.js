@@ -1,4 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import { fetchUserResults } from '../actions';
+
 import user from '../data/user';
 
 import ResultEdit from './ResultEdit';
@@ -8,23 +12,16 @@ class ResultDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user,
-      results: []
+      user
     }
   }
   // Fetch results for user
-  componentDidMount() {
-    fetch(`/api/result/user/${this.state.user.username}`)
-    .then(res => res.json())
-    .then(data => {
-      // Update state with fetched data
-      this.setState({ results: data });
-    })
-    .catch(err => console.log(err))
+  componentWillMount() {
+    this.props.fetchUserResults(this.state.user.username);
   }
 
   render() {
-    let resultsRender = this.state.results.map((one, i) => {
+    let resultsRender = this.props.results.map((one, i) => {
       return (
         <li key={i} className="list-group-item">
           <ResultEdit data={one} user={this.state.user} />
@@ -47,4 +44,17 @@ class ResultDashboard extends Component {
   }
 }
 
-export default ResultDashboard;
+function mapStateToProps(state) {
+  console.log('state on ResultsDash', state);
+  return {
+    results: state.results
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchUserResults: (username) => dispatch(fetchUserResults(username))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ResultDashboard);

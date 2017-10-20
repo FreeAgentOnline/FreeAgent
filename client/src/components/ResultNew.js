@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+// import { bindActionCreators } from 'redux';
+import { createResult } from '../actions';
 
 import user from '../data/user';
 
@@ -41,19 +44,7 @@ class ResultNew extends Component {
       location: this.state.location,
       reference: this.state.reference
     }
-
-    fetch(`/api/result/user/${this.state.user.username}`, {
-      method: 'POST',
-      body: JSON.stringify(formBody),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(() => {
-      alert('Result added');
-      this.handleClear();
-    })
-    .catch(err => console.log(err))
+    this.props.createResult(this.state.user.username, formBody);
   }
   render() {
     return (
@@ -85,4 +76,14 @@ class ResultNew extends Component {
   }
 }
 
-export default ResultNew;
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    createResult: (username, formBody) => dispatch(createResult(username, formBody))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(ResultNew);
