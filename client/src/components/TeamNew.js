@@ -38,7 +38,16 @@ class TeamNew extends Component {
         'Content-Type': 'application/json'
       }
     })
-    .then(data => alert('Team added'))
+    .then(data => {
+      alert('Team added')
+      this.setState({
+        year_start: '',
+        year_end: '',
+        description: '',
+        name: '',
+        location: ''
+      })
+    })
     .catch(err => console.log(err))
   }
 

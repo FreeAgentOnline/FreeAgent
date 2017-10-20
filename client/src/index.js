@@ -13,6 +13,7 @@ import reducers from './reducers';
 // Import containers
 import Settings from './containers/Settings';
 import Profile from './containers/Profile';
+import Dashboard from './containers/Dashboard';
 
 // Import components
 import BaseLayout from './components/BaseLayout';
@@ -20,7 +21,6 @@ import Search from './components/Search'
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
-import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 
 // Import data

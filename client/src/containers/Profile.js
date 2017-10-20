@@ -4,7 +4,7 @@ import { user, results } from '../data/mockdata';
 
 import ProfileBasic from '../components/ProfileBasic';
 import Results from '../components/Results';
-import History from '../components/History';
+import TeamProfile from '../components/TeamProfile';
 
 class Profile extends Component {
   constructor(props) {
@@ -22,7 +22,7 @@ class Profile extends Component {
       <div className="container">
         <ProfileBasic match={this.props.match}/>
         <Results data={results}/>
-        <History data={user}/>
+        <TeamProfile match={this.props.match}/>
       </div>
     );
   }
