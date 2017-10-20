@@ -21,6 +21,16 @@ module.exports = function(app) {
     .catch(err => { res.status(500).send(err) })
   })
 
+
+//find meet by search query
+  router.get('/search/meet', (req, res) => {
+    Meet.find({ $text: { $search: "city" } }
+        )
+    .then(data => { res.status(200).send(data) })
+    .catch(err => { res.status(500).send(err) })
+  })
+////////////////////////////
+
   router.get('/meet/:id', (req, res) => {
     Meet.findById({_id: req.params.id})
     .then(data => { res.status(200).send(data) })

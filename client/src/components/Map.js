@@ -31,13 +31,11 @@ const MyMapComponent = compose( withProps({
             console.log("hello");
             console.log(meet);
             console.log("meet.lat: ", meet.lat);
-
-            return (
-                <div>
-                    <Marker position={{ lat: meet.lat, lng: meet.lng }} onClick={props.onMarkerClick} />}
-                </div>
-
-            )
+        return (
+            <div>
+                <Marker position={{ lat: meet.lat, lng: meet.lng }} onClick={props.onMarkerClick} />
+            </div>
+        )
         })
         return (
 

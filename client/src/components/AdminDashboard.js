@@ -17,7 +17,7 @@ export default class AdminDashboard extends Component {
         let meetData = this.state.meets.map((meet, index)=>{
             return(
                         <tr key= {index}>
-                            <th scope="row">{index + 1}</th>
+                            <td scope="row">{index + 1}</td>
                             <td>{meet.name}</td>
                             <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
                             <td>{meet.country}</td>

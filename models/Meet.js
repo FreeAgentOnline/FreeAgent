@@ -13,17 +13,16 @@ const meetSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    location_name: String,
-    street: String,
+    venue: String,
     city: String,
     state: String,
     country: {
         type: String,
         required: true
     },
-    zip: String,
-    cost: Number,
-    url: String
+    url: String,
+    lat: Number,
+    lng: Number
 });
 
 const Meet = mongoose.model('Meet', meetSchema);
