@@ -22,9 +22,9 @@ module.exports = function(app) {
     .catch(err => res.send(err))
   })
   // Create a new result for given user
-  router.post('/result/user/:userId', (req, res) => {
+  router.post('/result/user/:username', (req, res) => {
     Result.create({
-      userId: req.params.userId,
+      username: req.params.username,
       event: req.body.event,
       measurement: req.body.measurement,
       unit: req.body.unit,
@@ -40,8 +40,8 @@ module.exports = function(app) {
     .catch(err => { res.send(err) })
   })
   // View all results for given user
-  router.get('/result/user/:userId', (req, res) => {
-    Result.find({ userId: req.params.userId})
+  router.get('/result/user/:username', (req, res) => {
+    Result.find({ username: req.params.username})
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
   })
