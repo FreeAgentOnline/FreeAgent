@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 import MyFancyComponent from './Map';
+import { geocodeAddress , storeMeets } from '../actions'
 
 class Search extends Component {
     constructor(props){
@@ -49,44 +50,7 @@ class Search extends Component {
                     <div className="panel-body">
                         <h1>Available Meets</h1>
                         <div className = "Results">
-                            <div className="row">
-                                <div className="col-sm-6">
-                                    <div className="card">
-                                        <div className="card-block">
-                                            <h3 className="card-title">Special title treatment</h3>
-                                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="/" className="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6">
-                                    <div className="card">
-                                        <div className="card-block">
-                                            <h3 className="card-title">Special title treatment</h3>
-                                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="/" className="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6">
-                                    <div className="card">
-                                        <div className="card-block">
-                                            <h3 className="card-title">Special title treatment</h3>
-                                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="/" className="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="col-sm-6">
-                                    <div className="card">
-                                        <div className="card-block">
-                                            <h3 className="card-title">Special title treatment</h3>
-                                            <p className="card-text">With supporting text below as a natural lead-in to additional content.</p>
-                                            <a href="/" className="btn btn-primary">Go somewhere</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
+
                         </div>
                     </div>
                 </div>
