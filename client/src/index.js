@@ -10,6 +10,10 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
+// Import containers
+import Settings from './containers/Settings';
+import Profile from './containers/Profile';
+
 // Import components
 import BaseLayout from './components/BaseLayout';
 import Search from './components/Search'
@@ -18,8 +22,6 @@ import Login from './components/Login';
 import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
-import Profile from './components/Profile';
-import ProfileEdit from './components/ProfileEdit';
 
 // Import data
 // import meets from './data/meets'
@@ -57,7 +59,7 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/settings" component={ProfileEdit} />
+          <Route path="/settings" component={Settings} />
           <Route path="/:username" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
 

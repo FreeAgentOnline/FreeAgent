@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import user from '../data/user';
 
-import TeamNew from './TeamNew';
-
 class ProfileEdit extends Component {
   constructor(props) {
     super(props);
@@ -42,8 +40,7 @@ class ProfileEdit extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h2>Edit profile</h2>
+      <div className="">
         <h4>Basic information</h4>
         <div className="form-group">
           <div className="d-flex">
@@ -74,7 +71,6 @@ class ProfileEdit extends Component {
           <textarea className="form-control" name="bio" aria-describedby="bioHelp" value={this.state.bio} onChange={this.handleBio}></textarea>
         </div>
         <button className="btn btn-primary" onClick={this.handleUpdate}>Update</button>
-        <TeamNew />
       </div>
     );
   }
