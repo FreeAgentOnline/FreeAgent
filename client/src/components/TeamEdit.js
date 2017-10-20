@@ -9,8 +9,7 @@ class TeamEdit extends Component {
       year_end: this.props.data.year_end,
       description: this.props.data.description,
       name: this.props.data.name,
-      location: this.props.data.location,
-      user
+      location: this.props.data.location
     }
   }
   handleYearStart = e => { this.setState({ year_start: e.target.value })};
@@ -60,7 +59,6 @@ class TeamEdit extends Component {
   render() {
     return (
       <div className="">
-        <h4>Team history</h4>
         <div className="form-group">
           <div className="row">
             <div className="col">

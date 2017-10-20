@@ -4,7 +4,7 @@ import user from '../data/user';
 
 // Import components
 import ProfileEdit from '../components/ProfileEdit';
-import TeamNew from '../components/TeamNew';
+import TeamSettings from '../components/TeamSettings';
 
 class Settings extends Component {
   constructor(props) {
@@ -20,7 +20,7 @@ class Settings extends Component {
       <div className="container">
         <h2>Edit profile</h2>
         <ProfileEdit />
-        <TeamNew />
+        <TeamSettings />
       </div>
     );
   }
