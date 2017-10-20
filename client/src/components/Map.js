@@ -28,9 +28,9 @@ const MyMapComponent = compose( withProps({
 }),  withScriptjs, withGoogleMap)
     (function (props) {
         let newMarker = meets.map((meet) => {
-            console.log("hello");
-            console.log(meet);
-            console.log("meet.lat: ", meet.lat);
+            // console.log("hello");
+            // console.log(meet);
+            // console.log("meet.lat: ", meet.lat);
         return (
             <div>
                 <Marker position={{ lat: meet.lat, lng: meet.lng }} onClick={props.onMarkerClick} />

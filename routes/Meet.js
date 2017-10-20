@@ -23,6 +23,11 @@ module.exports = function(app) {
 
 
 //find a meet by search query
+
+
+// run this in CLI to import data into database: mongoimport --db free-agent --collection meets --file allMeets.json
+//run this in mongo to set search fields in data: db.meets.createIndex({ name: "text", venue: "text", city: "text", state: "text", country: "text"})
+
   router.get('/search/meet/:query', (req, res) => {
     let query = req.params.query;
 
@@ -32,6 +37,10 @@ module.exports = function(app) {
     .catch(err => { res.status(500).send(err) })
   })
 ////////////////////////////
+
+
+
+
 
   router.get('/meet/:id', (req, res) => {
     Meet.findById({_id: req.params.id})
