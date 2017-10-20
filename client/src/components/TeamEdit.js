@@ -58,40 +58,27 @@ class TeamEdit extends Component {
 
   render() {
     return (
-      <div className="">
-        <div className="form-group">
-          <div className="row">
-            <div className="col">
-              <label className="mr-2" htmlFor="name">Name</label>
-              <input className="form-control" type="text" name="name" placeholder="Name" value={this.state.name} onChange={this.handleName} />
-            </div>
-            <div className="col">
-              <label className="mr-2" htmlFor="name">Location</label>
-              <input className="form-control" type="text" name="location" placeholder="City and state" value={this.state.location} onChange={this.handleLocation} />
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
-          <div className="d-flex">
-          </div>
-          <div className="row">
-            <div className="col">
-              <label htmlFor="year_start" className="">From</label>
-              <input className="form-control" type="number" name="year_start" placeholder="Year" value={this.state.year_start} onChange={this.handleYearStart} />
-            </div>
-            <div className="col">
-              <label htmlFor="year_end" className="">To</label>
-              <input className="form-control" type="number" name="year_end" placeholder="Year (if applicable)" value={this.state.year_end} onChange={this.handleYearEnd} />
-            </div>
-          </div>
-        </div>
-        <div className="form-group">
-          <label className="mr-2" htmlFor="description">Description</label>
-          <textarea className="form-control" name="description" aria-describedby="descriptionHelp" value={this.state.description} onChange={this.handleDescription}></textarea>
-        </div>
-        <button className="btn btn-primary" onClick={this.handleUpdate}>Update</button>
-        <button className="btn btn-primary" onClick={this.handleDelete}>Delete</button>
-      </div>
+      <tr>
+        <th scope="row">
+          <input className="" type="text" name="name" placeholder="Team name" value={this.state.name} onChange={this.handleName} />
+        </th>
+        <td>
+          <input className="" type="text" name="location" placeholder="City, State" value={this.state.location} onChange={this.handleLocation} />
+        </td>
+        <td>
+          <input className="" type="number" name="year_start" placeholder="From" value={this.state.year_start} onChange={this.handleYearStart} />
+        </td>
+        <td>
+          <input className="" type="number" name="year_end" placeholder="To (if applicable)" value={this.state.year_end} onChange={this.handleYearEnd} />
+        </td>
+        <td>
+          <textarea className="" name="description" aria-describedby="descriptionHelp" value={this.state.description} onChange={this.handleDescription}></textarea>
+        </td>
+        <td>
+          <button className="btn btn-sm btn-outline-success" onClick={this.handleUpdate}>Update</button>
+          <button className="btn btn-sm btn-outline-danger" onClick={this.handleDelete}>Delete</button>
+        </td>
+      </tr>
     );
   }
 }

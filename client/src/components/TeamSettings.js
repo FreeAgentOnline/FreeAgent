@@ -26,22 +26,28 @@ class TeamSettings extends Component {
   render() {
     let teamsRender = this.state.teams.map((one, i) => {
       return (
-        <li key={i} className="list-group-item">
-          <TeamEdit data={one} user={this.state.user} />
-        </li>
+        <TeamEdit key={i} data={one} user={this.state.user} />
       )
     })
     return (
-      <div className="card">
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">
-            <h4>Results</h4>
-          </li>
-          {teamsRender}
-          <li className="list-group-item">
-            <TeamNew />
-          </li>
-        </ul>
+      <div className="">
+        <h4>Team history</h4>
+        <table className="table table-sm">
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Location</th>
+              <th scope="col">From</th>
+              <th scope="col">To</th>
+              <th scope="col">Description</th>
+              <th scope="col">Edit</th>
+            </tr>
+          </thead>
+          <tbody>
+            {teamsRender}
+          </tbody>
+        </table>
+        <TeamNew />
       </div>
     );
   }
