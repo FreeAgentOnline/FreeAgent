@@ -35,7 +35,13 @@ module.exports = function(app) {
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
   })
-  // View a specific user
+  // View a user by username
+  router.get('/user/:username', (req, res) => {
+    User.findOne({ username: req.params.username })
+    .then(data => { res.status(200).send(data) })
+    .catch(err => { res.send(err) })
+  })
+  // View a user by id
   router.get('/user/:_id', (req, res) => {
     User.findOne({ _id: req.params._id })
     .then(data => { res.status(200).send(data) })

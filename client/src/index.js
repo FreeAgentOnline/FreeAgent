@@ -22,7 +22,7 @@ import Profile from './components/Profile';
 import ProfileEdit from './components/ProfileEdit';
 
 // Import data
-import meets from './data/meets'
+// import meets from './data/meets'
 
 // Import containers
 
@@ -58,7 +58,7 @@ ReactDOM.render(
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/settings" component={ProfileEdit} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/:username" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
 
         </Switch>

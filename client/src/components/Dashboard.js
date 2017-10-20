@@ -41,7 +41,7 @@ class Dashboard extends Component {
       <div className="container">
         <h2>Dashboard</h2>
         <p>
-          <Link to="/profile" className="btn btn-secondary mr-2">Profile</Link>
+          <Link to={`/${this.state.user.username}`} className="btn btn-secondary mr-2">Profile</Link>
           <Link to="/settings" className="btn btn-secondary">Settings</Link>
         </p>
         <h4>Scheduled events</h4>

@@ -6,21 +6,36 @@ import Results from './Results';
 import History from './History';
 
 class Profile extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      profile: '',
+      results: '',
+      teams: '',
+      user
+    }
+  }
+  componentDidMount() {
+    fetch(`/api/user/${this.props.match.params.username}`)
+    .then(res => res.json())
+    .then(data => {
+      // Update state with fetched data
+      this.setState({ profile: data });
+    })
+    .catch(err => console.log(err))
+  }
   render() {
-    // let eventsRender = user.events.map((one, i) => {
-    //   return (
-    //     <span key={i} className="badge badge-primary mx-1">{one}</span>
-    //   )
-    // })
+    let profile = this.state.profile;
+
     return (
       <div className="container">
-        <header className="d-flex align-items-center">
-          <h2>{user.name.first} {user.name.last}</h2>
-          <p className="ml-2 lead">@{user.username}</p>
+        <header className="text-center">
+          <h2>{profile.first_name} {profile.last_name}</h2>
+          <p className="ml-2 lead">{profile.tagline}</p>
         </header>
         <main>
           <h4>Biography</h4>
-          <p>{user.bio}</p>
+          <p>{profile.bio}</p>
           <Results data={results}/>
           <History data={user}/>
         </main>
@@ -28,10 +43,5 @@ class Profile extends Component {
     );
   }
 }
-
-// <div className="d-flex">
-// <h4>Events</h4>
-// <p className="ml-1">{eventsRender}</p>
-// </div>
 
 export default Profile;
