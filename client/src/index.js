@@ -57,7 +57,7 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/profile/edit" component={ProfileEdit} />
+          <Route path="/settings" component={ProfileEdit} />
           <Route path="/profile" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
 

@@ -69,7 +69,7 @@ class ProfileEdit extends Component {
             <label className="mr-2" htmlFor="bio">Biography</label>
             <small id="bioHelp" className="form-text text-muted">Give some details about who you are and what you are hoping to achieve</small>
           </div>
-          <textarea className="form-control" name="bio" aria-describedby="bioHelp" onChange={this.handleBio}>{this.state.bio}</textarea>
+          <textarea className="form-control" name="bio" aria-describedby="bioHelp" value={this.state.bio} onChange={this.handleBio}></textarea>
         </div>
         <button className="btn btn-primary" onClick={this.handleUpdate}>Update</button>
       </div>

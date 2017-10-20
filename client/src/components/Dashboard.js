@@ -42,7 +42,7 @@ class Dashboard extends Component {
         <h2>Dashboard</h2>
         <p>
           <Link to="/profile" className="btn btn-secondary mr-2">Profile</Link>
-          <Link to="/" className="btn btn-secondary">Settings</Link>
+          <Link to="/settings" className="btn btn-secondary">Settings</Link>
         </p>
         <h4>Scheduled events</h4>
         {/* Render Saved Meets */}
