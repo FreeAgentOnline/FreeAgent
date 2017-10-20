@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { setFilter } from '../actions';
+
 
 import ResultGraph from './ResultGraph';
 
@@ -7,17 +10,12 @@ class Results extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      filter: 'all',
-      index: 0,
+      filter: 'All',
       data: ''
     }
   }
-  handleIndex = (i) => {
-    this.setState({ index: i });
-  }
-  handleFilter = (string) => {
-    this.setState({ filter: string })
-    console.log('this.state', this.state);
+  changeFilter = (e) => {
+    this.setState({ filter: e.target.textContent })
   }
   render() {
     // console.log('this.state', this.state);
@@ -30,16 +28,16 @@ class Results extends Component {
         eventsObj[one.event] = [one];
       }
     });
-    let linkArr = [];
+    let linkRender = [];
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
         // do stuff
-        linkArr.push(
-          <button className="btn btn-primary btn-sm" onClick={() => this.handleFilter(property)}>{property}</button>
+        console.log('property', property);
+        linkRender.push(
+          <button className="btn btn-primary btn-sm" onClick={this.changeFilter}>{property}</button>
         )
       }
     }
-    console.log('linkArr', linkArr);
     // let eventsLinks = data.events.map((one, i) => {
     //   return (
     //     <li key={i} className="nav-item">
@@ -67,7 +65,7 @@ class Results extends Component {
     }
     return (
       <div>
-        {linkArr}
+        {linkRender}
         <table className="table table-bordered">
           <thead>
             <tr>
