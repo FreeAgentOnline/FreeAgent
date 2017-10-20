@@ -53,13 +53,13 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/admin/dashboard" component={AdminDashboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/settings" component={Settings} />
           <Route path="/:username" component={Profile} />
-          <Route path="/admin/dashboard" component={AdminDashboard} />
 
         </Switch>
       </BaseLayout>

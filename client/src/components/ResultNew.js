@@ -41,6 +41,7 @@ class ResultNew extends Component {
       location: this.state.location,
       reference: this.state.reference
     }
+
     fetch(`/api/result/user/${this.state.user.username}`, {
       method: 'POST',
       body: JSON.stringify(formBody),
