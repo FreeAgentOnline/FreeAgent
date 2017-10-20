@@ -26,8 +26,6 @@ import AdminDashboard from './components/AdminDashboard';
 // Import data
 // import meets from './data/meets'
 
-// Import containers
-
 // Create store for redux and apply middleware
 // Check for Chrome before including Redux DevTools extension
 let store;
