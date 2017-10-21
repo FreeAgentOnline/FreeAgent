@@ -1,0 +1,33 @@
+/************************************
+  Dashboard
+************************************/
+#dashBoxContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.dashBox {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-basis: 25%;
+  min-height: 400px;
+}
+.dashBox > div {
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 10px;
+}
+#dashBasic {
+  background-image: url('../images/relay_action.jpg');
+}
+#dashTeam {
+  background-image: url('../images/swimming.jpg');
+}
+#dashResults {
+  background-image: url('../images/high_jump.jpg');
+}
+#dashSettings {
+  background-image: url('../images/hurdles.jpg');
+}
