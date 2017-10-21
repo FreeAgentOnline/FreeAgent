@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchUserResults } from '../actions';
 
-import { user, results } from '../data/mockdata';
+import { user } from '../data/mockdata';
 
 import ProfileBasic from '../components/ProfileBasic';
 import Results from '../components/Results';

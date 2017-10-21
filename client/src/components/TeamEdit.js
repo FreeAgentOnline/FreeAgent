@@ -59,9 +59,9 @@ class TeamEdit extends Component {
   render() {
     return (
       <tr>
-        <td scope="row">
+        <th scope="row">
           <input className="" type="text" name="name" placeholder="Team name" value={this.state.name} onChange={this.handleName} />
-        </td>
+        </th>
         <td>
           <input className="" type="text" name="location" placeholder="City, State" value={this.state.location} onChange={this.handleLocation} />
         </td>

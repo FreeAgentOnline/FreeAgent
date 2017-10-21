@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { setFilter } from '../actions';
 
@@ -15,7 +14,7 @@ class Results extends Component {
     }
   }
   changeFilter = (e) => {
-    this.setState({ filter: e.target.textContent })
+    this.props.setFilter(e.target.textContent);
   }
   render() {
     let data = this.props.data;
@@ -40,28 +39,22 @@ class Results extends Component {
             <span className="nav-link" onClick={this.changeFilter}>{property}</span>
           </li>
         )
+
       }
     }
-    // let eventsLinks = data.events.map((one, i) => {
-    //   return (
-    //     <li key={i} className="nav-item">
-    //       <span onClick={() => this.handleIndex(i)} className="nav-link sim-link">{one.title}</span>
-    //     </li>
-    //   )
-    // })
 
     let resultRender = [<div>No results saved</div>];
     if (data.length > 0) {
-      if (this.state.filter === 'All') {
+      if (this.props.filter === 'All') {
         resultRender = data.map((one, i) => {
           return (
-            <ResultRow key={i} data={one} />
+            <ResultRow index={i} data={one} />
           )
         })
       } else {
-        resultRender = eventsObj[this.state.filter].map((one, i) => {
+        resultRender = eventsObj[this.props.filter].map((one, i) => {
           return (
-            <ResultRow key={i} data={one} />
+            <ResultRow index={i} data={one} />
           )
         })
       }
@@ -75,7 +68,8 @@ class Results extends Component {
           </ul>
         </div>
         <div className="card-body p-3">
-        <h4 className="text-center">{this.state.filter}</h4>
+        <h4 className="text-center">{this.props.filter}</h4>
+        <ResultGraph data={data}/>
           <div className="">
             <div className="row font-weight-bold p-2">
               <div className="col">Event</div>
@@ -92,4 +86,16 @@ class Results extends Component {
   }
 }
 
-export default Results;
+function mapStateToProps(state) {
+  return {
+    filter: state.filter
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    setFilter: filter => dispatch(setFilter(filter))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(Results);
