@@ -4,19 +4,8 @@ import { compose, withProps } from 'recompose';
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-maps';
 import { geocodeAddress } from '../actions'
 import meets from '../data/meets'
-//
-// let allDataMap = meets.map((meet){
-//
-//     console.log("map");
-//
-// })
+import { connect } from 'react-redux';
 
-
-// for (var i = 0; i < meets.length; i++) {
-//     marker = new google.maps.Marker ({
-//         position: new google.maps.LatLng(geocodeAddress(meets[i].city)), map: map
-//     });
-// }
 
 const MyMapComponent = compose( withProps({
         googleMapURL: "https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places",
@@ -48,11 +37,13 @@ const MyMapComponent = compose( withProps({
 })
 
 
-
 export default class MyFancyComponent extends React.PureComponent {
-
-    state = {
-        isMarkerShown: false,
+    constructor(props){
+        super(props);
+        this.state = {
+            isMarkerShown: false,
+            meets: this.props.meets
+        }
     }
 
     componentDidMount() {
@@ -70,27 +61,20 @@ export default class MyFancyComponent extends React.PureComponent {
         this.delayedShowMarker()
     }
 
-    // componentWillMount(){
-    //
-    // }
     render() {
-
 
         return (
             <MyMapComponent isMarkerShown={this.state.isMarkerShown} onMarkerClick={this.handleMarkerClick}/>
         )
     }
 }
-// export class Map extends Component{
+
 //
-//     construct(props){
-//         super(props);
-//
-//     }
-//     render(){
-//
-//         return(
-//
-//         )
-//     }
+// function mapStateToProps(state) {
+//   console.log('state on Search', state);
+//   return {
+//     meets: state.meets
+//   }
 // }
+//
+// export default connect(mapStateToProps)(Map);

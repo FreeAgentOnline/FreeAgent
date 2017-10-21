@@ -42,12 +42,6 @@ export function storeMeets(arg) {
   }
 }
 
-export function setLatLon (arg) {
-    return {
-        type: SET_LAT_LON,
-        payload: arg
-    }
-}
 // //
 // export function createMarker(address) {
 //     return (
