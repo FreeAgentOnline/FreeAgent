@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { fetchUserResults } from '../actions';
 
+import '../styles/profile.css';
 import { user } from '../data/mockdata';
 
 import ProfileBasic from '../components/ProfileBasic';
@@ -25,10 +26,13 @@ class Profile extends Component {
   render() {
 
     return (
-      <div className="container">
-        <ProfileBasic match={this.props.match}/>
-        <Results data={this.props.results}/>
-        <TeamProfile match={this.props.match}/>
+      <div className="">
+        <div className="container-fluid" id="profileBackground"></div>
+        <div className="container mt-3">
+          <ProfileBasic match={this.props.match}/>
+          <Results data={this.props.results}/>
+          <TeamProfile match={this.props.match}/>
+        </div>
       </div>
     );
   }

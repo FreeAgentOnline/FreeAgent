@@ -1,0 +1,13 @@
+/************************************
+  Profile
+************************************/
+#profileBackground {
+  background-attachment: fixed;
+  background-image: url('../images/track-bg.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 200px;
+}
+body {
+}

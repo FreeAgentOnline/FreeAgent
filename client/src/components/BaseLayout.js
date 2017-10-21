@@ -10,7 +10,7 @@ class BaseLayout extends Component {
     return (
       <div className="">
         <Header />
-        <div className="p-3">
+        <div className="">
           {this.props.children}
 
         </div>
