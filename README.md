@@ -4,6 +4,7 @@ FreeAgent is for professional athletes looking to make their mark in the world o
 
 ## Utilizing
 - React
+- Redux
 - Node.js
 - MongoDB
 - Mongoose
