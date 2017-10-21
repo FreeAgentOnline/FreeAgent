@@ -42,8 +42,8 @@ module.exports = function(app) {
 
 
 
-  router.get('/meet/:id', (req, res) => {
-    Meet.findById({_id: req.params.id})
+  router.get('/meet/:meetId', (req, res) => {
+    Meet.findById({_id: req.params.meetId})
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.status(500).send(err) })
   })

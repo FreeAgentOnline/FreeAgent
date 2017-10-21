@@ -4,7 +4,8 @@
     2. Store result information on public user profile
     3. Set search query that can be accessed by multiple components
     4. Store fetched events for future filtering
-    5. Fetch to google API to geocode locations
+    5. Display meet information for individual meet
+
 */
 
 export const SET_USER = 'SET_USER';
@@ -60,20 +61,20 @@ export function setLatLon (arg) {
 
 // the following action creator contains a fetch request to the Google API, which, in turn, calls the setLatLon action creator function
 
-const encode = encodeURIComponent;
-
-export const geocodeAddress = (address) => {
-  return (dispatch, getState) => {
-    fetch(`http://maps.googleapis.com/maps/api/geocode/json?address=${encode(address)}`)
-      .then(response => {
-        return response.json();
-      })
-      .then(json => {
-        const loc = json.results[0].geometry.location;
-        dispatch(setLatLon({
-          lat: loc.lat,
-          lon: loc.lng
-        }));
-      })
-  }
-}
+// const encode = encodeURIComponent;
+//
+// export const geocodeAddress = (address) => {
+//   return (dispatch, getState) => {
+//     fetch(`http://maps.googleapis.com/maps/api/geocode/json?address=${encode(address)}`)
+//       .then(response => {
+//         return response.json();
+//       })
+//       .then(json => {
+//         const loc = json.results[0].geometry.location;
+//         dispatch(setLatLon({
+//           lat: loc.lat,
+//           lon: loc.lng
+//         }));
+//       })
+//   }
+// }

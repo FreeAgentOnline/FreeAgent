@@ -1,0 +1,56 @@
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
+import meets from '../data/meets';
+import * as moment from 'moment';
+
+export default class ViewMeet extends Component {
+
+    constructor(props){
+        super(props)
+
+        this.state = {
+            currentMeet: {}
+        }
+    }
+
+    componentDidMount(){
+        const URL= `/api/meet/${this.props.match.params.meetId}`;
+
+        fetch(URL)
+        .then(results => {
+            return results.json();
+        })
+        .then(data => {
+            this.setState({currentMeet: data})
+            console.log('this.state.currentMeet: ', this.state.currentMeet);
+        })
+        .catch(err => {
+            console.log("error fetching! : ", err);
+        })
+
+    }
+//either params.id or params.meetId
+    render(){
+
+        return(
+            <div className="card">
+                    <div className="card-block">
+                    Name of Meet:
+                          <h4 className="card-title"> {this.state.currentMeet.name}</h4>
+
+                      <p className="card-text">Date Start: <strong>{this.state.currentMeet.date_start}</strong></p>
+                    </div>
+                    <div className="card-block">
+                      <blockquote className="card-blockquote">
+                        <p>{this.state.currentMeet.city}</p>
+
+                      </blockquote>
+                    </div>
+        )
+    }
+}
+
+
+function mapStateToProps(){
+
+}

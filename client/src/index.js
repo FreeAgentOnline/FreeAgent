@@ -19,6 +19,7 @@ import Register from './components/Register';
 import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
 import Profile from './components/Profile';
+import ViewMeet from './components/ViewMeet';
 
 // Import data
 import meets from './data/meets'
@@ -58,6 +59,7 @@ ReactDOM.render(
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/profile" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
+          <Route path="/meet/:meetId" component={ViewMeet} />
 
         </Switch>
       </BaseLayout>
