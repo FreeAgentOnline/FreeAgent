@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { bindActionCreators } from 'redux';
+// import { bindActionCreators } from 'redux';
 import MyFancyComponent from './Map';
 import { geocodeAddress , storeMeets } from '../actions'
 import * as moment from 'moment';
@@ -40,6 +40,7 @@ class Search extends Component {
       .catch(err => console.log(err))
 
     }
+
     moveCursor = e => {
       let temp = e.target.value;
       e.target.value = '';
@@ -50,21 +51,17 @@ class Search extends Component {
     }
 
     render(){
-    //   console.log('props on search', this.props);
-    //   console.log('state on search', this.state);
-
-
-    let filteredMeets = this.state.meets.map((meet, index)=>{
-        let viewMeetLink = "/meet/" + meet._id;
-        return(
-            <tr key= {index}>
-                <td scope="row">{index + 1}</td>
-                <td>{meet.name}</td>
-                <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
-                <td>{meet.country}</td>
-                <td><button  className="btn btn-primary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
-            </tr>
-        )
+        let filteredMeets = this.state.meets.map((meet, index)=>{
+            let viewMeetLink = "/meet/" + meet._id;
+            return(
+                <tr key= {index}>
+                    <td scope="row">{index + 1}</td>
+                    <td>{meet.name}</td>
+                    <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
+                    <td>{meet.country}</td>
+                    <td><button  className="btn btn-primary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
+                </tr>
+            )
     })
 
 

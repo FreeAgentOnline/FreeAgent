@@ -41,33 +41,3 @@ export function storeMeets(arg) {
     payload: arg
   }
 }
-
-// //
-// export function createMarker(address) {
-//     return (
-//             {props.isMarkerShown && <Marker position={geocodeAddress(meets.address)} onClick={props.onMarkerClick} />}
-//     )
-// }
-
-
-
-
-// the following action creator contains a fetch request to the Google API, which, in turn, calls the setLatLon action creator function
-
-// const encode = encodeURIComponent;
-//
-// export const geocodeAddress = (address) => {
-//   return (dispatch, getState) => {
-//     fetch(`http://maps.googleapis.com/maps/api/geocode/json?address=${encode(address)}`)
-//       .then(response => {
-//         return response.json();
-//       })
-//       .then(json => {
-//         const loc = json.results[0].geometry.location;
-//         dispatch(setLatLon({
-//           lat: loc.lat,
-//           lon: loc.lng
-//         }));
-//       })
-//   }
-// }

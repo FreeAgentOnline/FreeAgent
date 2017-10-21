@@ -5,7 +5,7 @@ import ReactDOM from 'react-dom';
 class ResultGraph extends Component {
   componentDidMount() {
     let data = this.props.data;
-    console.log('data on ResultGraph', data);
+    // console.log('data on ResultGraph', data);
     let labelsArr = [];
     let dataArr = [];
     data.forEach(one => {

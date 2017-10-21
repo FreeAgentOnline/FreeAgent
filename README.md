@@ -44,4 +44,4 @@ All client endpoints are listed below.
 - `/login` for user login
 - `/register` for user registration
 - `/dashboard` User Dashboard for editing account information
-- `/profile` view user's profile
+- `/:username` to view a user's profile
