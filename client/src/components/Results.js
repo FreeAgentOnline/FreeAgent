@@ -18,6 +18,7 @@ class Results extends Component {
   }
   render() {
     let data = this.props.data;
+    // Create an object with properties containing event keys and array values with result objects
     let eventsObj = {};
     data.forEach(one => {
       if (eventsObj[one.event]) {
@@ -26,12 +27,15 @@ class Results extends Component {
         eventsObj[one.event] = [one];
       }
     });
+    // This will become the result links in the card header
     let linkRender = [];
+    // Push a generic "view all" button
     linkRender.push(
       <li className="nav-item">
         <span className="nav-link" onClick={this.changeFilter}>All</span>
       </li>
     )
+    // Iterate through object to create buttons for each result event category
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
         linkRender.push(
@@ -42,7 +46,7 @@ class Results extends Component {
 
       }
     }
-
+    // Change this to prevent results from rendering if none saved
     let resultRender = [<div>No results saved</div>];
     if (data.length > 0) {
       if (this.props.filter === 'All') {
@@ -61,7 +65,7 @@ class Results extends Component {
     }
 
     return (
-      <div className="card">
+      <div className="card mb-3">
         <div className="card-header">
           <ul className="nav nav-tabs card-header-tabs">
             {linkRender}
@@ -69,7 +73,7 @@ class Results extends Component {
         </div>
         <div className="card-body p-3">
         <h4 className="text-center">{this.props.filter}</h4>
-        <ResultGraph data={data}/>
+        <ResultGraph />
           <div className="">
             <div className="row font-weight-bold p-2">
               <div className="col">Event</div>

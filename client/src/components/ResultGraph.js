@@ -5,39 +5,34 @@ import { setFilter } from '../actions';
 import Chart from 'chart.js';
 
 class ResultGraph extends Component {
-  componentDidMount() {
-    let data = this.props.data.filter(one => one.event === this.props.filter);
-
-    console.log('data after filter', data);
-
-    let labelsArr = [];
-    let dataArr = [];
-    data.forEach(one => {
-      labelsArr.push(one.date);
-      dataArr.push(one.reference)
-    });
-
-    let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
-    let ctx = canvas.getContext('2d');
-    let myLineChart = new Chart(ctx, {
-      type: 'line',
-      data: {
-        labels: labelsArr,
-        datasets: [{
-          label: 'Disance (m)',
-          data: dataArr
-        }],
-        backgroundColor: 'red'
-      },
-      options: {}
-    });
-  }
   render() {
-    let data = this.props.data.filter(one => one.measurement === this.props.filter);
+    setTimeout(() => {
+      let data = this.props.results.filter(one => one.event === this.props.filter);
 
-    console.log('data after filter', data);
+      let labelsArr = [];
+      let dataArr = [];
+      let key = 'None';
+      data.forEach(one => {
+        labelsArr.push(one.date);
+        dataArr.push(one.performance)
+        key = one.measurement.slice(0, 1).toUpperCase() + one.measurement.slice(1) + ' (' + one.unit + ')';
+      });
 
-    console.log('props on Graph', this.props);
+      let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
+      let ctx = canvas.getContext('2d');
+      let myLineChart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: labelsArr,
+          datasets: [{
+            label: key,
+            data: dataArr
+          }],
+          backgroundColor: 'red'
+        },
+        options: {}
+      });
+    }, 0)
     return (
       <div id="canvasContainer" className="">
         <canvas width="400" height="100" ref="myCanvas" />
@@ -48,7 +43,8 @@ class ResultGraph extends Component {
 
 function mapStateToProps(state) {
   return {
-    filter: state.filter
+    filter: state.filter,
+    results: state.results
   }
 }
 
