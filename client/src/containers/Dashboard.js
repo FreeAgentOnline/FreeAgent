@@ -25,30 +25,30 @@ class Dashboard extends Component {
           <Link to="/settings" className="btn btn-secondary">Settings</Link>
         </p>
         <div id="dashBoxContainer" className="">
-          <div id="dashBasic" className="dashBox">
+          <Link to="/dashboard/info" id="dashBasic" className="dashBox">
             <div className="">
-              <h2 className="">Basic Information</h2>
+              <h2 className="">Basic Info</h2>
               <p className="">Update your name, tagline, bio, and location</p>
             </div>
+          </Link>
+          <Link to="/dashboard/result" id="dashResults" className="dashBox">
+          <div className="">
+          <h2 className="">Results</h2>
+          <p className="">Track your results and display them on your profile</p>
           </div>
-          <div id="dashTeam" className="dashBox">
+          </Link>
+          <Link to="/dashboard/team" id="dashTeam" className="dashBox">
             <div className="">
               <h2 className="">Team history</h2>
               <p className="">Update and add to your team history</p>
             </div>
-          </div>
-          <div id="dashResults" className="dashBox">
-            <div className="">
-              <h2 className="">Log results</h2>
-              <p className="">Track your results and display them on your profile</p>
-            </div>
-          </div>
-          <div id="dashSettings" className="dashBox">
+          </Link>
+          <Link to="/dashboard/settings" id="dashSettings" className="dashBox">
             <div className="">
               <h2 className="">Settings</h2>
-              <p className="">Update email address, reset password, and privacy settings</p>
+              <p className="">Update email, reset password, and privacy settings</p>
             </div>
-          </div>
+          </Link>
         </div>
         {/*<h4>Scheduled events</h4>*/}
         {/* Render Saved Meets */}

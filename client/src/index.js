@@ -63,7 +63,6 @@ ReactDOM.render(
           <Route path="/dashboard/result" component={Settings} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/:username" component={Profile} />
-
         </Switch>
       </BaseLayout>
     </BrowserRouter>

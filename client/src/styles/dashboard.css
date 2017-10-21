@@ -14,19 +14,27 @@
   flex-basis: 25%;
   min-height: 400px;
 }
+.dashBox:hover {
+  text-decoration: none !important;
+}
 .dashBox > div {
   background: rgba(0, 0, 0, 0.65);
   color: white;
   padding: 10px;
+  transition: background 0.2s ease-in-out;
+}
+.dashBox:hover > div {
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
 }
 #dashBasic {
   background-image: url('../images/relay_action.jpg');
 }
-#dashTeam {
-  background-image: url('../images/swimming.jpg');
-}
 #dashResults {
   background-image: url('../images/high_jump.jpg');
+}
+#dashTeam {
+  background-image: url('../images/swimming.jpg');
 }
 #dashSettings {
   background-image: url('../images/hurdles.jpg');
