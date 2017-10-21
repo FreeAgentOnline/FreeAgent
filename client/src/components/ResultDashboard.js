@@ -45,7 +45,6 @@ class ResultDashboard extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state on ResultsDash', state);
   return {
     results: state.results
   }
