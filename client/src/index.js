@@ -22,11 +22,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
-<<<<<<< HEAD
-import Profile from './components/Profile';
 import ViewMeet from './components/ViewMeet';
-=======
->>>>>>> e785090862f03dd6d3b6bde55dd13637a06a472f
+
 
 // Import data
 // import meets from './data/meets'
@@ -63,9 +60,9 @@ ReactDOM.render(
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/settings" component={Settings} />
+          <Route path="/meet/:meetId" component={ViewMeet} />
           <Route path="/:username" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
-          <Route path="/meet/:meetId" component={ViewMeet} />
 
         </Switch>
       </BaseLayout>
