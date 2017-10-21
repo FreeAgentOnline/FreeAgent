@@ -57,8 +57,11 @@ ReactDOM.render(
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
+          <Route path="/dashboard/settings" component={Settings} />
+          <Route path="/dashboard/info" component={Settings} />
+          <Route path="/dashboard/team" component={Settings} />
+          <Route path="/dashboard/result" component={Settings} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/settings" component={Settings} />
           <Route path="/:username" component={Profile} />
 
         </Switch>
