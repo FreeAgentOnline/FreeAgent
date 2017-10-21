@@ -10,20 +10,21 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import reduxThunk from 'redux-thunk';
 import reducers from './reducers';
 
+// Import containers
+import Settings from './containers/Settings';
+import Profile from './containers/Profile';
+import Dashboard from './containers/Dashboard';
+
 // Import components
 import BaseLayout from './components/BaseLayout';
 import Search from './components/Search'
 import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
-import Dashboard from './components/Dashboard';
 import AdminDashboard from './components/AdminDashboard';
-import Profile from './components/Profile';
 
 // Import data
-import meets from './data/meets'
-
-// Import containers
+// import meets from './data/meets'
 
 // Create store for redux and apply middleware
 // Check for Chrome before including Redux DevTools extension
@@ -56,7 +57,8 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/profile" component={Profile} />
+          <Route path="/settings" component={Settings} />
+          <Route path="/:username" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
 
         </Switch>

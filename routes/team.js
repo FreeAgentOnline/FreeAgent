@@ -16,12 +16,12 @@ module.exports = function(app) {
   // *************************************
 
   // Create team for given user
-  router.post('/team/user/:userId', (req, res) => {
+  router.post('/team/user/:username', (req, res) => {
     // if (req.body.events) {
     //   let eventsArr = req.body.events.split(', ');
     // }
     Team.create({
-      userId: req.params.userId,
+      username: req.params.username,
       name: req.body.name,
       location: req.body.location,
       year_start: req.body.year_start,
@@ -48,8 +48,8 @@ module.exports = function(app) {
     .catch(err => res.status(500). send(err))
   })
   // Get all teams for given user
-  router.get('/team/user/:userId', (req, res) => {
-    Team.find({ userId: req.params.userId })
+  router.get('/team/user/:username', (req, res) => {
+    Team.find({ username: req.params.username })
     .then(data => res.status(200).send(data))
     .catch(err => res.status(400).send(err))
   })
