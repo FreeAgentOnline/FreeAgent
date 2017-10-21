@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import meets from '../data/meets';
+// import meets from '../data/meets';
 import * as moment from 'moment';
+import { connect } from 'react-redux';
 
-export default class ViewMeet extends Component {
+class ViewMeet extends Component {
 
     constructor(props){
         super(props)
@@ -46,11 +47,18 @@ export default class ViewMeet extends Component {
 
                       </blockquote>
                     </div>
+            </div>
         )
     }
 }
 
 
-function mapStateToProps(){
-
+function mapStateToProps(state) {
+  console.log('state on Search', state);
+  return {
+    meets: state.meets
+  }
 }
+
+
+export default connect(mapStateToProps)(ViewMeet);

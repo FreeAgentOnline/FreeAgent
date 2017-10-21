@@ -4,7 +4,6 @@
     2. Store result information on public user profile
     3. Set search query that can be accessed by multiple components
     4. Store fetched events for future filtering
-    5. Display meet information for individual meet
 
 */
 

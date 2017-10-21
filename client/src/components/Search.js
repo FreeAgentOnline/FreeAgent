@@ -12,7 +12,7 @@ class Search extends Component {
 
         this.state = {
             query: this.props.query,
-            data: []
+            meets: []
 
         }
         console.log("this.state before fetch: ", this.state);
@@ -20,6 +20,7 @@ class Search extends Component {
 
     handleQuery = e => {
         this.setState({ query : e.target.value})
+        this.props.storeMeets(this.state.meets)
     }
 
     handleSearch = e => {
@@ -31,7 +32,7 @@ class Search extends Component {
       .then(res => res.json())
       .then(data => {
           // Return fetched data
-          this.setState({ data: data });
+          this.setState({ meets: data });
           console.log("state after fetch: ", this.state);
 
           // return data
@@ -53,7 +54,7 @@ class Search extends Component {
     //   console.log('state on search', this.state);
 
 
-    let filteredMeets = this.state.data.map((meet, index)=>{
+    let filteredMeets = this.state.meets.map((meet, index)=>{
         let viewMeetLink = "/meet/" + meet._id;
         return(
             <tr key= {index}>
@@ -114,6 +115,10 @@ function mapStateToProps(state) {
   }
 }
 
+function mapDispatchToProps(dispatch) {
+  return bindActionCreators({
+    storeMeets
+  }, dispatch)
+}
 
-
-export default connect(mapStateToProps)(Search);
+export default connect(mapStateToProps, mapDispatchToProps)(Search);
