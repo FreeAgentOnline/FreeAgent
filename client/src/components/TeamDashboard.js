@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { fetchUserTeams } from '../actions';
+
 import user from '../data/user';
 
 import BackToDashboard from './BackToDashboard';
@@ -9,19 +12,19 @@ class TeamDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user,
-      teams: []
+      user
     }
   }
   // Fetch teams for user
   componentDidMount() {
-    fetch(`/api/team/user/${this.state.user.username}`)
-    .then(res => res.json())
-    .then(data => {
-      // Update state with fetched data
-      this.setState({ teams: data });
-    })
-    .catch(err => console.log(err))
+    this.props.fetchUserTeams(this.state.user.username);
+    // fetch(`/api/team/user/${this.state.user.username}`)
+    // .then(res => res.json())
+    // .then(data => {
+    //   // Update state with fetched data
+    //   this.setState({ teams: data });
+    // })
+    // .catch(err => console.log(err))
   }
 
   render() {
@@ -55,4 +58,16 @@ class TeamDashboard extends Component {
   }
 }
 
-export default TeamDashboard;
+function mapStateToProps(state) {
+  return {
+    teams: state.teams
+  }
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    fetchUserTeams: (username) => dispatch(fetchUserTeams(username))
+  };
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TeamDashboard);
