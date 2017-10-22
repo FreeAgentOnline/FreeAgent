@@ -23,6 +23,8 @@ import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
 import ResultDashboard from './components/ResultDashboard';
+import ProfileDashboard from './components/ProfileDashboard';
+import TeamDashboard from './components/TeamDashboard';
 
 // Import data
 // import meets from './data/meets'
@@ -59,8 +61,8 @@ ReactDOM.render(
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
           <Route path="/dashboard/settings" component={Settings} />
-          <Route path="/dashboard/info" component={Settings} />
-          <Route path="/dashboard/team" component={Settings} />
+          <Route path="/dashboard/info" component={ProfileDashboard} />
+          <Route path="/dashboard/team" component={TeamDashboard} />
           <Route path="/dashboard/result" component={ResultDashboard} />
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/:username" component={Profile} />

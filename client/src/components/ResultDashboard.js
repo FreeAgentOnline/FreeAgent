@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import { fetchUserResults } from '../actions';
 
 import user from '../data/user';
 
+import BackToDashboard from './BackToDashboard';
 import ResultEdit from './ResultEdit';
 import ResultNew from './ResultNew';
 
@@ -29,7 +29,7 @@ class ResultDashboard extends Component {
     })
     return (
       <div className="container my-3">
-        <Link to="/dashboard" className="">&lt; Back to dashboard</Link>
+        <BackToDashboard />
         <h1>Results</h1>
         <p>Results are records of your performances that are displayed on your public profile.</p>
         <div className="card">

@@ -2,7 +2,10 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import user from '../data/user';
 
-class ProfileEdit extends Component {
+// Import components
+import BackToDashboard from './BackToDashboard';
+
+class ProfileDashboard extends Component {
   constructor(props) {
     super(props);
 
@@ -40,8 +43,9 @@ class ProfileEdit extends Component {
 
   render() {
     return (
-      <div className="">
-        <h4>Basic information</h4>
+      <div className="container my-3">
+        <BackToDashboard />
+        <h2>Basic information</h2>
         <div className="form-group">
           <div className="d-flex">
             <label className="mr-2">Full name</label>
@@ -76,4 +80,4 @@ class ProfileEdit extends Component {
   }
 }
 
-export default ProfileEdit;
+export default ProfileDashboard;

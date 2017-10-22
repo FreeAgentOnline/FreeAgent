@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import user from '../data/user';
 
+import BackToDashboard from './BackToDashboard';
 import TeamEdit from './TeamEdit';
 import TeamNew from './TeamNew';
 
-class TeamSettings extends Component {
+class TeamDashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -30,8 +31,9 @@ class TeamSettings extends Component {
       )
     })
     return (
-      <div className="">
-        <h4>Team history</h4>
+      <div className="container py-3">
+        <BackToDashboard />
+        <h2>Team history</h2>
         <table className="table table-sm">
           <thead>
             <tr>
@@ -53,4 +55,4 @@ class TeamSettings extends Component {
   }
 }
 
-export default TeamSettings;
+export default TeamDashboard;
