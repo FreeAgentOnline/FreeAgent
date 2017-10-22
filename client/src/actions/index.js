@@ -12,6 +12,7 @@ export const DISPLAY_RESULTS = 'DISPLAY_RESULTS';
 export const SAVE_QUERY = 'SAVE_QUERY';
 export const STORE_MEETS = 'STORE_MEETS';
 export const SET_FILTER = 'SET_FILTER';
+export const SET_TEAMS = 'SET_TEAMS';
 
 export function setUser(payload) {
   return {
@@ -124,5 +125,34 @@ export function storeMeets(payload) {
   return {
     type: STORE_MEETS,
     payload
+  }
+}
+
+//**********************************
+//  TEAM HISTORY
+//**********************************
+
+export function setTeams(payload) {
+  return {
+    type: SET_TEAMS,
+    payload
+  }
+}
+
+export function fetchUserTeams(username) {
+  return (dispatch, getState) => {
+    let options = {
+      method: "GET",
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    fetch(`/api/result/team/${username}`, options)
+    .then(res => res.json())
+    .then(data => {
+      return dispatch(setTeams(data));
+    })
+    // Consider throwing errors
+    .catch(err => console.log(err))
   }
 }

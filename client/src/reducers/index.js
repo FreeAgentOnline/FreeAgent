@@ -1,4 +1,4 @@
-import { SET_USER, SET_RESULTS, SET_FILTER, DISPLAY_RESULTS, SAVE_QUERY, STORE_MEETS } from '../actions';
+import { SET_USER, SET_RESULTS, SET_FILTER, SET_TEAMS, DISPLAY_RESULTS, SAVE_QUERY, STORE_MEETS } from '../actions';
 import update from 'immutability-helper';
 
 const initialState = {
@@ -6,6 +6,7 @@ const initialState = {
   user: '',
   results: [],
   meets: [],
+  teams: [],
   filter: 'All'
 }
 
@@ -26,6 +27,12 @@ const reducer = (state = initialState, action) => {
     case SET_RESULTS:
       return update(state, {
         results: {
+          $set: action.payload
+        }
+      })
+    case SET_TEAMS:
+      return update(state, {
+        teams: {
           $set: action.payload
         }
       })
