@@ -18,17 +18,10 @@ class TeamDashboard extends Component {
   // Fetch teams for user
   componentDidMount() {
     this.props.fetchUserTeams(this.state.user.username);
-    // fetch(`/api/team/user/${this.state.user.username}`)
-    // .then(res => res.json())
-    // .then(data => {
-    //   // Update state with fetched data
-    //   this.setState({ teams: data });
-    // })
-    // .catch(err => console.log(err))
   }
 
   render() {
-    let teamsRender = this.state.teams.map((one, i) => {
+    let teamsRender = this.props.teams.map((one, i) => {
       return (
         <TeamEdit key={i} data={one} user={this.state.user} />
       )

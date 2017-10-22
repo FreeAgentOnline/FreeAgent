@@ -147,10 +147,63 @@ export function fetchUserTeams(username) {
         "Content-Type": "application/json"
       }
     }
-    fetch(`/api/result/team/${username}`, options)
+    fetch(`/api/team/user/${username}`, options)
     .then(res => res.json())
     .then(data => {
       return dispatch(setTeams(data));
+    })
+    // Consider throwing errors
+    .catch(err => console.log(err))
+  }
+}
+
+export function createTeam(username, formBody) {
+  return (dispatch, getState) => {
+    let options = {
+      method: "POST",
+      body: JSON.stringify(formBody),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    fetch(`/api/team/user/${username}`, options)
+    .then(res => res.json())
+    .then(data => {
+      return dispatch(fetchUserTeams(username));
+    })
+    // Consider throwing errors
+    .catch(err => console.log(err))
+  }
+}
+
+export function updateTeam(teamId, formBody, username) {
+  return (dispatch, getState) => {
+    let options = {
+      method: "PATCH",
+      body: JSON.stringify(formBody),
+      headers: {
+        "Content-Type": "application/json"
+      }
+    }
+    fetch(`/api/team/${teamId}`, options)
+    .then(res => res.json())
+    .then(data => {
+      return dispatch(fetchUserTeams(username));
+    })
+    // Consider throwing errors
+    .catch(err => console.log(err))
+  }
+}
+
+export function deleteTeam(teamId, username) {
+  return (dispatch, getState) => {
+    let options = {
+      method: "DELETE"
+    }
+    fetch(`/api/team/${teamId}`, options)
+    .then(res => res.json())
+    .then(data => {
+      return dispatch(fetchUserTeams(username));
     })
     // Consider throwing errors
     .catch(err => console.log(err))

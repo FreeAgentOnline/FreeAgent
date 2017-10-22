@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { updateTeam, deleteTeam } from '../actions';
+
 
 class TeamEdit extends Component {
   constructor(props) {
@@ -27,33 +30,10 @@ class TeamEdit extends Component {
       year_end: this.state.year_end,
       location: this.state.location
     }
-    fetch(`/api/team/${this.props.data._id}`, {
-      method: 'PATCH',
-      body: JSON.stringify(formBody),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(data => {
-      alert('Team updated')
-    })
-    .catch(err => console.log(err))
+    this.props.updateTeam(this.props.data._id, formBody, this.props.user.username);
   }
   handleDelete = e => {
-    fetch(`/api/team/${this.props.data._id}`, {
-      method: 'DELETE'
-    })
-    .then(data => {
-      console.log(data)
-      this.setState({
-        year_start: '',
-        year_end: '',
-        description: '',
-        name: '',
-        location: ''
-      })
-    })
-    .catch(err => console.log(err))
+    this.props.deleteTeam(this.props.data._id, this.props.user.username);
   }
 
   render() {
@@ -75,12 +55,23 @@ class TeamEdit extends Component {
           <textarea className="" name="description" aria-describedby="descriptionHelp" value={this.state.description} onChange={this.handleDescription}></textarea>
         </td>
         <td>
-          <button className="btn btn-sm btn-outline-success" onClick={this.handleUpdate}>Update</button>
-          <button className="btn btn-sm btn-outline-danger" onClick={this.handleDelete}>Delete</button>
+          <button className="btn btn-sm btn-outline-success" onClick={() => this.handleUpdate()}>Update</button>
+          <button className="btn btn-sm btn-outline-danger" onClick={() => this.handleDelete()}>Delete</button>
         </td>
       </tr>
     );
   }
 }
 
-export default TeamEdit;
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    updateTeam: (teamId, formBody, username) => dispatch(updateTeam(teamId, formBody, username)),
+    deleteTeam: (teamId, username) => dispatch(deleteTeam(teamId, username))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TeamEdit);

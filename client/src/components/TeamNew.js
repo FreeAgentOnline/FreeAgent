@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import { connect } from 'react-redux';
+import { createTeam } from '../actions';
+
 import user from '../data/user';
 
 class TeamNew extends Component {
@@ -31,24 +33,14 @@ class TeamNew extends Component {
       year_end: this.state.year_end,
       location: this.state.location
     }
-    fetch(`/api/team/user/${this.state.user.username}`, {
-      method: 'POST',
-      body: JSON.stringify(formBody),
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    })
-    .then(data => {
-      alert('Team added')
-      this.setState({
-        year_start: '',
-        year_end: '',
-        description: '',
-        name: '',
-        location: ''
-      })
-    })
-    .catch(err => console.log(err))
+    this.props.createTeam(this.state.user.username, formBody);
+    this.setState({
+      year_start: '',
+      year_end: '',
+      description: '',
+      name: '',
+      location: ''
+    });
   }
 
   render() {
@@ -85,10 +77,20 @@ class TeamNew extends Component {
           <label className="mr-2" htmlFor="description">Description</label>
           <textarea className="form-control" name="description" aria-describedby="descriptionHelp" value={this.state.description} onChange={this.handleDescription}></textarea>
         </div>
-        <button className="btn btn-primary" onClick={this.handleAdd}>Add</button>
+        <button className="btn btn-primary" onClick={() => this.handleAdd()}>Add</button>
       </div>
     );
   }
 }
 
-export default TeamNew;
+function mapStateToProps(state) {
+  return {};
+}
+
+function mapDispatchToProps(dispatch) {
+  return {
+    createTeam: (username, formBody) => dispatch(createTeam(username, formBody))
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(TeamNew);
