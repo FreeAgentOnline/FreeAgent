@@ -2,10 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import user from '../data/user';
 
-
 import '../styles/dashboard.css';
-
-import ResultDashboard from '../components/ResultDashboard';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -18,8 +15,8 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h2>Dashboard</h2>
+      <div className="container mt-3">
+        <h2>Welcome back, {this.state.user.first_name}</h2>
         <p>
           <Link to={`/${this.state.user.username}`} className="btn btn-secondary mr-2">Profile</Link>
           <Link to="/settings" className="btn btn-secondary">Settings</Link>
@@ -53,7 +50,6 @@ class Dashboard extends Component {
         {/*<h4>Scheduled events</h4>*/}
         {/* Render Saved Meets */}
         {/*<h4>Starred events</h4>*/}
-        <ResultDashboard />
       </div>
     );
   }

@@ -12,7 +12,7 @@
   background-size: cover;
   display: flex;
   flex-basis: 25%;
-  min-height: 400px;
+  min-height: 600px;
 }
 .dashBox:hover {
   text-decoration: none !important;
@@ -35,6 +35,7 @@
 }
 #dashTeam {
   background-image: url('../images/swimming.jpg');
+  /*background-position: right;*/
 }
 #dashSettings {
   background-image: url('../images/hurdles.jpg');

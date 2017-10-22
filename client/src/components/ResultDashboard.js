@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 // import { bindActionCreators } from 'redux';
 import { fetchUserResults } from '../actions';
@@ -23,22 +24,31 @@ class ResultDashboard extends Component {
   render() {
     let resultsRender = this.props.results.map((one, i) => {
       return (
-        <li key={i} className="list-group-item">
-          <ResultEdit data={one} user={this.state.user} />
-        </li>
+        <ResultEdit data={one} user={this.state.user} />
       )
     })
     return (
-      <div className="card">
-        <ul className="list-group list-group-flush">
-          <li className="list-group-item">
-            <h4>Results</h4>
-          </li>
-          {resultsRender}
-          <li className="list-group-item">
+      <div className="container my-3">
+        <Link to="/dashboard" className="">&lt; Back to dashboard</Link>
+        <h1>Results</h1>
+        <p>Results are records of your performances that are displayed on your public profile.</p>
+        <div className="card">
+          <h2 className="card-header">Create a new result</h2>
+          <div className="card-body m-3">
             <ResultNew />
-          </li>
-        </ul>
+          </div>
+        </div>
+        <h2>Saved results</h2>
+        <p>To update any of these events, edit the desired field and click <span className="btn btn-outline-success btn-sm">Update</span> at the end of the row.</p>
+        <div className="row font-weight-bold">
+          <div className="col-2">Event</div>
+          <div className="col-2">Date</div>
+          <div className="col-2">Location</div>
+          <div className="col-2">Performance</div>
+          <div className="col-2">Reference</div>
+          <div className="col-2">Edit</div>
+        </div>
+        {resultsRender}
       </div>
     );
   }
