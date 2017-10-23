@@ -1,4 +1,4 @@
-let meets = [
+
     {
         "name" : "Atlas Field Series",
         "date_start" : "2017-10-28T04:00:00.000Z",
@@ -10,7 +10,7 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 29.884944,
         "lng" : -97.67
-    },
+    }
     {
         "name" : "iRun4Good",
         "date_start" : "2017-10-28T04:00:00.000Z",
@@ -22,7 +22,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 33.352826,
         "lng" : -111.789027
-    },
+    }
+
     {
         "name" : "Throw For The Road 2017 Series",
         "date_start" : "2017-10-28T04:00:00.000Z",
@@ -34,7 +35,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 31.808768,
         "lng" : -85.969951
-    },
+    }
+
     {
         "name" : "Trick or Treat Run London",
         "date_start" : "2017-10-28T04:00:00.000Z",
@@ -46,7 +48,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 51.507351,
         "lng" : -0.127758
-    },
+    }
+
     {
         "name" : "ATB Churchyard Pole Vault Meet #6",
         "date_start" : "2017-10-28T04:00:00.000Z",
@@ -58,7 +61,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.014986,
         "lng" : -105.270546
-    },
+    }
+
     {
         "name" : "2017 USATF-FL 3000m/1500m RW",
         "date_start" : "2017-10-29T04:00:00.000Z",
@@ -70,7 +74,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 26.127586,
         "lng" : -80.233104
-    },
+    }
+
     {
         "name" : "Texas Throwers Winter Series",
         "date_start" : "2018-02-10T05:00:00.000Z",
@@ -82,7 +87,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 29.884944,
         "lng" : -97.67
-    },
+    }
+
     {
         "name" : "Draycote Water Winter 10K Series - Race 5",
         "date_start" : "2018-02-11T05:00:00.000Z",
@@ -94,7 +100,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 48.368888,
         "lng" : -99.996246
-    },
+    }
+
     {
         "name" : "USATF Indoor Championships",
         "date_start" : "2018-02-16T05:00:00.000Z",
@@ -106,7 +113,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 35.085334,
         "lng" : -106.605553
-    },
+    }
+
     {
         "name" : "2018 USATF Minnesota All Ages Indoor Track & Field Meet #5",
         "date_start" : "2018-02-18T05:00:00.000Z",
@@ -118,7 +126,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 44.953703,
         "lng" : -93.089958
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series",
         "date_start" : "2018-02-23T05:00:00.000Z",
@@ -130,7 +139,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "Sculptor Charter Schools A Max Brewer Bridge 5K GLOW Run",
         "date_start" : "2018-02-24T05:00:00.000Z",
@@ -142,7 +152,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 28.612219,
         "lng" : -80.807554
-    },
+    }
+
     {
         "name" : "NYRR Night at the Races 4",
         "date_start" : "2018-03-01T05:00:00.000Z",
@@ -154,7 +165,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series Finale",
         "date_start" : "2018-03-02T05:00:00.000Z",
@@ -166,7 +178,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "Take Stock 5K/10K Run",
         "date_start" : "2018-03-04T05:00:00.000Z",
@@ -178,7 +191,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 27.498928,
         "lng" : -82.574819
-    },
+    }
+
     {
         "name" : "Cancer Research UK Manchester Winter Run",
         "date_start" : "2018-03-11T05:00:00.000Z",
@@ -190,7 +204,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 53.480759,
         "lng" : -2.242631
-    },
+    }
+
     {
         "name" : "Draycote Water Winter 10K Series - Race 6",
         "date_start" : "2018-03-11T05:00:00.000Z",
@@ -202,7 +217,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 48.368888,
         "lng" : -99.996246
-    },
+    }
+
     {
         "name" : "8th Annual Trailblazer Invitational",
         "date_start" : "2018-03-24T04:00:00.000Z",
@@ -214,7 +230,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 27.950575,
         "lng" : -82.457178
-    },
+    }
+
     {
         "name" : "Delaware Classic",
         "date_start" : "2018-03-24T04:00:00.000Z",
@@ -226,7 +243,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.689531,
         "lng" : -74.174462
-    },
+    }
+
     {
         "name" : "Mornington Chasers Regents Park 10k Series",
         "date_start" : "2018-04-02T04:00:00.000Z",
@@ -238,7 +256,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 51.507351,
         "lng" : -0.127758
-    },
+    }
+
     {
         "name" : "Claremont Classic",
         "date_start" : "2018-04-08T04:00:00.000Z",
@@ -250,7 +269,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 34.096676,
         "lng" : -117.719779
-    },
+    }
+
     {
         "name" : "American Masters Track & Field Championship",
         "date_start" : "2018-04-14T04:00:00.000Z",
@@ -262,7 +282,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 35.994033,
         "lng" : -78.898619
-    },
+    }
+
     {
         "name" : "Brighton Marathon - Kent, Surrey and Sussex Air Ambulance",
         "date_start" : "2018-04-15T04:00:00.000Z",
@@ -274,7 +295,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 43.122272,
         "lng" : -77.573405
-    },
+    }
+
     {
         "name" : "UAlbany Spring Classic",
         "date_start" : "2018-04-19T04:00:00.000Z",
@@ -286,7 +308,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 42.652579,
         "lng" : -73.756232
-    },
+    }
+
     {
         "name" : "UD Open",
         "date_start" : "2018-04-29T04:00:00.000Z",
@@ -298,7 +321,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.689531,
         "lng" : -74.174462
-    },
+    }
+
     {
         "name" : "Dawn 2 Dusk 2 Dawn Track Ultras",
         "date_start" : "2018-05-12T04:00:00.000Z",
@@ -310,7 +334,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 39.906502,
         "lng" : -75.271573
-    },
+    }
+
     {
         "name" : "Ryan Gilmartin",
         "date_start" : "2018-05-20T04:00:00.000Z",
@@ -322,7 +347,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 41.899474,
         "lng" : -87.940342
-    },
+    }
+
     {
         "name" : "Alabama Association Alumni Indoor Track Meet",
         "date_start" : "2017-12-30T05:00:00.000Z",
@@ -334,7 +360,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 52.486243,
         "lng" : -1.890401
-    },
+    }
+
     {
         "name" : "Expo PV Explosions IX",
         "date_start" : "2017-12-30T05:00:00.000Z",
@@ -346,7 +373,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 31.056013,
         "lng" : -97.464453
-    },
+    }
+
     {
         "name" : "NYRR Armory Open Sprint Night",
         "date_start" : "2017-12-30T05:00:00.000Z",
@@ -358,7 +386,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 43.16103,
         "lng" : -77.610922
-    },
+    }
+
     {
         "name" : "Upstate NY Holiday Classic",
         "date_start" : "2017-12-30T05:00:00.000Z",
@@ -370,7 +399,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 43.16103,
         "lng" : -77.6109219
-    },
+    }
+
     {
         "name" : "USATF Indoor 5,000m Race Walk Championships",
         "date_start" : "2017-12-30T05:00:00.000Z",
@@ -382,7 +412,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 43.16103,
         "lng" : -77.6109219
-    },
+    }
+
     {
         "name" : "2017 Bell Athletics Pole Vault Series",
         "date_start" : "2017-12-31T05:00:00.000Z",
@@ -394,7 +425,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 35.842297,
         "lng" : -90.704279
-    },
+    }
+
     {
         "name" : "Throw For The Road 2017 Series",
         "date_start" : "2017-12-31T05:00:00.000Z",
@@ -406,7 +438,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 31.808768,
         "lng" : -85.969951
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series",
         "date_start" : "2018-01-05T05:00:00.000Z",
@@ -418,7 +451,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "2018 USATF Minnesota All Ages Indoor Track & Field Meet #2",
         "date_start" : "2018-01-07T05:00:00.000Z",
@@ -430,7 +464,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 44.953703,
         "lng" : -93.089958
-    },
+    }
+
     {
         "name" : "Mornington Chasers Regents Park 10k Series",
         "date_start" : "2018-01-07T05:00:00.000Z",
@@ -442,7 +477,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 51.507351,
         "lng" : -0.127758
-    },
+    }
+
     {
         "name" : "NYRR Night at the Races 2",
         "date_start" : "2018-01-11T05:00:00.000Z",
@@ -454,7 +490,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "Great Dane Classic",
         "date_start" : "2018-01-13T05:00:00.000Z",
@@ -466,7 +503,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.579532,
         "lng" : -74.150201
-    },
+    }
+
     {
         "name" : "Thin Mint",
         "date_start" : "2018-01-13T05:00:00.000Z",
@@ -478,7 +516,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 35.373292,
         "lng" : -119.018712
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series",
         "date_start" : "2018-01-19T05:00:00.000Z",
@@ -490,7 +529,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series",
         "date_start" : "2018-01-19T05:00:00.000Z",
@@ -502,7 +542,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "New Balance Games",
         "date_start" : "2018-01-19T05:00:00.000Z",
@@ -514,7 +555,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "Pacific Association USATF 1 Mile Grand Prix",
         "date_start" : "2018-01-20T05:00:00.000Z",
@@ -526,7 +568,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 37.871899,
         "lng" : -122.25854
-    },
+    }
+
     {
         "name" : "2018 USATF Minnesota All Ages Indoor Track & Field Meet #3",
         "date_start" : "2018-01-21T05:00:00.000Z",
@@ -538,7 +581,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 44.953703,
         "lng" : -93.089958
-    },
+    }
+
     {
         "name" : "NYRR Night at the Races 3",
         "date_start" : "2018-01-25T05:00:00.000Z",
@@ -550,7 +594,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "18th Dr. Sanders Invitational/Columbia Challenge",
         "date_start" : "2018-01-26T05:00:00.000Z",
@@ -562,7 +607,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "STC Bil Butterworth Masters/Open USATF Missouri Valley Association Championships and Youth Indoor",
         "date_start" : "2018-01-27T05:00:00.000Z",
@@ -574,7 +620,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 37.687176,
         "lng" : -97.330053
-    },
+    }
+
     {
         "name" : "Texas Throwers Club Winter Series",
         "date_start" : "2018-01-27T05:00:00.000Z",
@@ -586,7 +633,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 29.884944,
         "lng" : -97.67
-    },
+    }
+
     {
         "name" : "DMV Indoor Winter Throws Series",
         "date_start" : "2018-02-02T05:00:00.000Z",
@@ -598,7 +646,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 38.934,
         "lng" : -76.89664
-    },
+    }
+
     {
         "name" : "NYRR Millrose Games",
         "date_start" : "2018-02-03T05:00:00.000Z",
@@ -610,7 +659,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "2018 USATF Minnesota All Ages Indoor Track & Field Meet #4",
         "date_start" : "2018-02-04T05:00:00.000Z",
@@ -622,7 +672,8 @@ let meets = [
         "url" : "directathletics.com",
         "lat" : 44.953703,
         "lng" : -93.089958
-    },
+    }
+
     {
         "name" : "TCS Amsterdam Marathon",
         "date_start" : "2017-10-15T04:00:00.000Z",
@@ -634,7 +685,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.370216,
         "lng" : 4.895168
-    },
+    }
+
     {
         "name" : "Rock 'n' Roll Lisbon Half Marathon Santander Totta RTP",
         "date_start" : "2017-10-15T04:00:00.000Z",
@@ -646,7 +698,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 38.722252,
         "lng" : -9.139337
-    },
+    }
+
     {
         "name" : "Rock 'n' Roll Lisbon Marathon EDP",
         "date_start" : "2017-10-15T04:00:00.000Z",
@@ -658,7 +711,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 38.722252,
         "lng" : -9.139337
-    },
+    }
+
     {
         "name" : "Scotiabank Toronto Waterfront Marathon",
         "date_start" : "2017-10-22T04:00:00.000Z",
@@ -670,7 +724,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.653226,
         "lng" : -79.383184
-    },
+    }
+
     {
         "name" : "Venice Marathon",
         "date_start" : "2017-10-22T04:00:00.000Z",
@@ -682,7 +737,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 45.440847,
         "lng" : 12.315515
-    },
+    }
+
     {
         "name" : "Medio Maratón Valencia Trinidad Alfonso EDP",
         "date_start" : "2017-10-22T04:00:00.000Z",
@@ -694,7 +750,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 28.521772,
         "lng" : -81.463458
-    },
+    }
+
     {
         "name" : "Marseille-Cassis 20KM",
         "date_start" : "2017-10-29T04:00:00.000Z",
@@ -706,7 +763,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.296482,
         "lng" : 5.36978
-    },
+    }
+
     {
         "name" : "Mainova Frankfurt Marathon",
         "date_start" : "2017-10-29T04:00:00.000Z",
@@ -718,7 +776,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 50.110922,
         "lng" : 8.682127
-    },
+    }
+
     {
         "name" : "Volkswagen Ljubljana Marathon",
         "date_start" : "2017-10-29T04:00:00.000Z",
@@ -730,7 +789,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 46.056947,
         "lng" : 14.505751
-    },
+    }
+
     {
         "name" : "Marathon des Alpes-Maritimes Nice-Cannes",
         "date_start" : "2017-11-05T04:00:00.000Z",
@@ -742,7 +802,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.710173,
         "lng" : 7.261953
-    },
+    }
+
     {
         "name" : "TCS New York CIty Marathon",
         "date_start" : "2017-11-05T04:00:00.000Z",
@@ -754,7 +815,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 40.7127753,
         "lng" : -74.0059728
-    },
+    }
+
     {
         "name" : "Hangzhou Marathon",
         "date_start" : "2017-11-05T04:00:00.000Z",
@@ -766,7 +828,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 30.274084,
         "lng" : 120.15507
-    },
+    }
+
     {
         "name" : "Saitama International Marathon",
         "date_start" : "2017-11-12T05:00:00.000Z",
@@ -778,7 +841,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 35.861729,
         "lng" : 139.645482
-    },
+    }
+
     {
         "name" : "BLOM BANK Beirut Marathon",
         "date_start" : "2017-11-12T05:00:00.000Z",
@@ -790,7 +854,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 33.893791,
         "lng" : 35.501777
-    },
+    }
+
     {
         "name" : "Shanghai International Marathon",
         "date_start" : "2017-11-12T05:00:00.000Z",
@@ -802,7 +867,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 31.23039,
         "lng" : 121.473702
-    },
+    }
+
     {
         "name" : "Vodafone Istanbul Marathon",
         "date_start" : "2017-11-12T05:00:00.000Z",
@@ -814,7 +880,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 41.008238,
         "lng" : 28.978359
-    },
+    }
+
     {
         "name" : "Cross de Atapuerca",
         "date_start" : "2017-11-12T05:00:00.000Z",
@@ -826,7 +893,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 42.343993,
         "lng" : -3.696906
-    },
+    }
+
     {
         "name" : "Semi-Marathon de Boulogne Billancourt Christian Granger",
         "date_start" : "2017-11-19T05:00:00.000Z",
@@ -838,7 +906,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 48.839695,
         "lng" : 2.239912
-    },
+    }
+
     {
         "name" : "Maratón Valencia Trinidad Alfonso EDP",
         "date_start" : "2017-11-19T05:00:00.000Z",
@@ -850,7 +919,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 28.521772,
         "lng" : -81.463458
-    },
+    }
+
     {
         "name" : "Airtel Delhi Half Marathon",
         "date_start" : "2017-11-19T05:00:00.000Z",
@@ -862,7 +932,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 28.613939,
         "lng" : 77.209021
-    },
+    }
+
     {
         "name" : "Firenze Marathon",
         "date_start" : "2017-11-26T05:00:00.000Z",
@@ -874,7 +945,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.76956,
         "lng" : 11.255814
-    },
+    }
+
     {
         "name" : "The 71st Fukuoka International Open Marathon Championships",
         "date_start" : "2017-12-03T05:00:00.000Z",
@@ -886,7 +958,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 33.590355,
         "lng" : 130.401716
-    },
+    }
+
     {
         "name" : "Marathon du Gabon",
         "date_start" : "2017-12-03T05:00:00.000Z",
@@ -898,7 +971,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 0.416198,
         "lng" : 9.467268
-    },
+    }
+
     {
         "name" : "Standard Chartered Singapore Marathon",
         "date_start" : "2017-12-03T05:00:00.000Z",
@@ -910,7 +984,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 1.352083,
         "lng" : 103.819836
-    },
+    }
+
     {
         "name" : "Guangzhou Marathon",
         "date_start" : "2017-12-10T05:00:00.000Z",
@@ -922,7 +997,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 23.12911,
         "lng" : 113.264385
-    },
+    }
+
     {
         "name" : "Shenzhen Marathon",
         "date_start" : "2017-12-17T05:00:00.000Z",
@@ -934,7 +1010,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 22.543096,
         "lng" : 114.057865
-    },
+    }
+
     {
         "name" : "San Silvestre Vallecana",
         "date_start" : "2017-12-31T05:00:00.000Z",
@@ -946,7 +1023,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 40.416775,
         "lng" : -3.70379
-    },
+    }
+
     {
         "name" : "IAAF Antrim International Cross Country",
         "date_start" : "2018-01-06T05:00:00.000Z",
@@ -958,7 +1036,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.030856,
         "lng" : -71.938919
-    },
+    }
+
     {
         "name" : "61° Campaccio-International Cross Country",
         "date_start" : "2018-01-06T05:00:00.000Z",
@@ -970,7 +1049,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 45.590063,
         "lng" : 8.903825
-    },
+    }
+
     {
         "name" : "Cross Internacional Juan Muguerza",
         "date_start" : "2018-01-14T05:00:00.000Z",
@@ -982,7 +1062,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.215711,
         "lng" : -2.41282
-    },
+    }
+
     {
         "name" : "Indoor Meeting - Karlsruhe",
         "date_start" : "2018-02-03T05:00:00.000Z",
@@ -994,7 +1075,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 49.00689,
         "lng" : 8.403653
-    },
+    }
+
     {
         "name" : "13. International PSD Bank Meeting Dusseldorf 2018",
         "date_start" : "2018-02-06T05:00:00.000Z",
@@ -1006,7 +1088,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 51.227741,
         "lng" : 6.773456
-    },
+    }
+
     {
         "name" : "Madrid Indoor Meeting",
         "date_start" : "2018-02-08T05:00:00.000Z",
@@ -1018,7 +1101,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 40.416775,
         "lng" : -3.70379
-    },
+    }
+
     {
         "name" : "New Balance Indoor Grand Prix",
         "date_start" : "2018-02-10T05:00:00.000Z",
@@ -1030,7 +1114,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 42.360083,
         "lng" : -71.05888
-    },
+    }
+
     {
         "name" : "Cinque Mulini",
         "date_start" : "2018-02-11T05:00:00.000Z",
@@ -1042,7 +1127,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 45.5861,
         "lng" : 8.942593
-    },
+    }
+
     {
         "name" : "Copernicus Cup",
         "date_start" : "2018-02-15T05:00:00.000Z",
@@ -1054,7 +1140,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 53.01379,
         "lng" : 18.598444
-    },
+    }
+
     {
         "name" : "Müller Indoor Grand Prix Glasgow",
         "date_start" : "2018-02-25T05:00:00.000Z",
@@ -1066,7 +1153,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 55.864237,
         "lng" : -4.251806
-    },
+    }
+
     {
         "name" : "IAAF World Indoor Championships",
         "date_start" : "2018-03-01T05:00:00.000Z",
@@ -1078,7 +1166,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.486243,
         "lng" : -1.890401
-    },
+    }
+
     {
         "name" : "IAAF World Half Marathon Championships Valencia 2018",
         "date_start" : "2018-03-24T04:00:00.000Z",
@@ -1090,7 +1179,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 28.521772,
         "lng" : -81.463458
-    },
+    }
+
     {
         "name" : "Commonwealth Games",
         "date_start" : "2018-04-15T04:00:00.000Z",
@@ -1102,7 +1192,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : -41.169162,
         "lng" : 146.354391
-    },
+    }
+
     {
         "name" : "31st Multistars - Trofeo Zerneri Acciai",
         "date_start" : "2018-04-28T04:00:00.000Z",
@@ -1114,7 +1205,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 43.76956,
         "lng" : 11.255814
-    },
+    }
+
     {
         "name" : "Doha Diamond League",
         "date_start" : "2018-05-04T04:00:00.000Z",
@@ -1126,7 +1218,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 25.285447,
         "lng" : 51.53104
-    },
+    }
+
     {
         "name" : "IAAF Diamond League Shanghai",
         "date_start" : "2018-05-12T04:00:00.000Z",
@@ -1138,7 +1231,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 31.23039,
         "lng" : 121.473702
-    },
+    }
+
     {
         "name" : "Jamaica International Invitational",
         "date_start" : "2018-05-19T04:00:00.000Z",
@@ -1150,7 +1244,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 18.0724068,
         "lng" : -76.7293739
-    },
+    }
+
     {
         "name" : "Golden Grand Prix 2018 Osaka",
         "date_start" : "2018-05-20T04:00:00.000Z",
@@ -1162,7 +1257,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 34.693738,
         "lng" : 135.502165
-    },
+    }
+
     {
         "name" : "Prefontaine Classic",
         "date_start" : "2018-05-26T04:00:00.000Z",
@@ -1174,7 +1270,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 44.052069,
         "lng" : -123.086754
-    },
+    }
+
     {
         "name" : "44th Hypo-Meeting",
         "date_start" : "2018-05-27T04:00:00.000Z",
@@ -1186,7 +1283,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 47.334287,
         "lng" : 9.645246
-    },
+    }
+
     {
         "name" : "Golden Gala Pietro Mennea",
         "date_start" : "2018-05-31T04:00:00.000Z",
@@ -1198,7 +1296,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 41.902784,
         "lng" : 12.496366
-    },
+    }
+
     {
         "name" : "FBK Games",
         "date_start" : "2018-06-03T04:00:00.000Z",
@@ -1210,7 +1309,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.257412,
         "lng" : 6.792772
-    },
+    }
+
     {
         "name" : "Paavo Nurmi Games",
         "date_start" : "2018-06-05T04:00:00.000Z",
@@ -1222,7 +1322,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 60.451813,
         "lng" : 22.26663
-    },
+    }
+
     {
         "name" : "Oslo Bislett Games",
         "date_start" : "2018-06-07T04:00:00.000Z",
@@ -1234,7 +1335,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 59.913869,
         "lng" : 10.752245
-    },
+    }
+
     {
         "name" : "Bauhaus-Galan",
         "date_start" : "2018-06-10T04:00:00.000Z",
@@ -1246,7 +1348,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 59.329323,
         "lng" : 18.068581
-    },
+    }
+
     {
         "name" : "57th Ostrava Golden Spike",
         "date_start" : "2018-06-13T04:00:00.000Z",
@@ -1258,7 +1361,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 49.820923,
         "lng" : 18.262524
-    },
+    }
+
     {
         "name" : "11th TNT Express Meeting",
         "date_start" : "2018-06-17T04:00:00.000Z",
@@ -1270,7 +1374,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 50.141699,
         "lng" : 14.106746
-    },
+    }
+
     {
         "name" : "22nd Stadtwerke Ratingen Mehrkampf-Meeting",
         "date_start" : "2018-06-17T04:00:00.000Z",
@@ -1282,7 +1387,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 51.296415,
         "lng" : 6.840184
-    },
+    }
+
     {
         "name" : "Meeting Madrid 2018",
         "date_start" : "2018-06-23T04:00:00.000Z",
@@ -1294,7 +1400,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 40.416775,
         "lng" : -3.70379
-    },
+    }
+
     {
         "name" : "Meeting de Paris",
         "date_start" : "2018-06-30T04:00:00.000Z",
@@ -1306,7 +1413,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 48.856614,
         "lng" : 2.352222
-    },
+    }
+
     {
         "name" : "Pan American Combined Events",
         "date_start" : "2018-07-04T04:00:00.000Z",
@@ -1318,7 +1426,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 45.42153,
         "lng" : -75.697193
-    },
+    }
+
     {
         "name" : "Athletissima",
         "date_start" : "2018-07-05T04:00:00.000Z",
@@ -1330,7 +1439,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 46.519654,
         "lng" : 6.632273
-    },
+    }
+
     {
         "name" : "Grande Premio Brasil de Atletismo",
         "date_start" : "2018-07-08T04:00:00.000Z",
@@ -1342,7 +1452,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : -22.95317,
         "lng" : -46.542324
-    },
+    }
+
     {
         "name" : "IAAF World U20 Championships Tampere 2018",
         "date_start" : "2018-07-15T04:00:00.000Z",
@@ -1354,7 +1465,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 61.497752,
         "lng" : 23.760954
-    },
+    }
+
     {
         "name" : "Meeting International Mohammed VI D'Athletisme de Rabat",
         "date_start" : "2018-07-13T04:00:00.000Z",
@@ -1366,7 +1478,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 33.97159,
         "lng" : -6.849813
-    },
+    }
+
     {
         "name" : "Herculis",
         "date_start" : "2018-07-20T04:00:00.000Z",
@@ -1378,7 +1491,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 38.017144,
         "lng" : -122.288581
-    },
+    }
+
     {
         "name" : "Müller Anniversary Games",
         "date_start" : "2018-07-28T04:00:00.000Z",
@@ -1390,7 +1504,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 55.864237,
         "lng" : -4.251806
-    },
+    }
+
     {
         "name" : "European Athletics Championships",
         "date_start" : "2018-08-12T04:00:00.000Z",
@@ -1402,7 +1517,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.520007,
         "lng" : 13.404954
-    },
+    }
+
     {
         "name" : "Müller Grand Prix Birmingham",
         "date_start" : "2018-08-18T04:00:00.000Z",
@@ -1414,7 +1530,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.486243,
         "lng" : -1.890401
-    },
+    }
+
     {
         "name" : "Weltklasse Zürich",
         "date_start" : "2018-08-30T04:00:00.000Z",
@@ -1426,7 +1543,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 47.376887,
         "lng" : 8.541694
-    },
+    }
+
     {
         "name" : "AG Memorial Van Damme",
         "date_start" : "2018-08-31T04:00:00.000Z",
@@ -1438,7 +1556,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 39.276067,
         "lng" : -123.785671
-    },
+    }
+
     {
         "name" : "ISTAF Berlin",
         "date_start" : "2018-09-02T04:00:00.000Z",
@@ -1450,7 +1569,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 52.520007,
         "lng" : 13.404954
-    },
+    }
+
     {
         "name" : "IWC Zagreb 2018",
         "date_start" : "2018-09-04T04:00:00.000Z",
@@ -1462,7 +1582,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 45.815011,
         "lng" : 15.981919
-    },
+    }
+
     {
         "name" : "IAAF Continental Cup Ostrava 2018",
         "date_start" : "2018-09-09T04:00:00.000Z",
@@ -1474,7 +1595,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 49.820923,
         "lng" : 18.262524
-    },
+    }
+
     {
         "name" : "Decastar",
         "date_start" : "2018-09-16T04:00:00.000Z",
@@ -1486,7 +1608,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : 44.791641,
         "lng" : -0.592811
-    },
+    }
+
     {
         "name" : "3rd Youth Olympic Games",
         "date_start" : "2018-10-18T04:00:00.000Z",
@@ -1498,7 +1621,8 @@ let meets = [
         "url" : "iaaf.org",
         "lat" : -34.6036844,
         "lng" : -58.3815591
-    },
+    }
+
     {
         "name" : "IAAF World Championships Doha 2019",
         "date_start" : "2019-10-06T04:00:00.000Z",
@@ -1511,6 +1635,3 @@ let meets = [
         "lat" : 25.285447,
         "lng" : 51.53104
     }
-]
-
-module.exports = meets;

@@ -25,6 +25,7 @@ import AdminDashboard from './components/AdminDashboard';
 import ResultDashboard from './components/ResultDashboard';
 import ProfileDashboard from './components/ProfileDashboard';
 import TeamDashboard from './components/TeamDashboard';
+import ViewMeet from './components/ViewMeet';
 
 // Import data
 // import meets from './data/meets'
@@ -65,6 +66,11 @@ ReactDOM.render(
           <Route path="/dashboard/team" component={TeamDashboard} />
           <Route path="/dashboard/result" component={ResultDashboard} />
           <Route path="/dashboard" component={Dashboard} />
+<<<<<<< HEAD
+=======
+          <Route path="/settings" component={Settings} />
+          <Route path="/meet/:meetId" component={ViewMeet} />
+>>>>>>> e2da85d6ea811d8ba503d8a98c9448fab2210e61
           <Route path="/:username" component={Profile} />
         </Switch>
       </BaseLayout>

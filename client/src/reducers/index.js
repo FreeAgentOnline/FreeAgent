@@ -6,6 +6,7 @@ const initialState = {
   user: '',
   results: [],
   meets: [],
+  activeLatLon: [],
   teams: [],
   filter: 'All'
 }
@@ -54,6 +55,13 @@ const reducer = (state = initialState, action) => {
           $set: action.payload
         }
       });
+    //   activeLatLon describes what
+    // case SET_LAT_LON:
+    //   return update(state, {
+    //     activeLatLon: {
+    //       $set: action.payload
+    //   }
+    // });
     default:
       return state;
   }
