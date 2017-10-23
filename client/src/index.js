@@ -61,8 +61,8 @@ ReactDOM.render(
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/settings" component={Settings} />
           <Route path="/meet/:meetId" component={ViewMeet} />
-          <Route path="/:username" component={Profile} />
           <Route path="/admin/dashboard" component={AdminDashboard} />
+          <Route path="/:username" component={Profile} />
 
         </Switch>
       </BaseLayout>

@@ -36,16 +36,17 @@ class ViewMeet extends Component {
         return(
             <div className="card">
                     <div className="card-block">
-                    Name of Meet:
-                          <h4 className="card-title"> {this.state.currentMeet.name}</h4>
+                    Meet Information
+                          <h4 className="card-title"> Name: {this.state.currentMeet.name}</h4>
 
-                      <p className="card-text">Date Start: <strong>{this.state.currentMeet.date_start}</strong></p>
+                     
                     </div>
                     <div className="card-block">
                       <blockquote className="card-blockquote">
                         <p>{this.state.currentMeet.city}</p>
 
                       </blockquote>
+
                     </div>
             </div>
         )

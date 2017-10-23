@@ -76,7 +76,7 @@ class Search extends Component {
                             <button type="submit" className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</button>
                         </div>
                         <div id="mapField">
-                            <MyFancyComponent/>
+                            <MyFancyComponent meets={this.state.meets}/>
                         </div>
                     </div>
                 </div>
@@ -106,7 +106,7 @@ class Search extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state on Search', state);
+  // console.log('state on Search', state);
   return {
     query: state.query
   }
