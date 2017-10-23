@@ -47,9 +47,7 @@ class Search extends Component {
       e.target.value = temp;
     }
 
-    fetchFilteredMeets = e => {
-    }
-
+    
     render(){
         let filteredMeets = this.state.meets.map((meet, index)=>{
             let viewMeetLink = "/meet/" + meet._id;
