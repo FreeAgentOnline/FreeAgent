@@ -3,8 +3,8 @@ import React, { Component } from 'react';
 import user from '../data/user';
 
 // Import components
-import ProfileEdit from '../components/ProfileEdit';
-import TeamSettings from '../components/TeamSettings';
+import ProfileDashboard from '../components/ProfileDashboard';
+import TeamDashboard from '../components/TeamDashboard';
 
 class Settings extends Component {
   constructor(props) {
@@ -19,8 +19,8 @@ class Settings extends Component {
     return (
       <div className="container">
         <h2>Edit profile</h2>
-        <ProfileEdit />
-        <TeamSettings />
+        <ProfileDashboard />
+        <TeamDashboard />
       </div>
     );
   }

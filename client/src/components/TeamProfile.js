@@ -16,7 +16,6 @@ class TeamProfile extends Component {
     .catch(err => console.log(err))
   }
   render() {
-    console.log('state on TeamProfile', this.state);
     let teamsRender = null;
     if (this.state.teams) {
       teamsRender = this.state.teams.map((one, i) => {
@@ -29,7 +28,6 @@ class TeamProfile extends Component {
           </div>
         )
       })
-      console.log('teamsRender', teamsRender);
     }
     return (
       <div id="resultContainer">

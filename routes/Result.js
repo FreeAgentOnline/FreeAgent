@@ -17,7 +17,7 @@ module.exports = function(app) {
 
   // View all results
   router.get('/result', (req, res) => {
-    Result.find()
+    Result.find().sort({'username': 1})
     .then(data => res.status(200).send(data))
     .catch(err => res.send(err))
   })
@@ -41,7 +41,7 @@ module.exports = function(app) {
   })
   // View all results for given user
   router.get('/result/user/:username', (req, res) => {
-    Result.find({ username: req.params.username})
+    Result.find({ username: req.params.username}).sort({'event': 1})
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
   })
