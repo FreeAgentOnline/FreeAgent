@@ -4,12 +4,15 @@
     2. Store result information on public user profile
     3. Set search query that can be accessed by multiple components
     4. Store fetched events for future filtering
+
 */
 
 export const SET_USER = 'SET_USER';
 export const DISPLAY_RESULTS = 'DISPLAY_RESULTS';
 export const SAVE_QUERY = 'SAVE_QUERY';
 export const STORE_MEETS = 'STORE_MEETS';
+export const SET_LAT_LON = 'SET_LAT_LON';
+export const CREATE_MARKER ='CREATE_MARKER'
 
 export function setUser(arg) {
   return {

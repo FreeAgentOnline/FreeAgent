@@ -5,7 +5,8 @@ const initialState = {
   query: '',
   user: '',
   results: [],
-  meets: []
+  meets: [],
+  // activeLatLon: []
 }
 
 const reducer = (state = initialState, action) => {
@@ -34,6 +35,13 @@ const reducer = (state = initialState, action) => {
           $set: action.payload
         }
       });
+    //   activeLatLon describes what
+    // case SET_LAT_LON:
+    //   return update(state, {
+    //     activeLatLon: {
+    //       $set: action.payload
+    //   }
+    // });
     default:
       return state;
   }
