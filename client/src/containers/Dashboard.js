@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-// import { results } from '../data/mockdata';
 import user from '../data/user';
 
-import ResultDashboard from '../components/ResultDashboard';
+import '../styles/dashboard.css';
 
 class Dashboard extends Component {
   constructor(props) {
@@ -16,16 +15,41 @@ class Dashboard extends Component {
 
   render() {
     return (
-      <div className="container">
-        <h2>Dashboard</h2>
+      <div className="container mt-3">
+        <h2>Welcome back, {this.state.user.first_name}</h2>
         <p>
           <Link to={`/${this.state.user.username}`} className="btn btn-secondary mr-2">Profile</Link>
           <Link to="/settings" className="btn btn-secondary">Settings</Link>
         </p>
-        <h4>Scheduled events</h4>
+        <div id="dashBoxContainer" className="">
+          <Link to="/dashboard/info" id="dashBasic" className="dashBox">
+            <div className="">
+              <h2 className="">Basic Info</h2>
+              <p className="">Update your name, tagline, bio, and location</p>
+            </div>
+          </Link>
+          <Link to="/dashboard/result" id="dashResults" className="dashBox">
+          <div className="">
+          <h2 className="">Results</h2>
+          <p className="">Track your results and display them on your profile</p>
+          </div>
+          </Link>
+          <Link to="/dashboard/team" id="dashTeam" className="dashBox">
+            <div className="">
+              <h2 className="">Team history</h2>
+              <p className="">Update and add to your team history</p>
+            </div>
+          </Link>
+          <Link to="/dashboard/settings" id="dashSettings" className="dashBox">
+            <div className="">
+              <h2 className="">Settings</h2>
+              <p className="">Update email, reset password, and privacy settings</p>
+            </div>
+          </Link>
+        </div>
+        {/*<h4>Scheduled events</h4>*/}
         {/* Render Saved Meets */}
-        <h4>Starred events</h4>
-        <ResultDashboard />
+        {/*<h4>Starred events</h4>*/}
       </div>
     );
   }

@@ -1,0 +1,42 @@
+/************************************
+  Dashboard
+************************************/
+#dashBoxContainer {
+  display: flex;
+  flex-flow: row nowrap;
+}
+.dashBox {
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-basis: 25%;
+  min-height: 600px;
+}
+.dashBox:hover {
+  text-decoration: none !important;
+}
+.dashBox > div {
+  background: rgba(0, 0, 0, 0.65);
+  color: white;
+  padding: 10px;
+  transition: background 0.2s ease-in-out;
+}
+.dashBox:hover > div {
+  background: rgba(0, 0, 0, 0.75);
+  border: none;
+}
+#dashBasic {
+  background-image: url('../images/relay_action.jpg');
+}
+#dashResults {
+  background-image: url('../images/pole_vault_w.jpg');
+}
+#dashTeam {
+  background-image: url('../images/swimming.jpg');
+  /*background-position: right;*/
+}
+#dashSettings {
+  background-image: url('../images/hurdles.jpg');
+}

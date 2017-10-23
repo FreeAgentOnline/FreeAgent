@@ -22,8 +22,10 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Register from './components/Register';
 import AdminDashboard from './components/AdminDashboard';
+import ResultDashboard from './components/ResultDashboard';
+import ProfileDashboard from './components/ProfileDashboard';
+import TeamDashboard from './components/TeamDashboard';
 import ViewMeet from './components/ViewMeet';
-
 
 // Import data
 // import meets from './data/meets'
@@ -55,15 +57,17 @@ ReactDOM.render(
       <BaseLayout>
         <Switch>
           <Route exact path="/" component={Home} />
+          <Route path="/admin/dashboard" component={AdminDashboard} />
           <Route path="/login" component={Login} />
           <Route path="/register" component={Register} />
           <Route path="/search" component={Search} />
+          <Route path="/dashboard/settings" component={Settings} />
+          <Route path="/dashboard/info" component={ProfileDashboard} />
+          <Route path="/dashboard/team" component={TeamDashboard} />
+          <Route path="/dashboard/result" component={ResultDashboard} />
           <Route path="/dashboard" component={Dashboard} />
-          <Route path="/settings" component={Settings} />
           <Route path="/meet/:meetId" component={ViewMeet} />
           <Route path="/:username" component={Profile} />
-          <Route path="/admin/dashboard" component={AdminDashboard} />
-
         </Switch>
       </BaseLayout>
     </BrowserRouter>
