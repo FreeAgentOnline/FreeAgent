@@ -1,0 +1,15 @@
+#site-footer {
+  background: #666;
+  bottom: 0;
+  color: #333;
+  font-size: 0.9em;
+  left: 0;
+  position: absolute;
+  right: 0;
+}
+#site-footer a {
+  color: #333;
+}
+i.fa {
+  padding-right: 5px;
+}
