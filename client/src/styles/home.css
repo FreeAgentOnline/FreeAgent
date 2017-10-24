@@ -1,0 +1,86 @@
+#homeHeader {
+  background: url('../images/100m_bw.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  font-family: 'Nunito', Helvetica, sans-serif;
+  text-align: center;
+  padding: 8rem 0;
+}
+#homeHeader h2 {
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+#homeSearchBanner {
+  background: black;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  padding: 1rem 0;
+}
+#homeSearchBanner input {
+  border: 1px solid #d1d1d1;
+  border-right: 0;
+}
+#homeSearchBanner a {
+  background: #F57C00;
+  border: 0;
+  color: white;
+}
+#homeSearchBanner a:hover {
+  background: #EF6C00;
+}
+.homerow {
+  /*background-attachment: fixed;*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  margin-top: 0;
+}
+.homerow div {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Nunito', Helvetica, sans-serif;
+  justify-content: center;
+}
+.homerowSmBox {
+  background: rgba(0, 0, 0, 0.75);
+  color: white;
+  font-size: 1.5em;
+}
+.homerowLgBox {
+  color: #EF6C00;
+  font-size: 3em;
+  font-weight: 600;
+  text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+/*Styles for home page*/
+
+#home{
+    height: 100%;
+    /*margin: 0px;*/
+}
+
+.homerow {
+    /*border: solid;*/
+    height: 325px;
+    width: 100%;
+    margin: 10px;
+}
+
+#homeTop {
+  background-image: url(../images/800m.jpg);
+  /*opacity: .5;*/
+}
+
+#homeMiddle{
+  background-image: url(../images/schedule.jpg);
+  /*opacity: .5;*/
+}
+
+#homeBottom {
+  background-image: url(../images/MoUsain.jpg);
+  /*opacity: .5;*/
+  z-index: -1;
+}

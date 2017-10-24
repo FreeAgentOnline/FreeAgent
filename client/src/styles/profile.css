@@ -9,5 +9,6 @@
   background-size: cover;
   height: 200px;
 }
-body {
+#resultContainer {
+  padding-bottom: 40px;
 }
