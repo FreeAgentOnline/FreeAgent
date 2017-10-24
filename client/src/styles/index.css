@@ -46,7 +46,6 @@
     width: 80%;
 }
 
-
 #searchPage #right {
     width: 49.75%;
     height: 60000px;
@@ -69,8 +68,75 @@
 #adminViewMeet {
     color: white;
     text-decoration: none;
-
 }
 #adminViewMeet :visited {
     text-decoration: none;
+}
+
+/*Styles for home page*/
+
+#home{
+    height: 100%;
+    /*margin: 0px;*/
+}
+
+.homerow {
+    /*border: solid;*/
+    height: 325px;
+    width: 100%;
+    margin: 10px;
+}
+
+#homeTop {
+    background-image: url(../images/800m.jpg);
+    background-size: cover;
+    padding: 10px;
+    opacity: .5;
+    /*background-position: center;*/
+}
+
+#homeMiddle{
+    background-image: url(../images/schedule.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    opacity: .5;
+
+
+}
+
+#homeBottom {
+    background-image: url(../images/MoUsain.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 10px;
+    /*opacity: .5;*/
+    z-index: -1;
+
+}
+
+#searchMeetsInfo {
+    background-color: #E65800;
+    opacity: 1;
+    z-index: 2;
+}
+
+#scheduleInfo {
+    background-color: #E65800;
+    opacity: 1;
+}
+
+#profileInfo {
+    background-color: #E65800;
+    opacity: 1;
+
+}
+
+#homeHeader {
+    background-color: #E65800;
+    margin-left: -20%;
+    padding-left: 20%;
+    margin-right: -11.5%;
+    padding-right: 20%;
+    padding-bottom: 10%;
 }

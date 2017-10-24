@@ -47,7 +47,7 @@ class Search extends Component {
       e.target.value = temp;
     }
 
-    
+
     render(){
         let filteredMeets = this.state.meets.map((meet, index)=>{
             let viewMeetLink = "/meet/" + meet._id;
@@ -55,14 +55,51 @@ class Search extends Component {
                 <tr key= {index}>
                     <td scope="row">{index + 1}</td>
                     <td>{meet.name}</td>
-                    <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
+                    <td>{moment(meet.date_start).format("ddd, MMMM D, YYYY")}</td>
                     <td>{meet.country}</td>
-                    <td><button  className="btn btn-primary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
+                    <td><button  className="btn btn-secondary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
                 </tr>
             )
-    })
+        })
 
+        function SearchResults([data]){
+            if (!data){
+                return (
+                    <div> No results found for  your query. Try searching by city or country!{/*this.state.query*/}</div>
+                )
+            }
+            //
+            // if (!data && !this.state.query){
+            //     return (
+            //         <div> Search for meets by city, state, country, and name!</div>
+            //     )
+            // }
 
+            if (data) {
+                return (
+
+                        <div className="panel-body">
+                            <h1>Available Meets</h1>
+                            <table id="searchResults" className="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Meet Name</th>
+                                        <th>Start Date</th>
+                                        <th>Country</th>
+                                        <th>Edit Meet</th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                        {filteredMeets}
+                                    </tbody>
+                                </table>
+                        </div>
+
+                )
+            }
+
+        }
 
         return (
             <div id="searchPage">
@@ -78,8 +115,9 @@ class Search extends Component {
                         </div>
                     </div>
                 </div>
-
                 <div id="right" className="panel panel-default">
+                {SearchResults(this.state.meets)}
+                {/* From here
                     <div className="panel-body">
                         <h1>Available Meets</h1>
                         <table id="searchResults" className="table">
@@ -97,6 +135,7 @@ class Search extends Component {
                                 </tbody>
                             </table>
                     </div>
+                    To here */}
                 </div>
             </div>
         )
