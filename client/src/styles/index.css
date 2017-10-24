@@ -1,6 +1,34 @@
+.orange {
+  color: #EF6C00;
+}
+.fw300 {
+  font-weight: 300;
+}
+html, body, #root {
+  height: 100%;
+}
+#siteWrapper, html, body {
+  min-height: 100%;
+  position: relative;
+}
 #site-header {
   background: #333;
   color: white;
+  font-family: 'Nunito', Helvetica, sans-serif;
+  padding: 0.5rem;
+}
+#headerLink {
+  align-items: center;
+  display: flex;
+  flex-flow: row nowrap;
+}
+#headerLink h4 {
+  padding: 0;
+  margin: 0;
+}
+#headerLogo {
+  height: 40px;
+  margin-right: 0.25rem;
 }
 #site-header h1 {
   margin-bottom: 0;
@@ -13,7 +41,11 @@
 }
 #site-footer {
   background: #999;
-  color: #666;
+  bottom: 0;
+  color: #333;
+  left: 0;
+  position: absolute;
+  right: 0;
 }
 .selected {
   background: black;
@@ -71,72 +103,4 @@
 }
 #adminViewMeet :visited {
     text-decoration: none;
-}
-
-/*Styles for home page*/
-
-#home{
-    height: 100%;
-    /*margin: 0px;*/
-}
-
-.homerow {
-    /*border: solid;*/
-    height: 325px;
-    width: 100%;
-    margin: 10px;
-}
-
-#homeTop {
-    background-image: url(../images/800m.jpg);
-    background-size: cover;
-    padding: 10px;
-    opacity: .5;
-    /*background-position: center;*/
-}
-
-#homeMiddle{
-    background-image: url(../images/schedule.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    opacity: .5;
-
-
-}
-
-#homeBottom {
-    background-image: url(../images/MoUsain.jpg);
-    background-size: cover;
-    background-position: center;
-    padding: 10px;
-    /*opacity: .5;*/
-    z-index: -1;
-
-}
-
-#searchMeetsInfo {
-    background-color: #E65800;
-    opacity: 1;
-    z-index: 2;
-}
-
-#scheduleInfo {
-    background-color: #E65800;
-    opacity: 1;
-}
-
-#profileInfo {
-    background-color: #E65800;
-    opacity: 1;
-
-}
-
-#homeHeader {
-    background-color: #E65800;
-    margin-left: -20%;
-    padding-left: 20%;
-    margin-right: -11.5%;
-    padding-right: 20%;
-    padding-bottom: 10%;
 }

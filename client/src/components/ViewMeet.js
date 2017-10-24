@@ -79,9 +79,10 @@ class ViewMeet extends Component {
     }
 
     render(){
-
+      let meet = this.state.currentMeet;
         return(
-            <div className="card">
+          <div className="container">
+            <div className="card m-3">
                     <div className="card-block">
                     Meet Information
                           <h4 className="card-title"> Name: {this.state.currentMeet.name}</h4>
@@ -99,13 +100,14 @@ class ViewMeet extends Component {
 
                     </div>
             </div>
+          </div>
         )
     }
 }
 
 
 function mapStateToProps(state) {
-  console.log('state on Search', state);
+  console.log('state on ViewMeet', state);
   return {
     meets: state.meets
   }
