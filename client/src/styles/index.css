@@ -58,6 +58,10 @@ html, body, #root {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
 }
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
+}
 /*Styles for the Search Page*/
 #searchPage {
     display: flex;
