@@ -30,11 +30,12 @@ class Results extends Component {
     // This will become the result links in the card header
     let linkRender = [];
     // Push a generic "view all" button
-    linkRender.push(
-      <li className="nav-item">
-        <span className="nav-link" onClick={this.changeFilter}>All</span>
-      </li>
-    )
+    // SUNSETTED
+    // linkRender.push(
+    //   <li className="nav-item">
+    //     <span className="nav-link" onClick={this.changeFilter}>All</span>
+    //   </li>
+    // )
     // Iterate through object to create buttons for each result event category
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
@@ -50,6 +51,8 @@ class Results extends Component {
     let resultRender = [<div>No results saved</div>];
     if (data.length > 0) {
       if (this.props.filter === 'All') {
+        // Automatically set the filter to the first index's event
+        this.props.setFilter(data[0].event);
         resultRender = data.map((one, i) => {
           return (
             <ResultRow index={i} data={one} />
