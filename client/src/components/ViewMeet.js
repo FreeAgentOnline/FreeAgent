@@ -14,6 +14,53 @@ class ViewMeet extends Component {
         }
     }
 
+
+    // handleSaveMeet = e => {
+    //     e.preventDefault();
+    //     let savedMeetBody = {
+    //         //I'll need a solution for the userId here since we aren't pulling from current users.
+    //         // userId: req.params.userId,
+    //         // //
+    //         // meetId: req.params.meetId,
+    //         isScheduled: false,
+    //         name: this.state.currentMeet.name,
+    //         date_start: this.state.currentMeet.date_start,
+    //         date_end: this.state.currentMeet.date_end,
+    //         country: this.state.currentMeet.country,
+    //         venue: this.state.currentMeet.venue || '',
+    //         city: this.state.currentMeet.city || '',
+    //         state: this.state.currentMeet.state || '',
+    //         lat: this.state.currentMeet.lat || '',
+    //         lng: this.state.currentMeet.lng || '',
+    //     }
+    //     fetch(`/api/meet/`+ this.state.currentMeet.meetId + `/save/user/` + this.props.user, {
+    //       method: 'POST',
+    //       body: JSON.stringify(savedMeetBody),
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       }
+    //     })
+    //     .then(data => alert('Meet Saved'))
+    //     .catch(err => console.log("error posting saved meet to database: ", err))
+    //
+    // }
+    //
+    // handleScheduleMeet = e => {
+    //     e.preventDefault();
+    //
+    //
+    //     fetch(`/api/meet/save/`+ this.state.currentMeet.meetId , {
+    //
+    //       method: 'POST',
+    //       body: JSON.stringify(savedMeetBody),
+    //       headers: {
+    //         'Content-Type': 'application/json'
+    //       }
+    //     })
+    //     .then(data => alert('Meet Saved'))
+    //     .catch(err => console.log("error posting saved meet to database: ", err))
+    // }
+
     componentDidMount(){
         const URL= `/api/meet/${this.props.match.params.meetId}`;
 
@@ -30,38 +77,27 @@ class ViewMeet extends Component {
         })
 
     }
-    handleSave = () => {
-      let options = {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        }
-      }
-      fetch(`/api/meet/${this.state.currentMeet._id}/save/user/59e7c5d6a9b1777678172aff`, options)
-    }
-//either params.id or params.meetId
+
     render(){
       let meet = this.state.currentMeet;
         return(
           <div className="container">
             <div className="card m-3">
                     <div className="card-block">
-                      <h4 className="card-title"> {this.state.currentMeet.name}</h4>
-                      <p className="card-text">
-                        <strong>Start date: </strong>
-                        {moment(meet.date_start).format("ddd. MMM D, YYYY h:mm a")}
-                      </p>
-                      <p className="card-text">
-                        <strong>End date: </strong>
-                        {moment(meet.date_end).format("ddd. MMM D, YYYY h:mm a")}
-                      </p>
-                      <p className="card-text">
-                        <strong>Location: </strong>
-                        {this.state.currentMeet.city}, {meet.state}{meet.country ? ` (${meet.country})` : ''}
-                      </p>
-                      <p className="text-right mb-0">
-                        <button className="btn btn-primary" onClick={this.handleSave}>Save Meet</button>
-                      </p>
+                    Meet Information
+                          <h4 className="card-title"> Name: {this.state.currentMeet.name}</h4>
+
+                          <p className="card-text">Date Start: <strong>{moment(this.state.currentMeet.date_start).format("ddd, MMMM D YYYY")}</strong></p>
+                          <p className="card-text">Date End: <strong>{moment(this.state.currentMeet.date_end).format("ddd, MMMM D YYYY")}</strong></p>
+                          <button onClick="handleSaveMeet" className="btn">Save Meet</button>
+                    </div>
+                    <div className="card-block">
+                      <blockquote className="card-blockquote">
+                        <p>{this.state.currentMeet.city}, {this.state.currentMeet.country}</p>
+
+
+                      </blockquote>
+
                     </div>
             </div>
           </div>
