@@ -66,13 +66,33 @@ class Search extends Component {
         let SearchResults = ([data]) =>{
             if (!data && this.state.haveSearched){
                 return (
-                    <div> No results found for  your query. Try searching by city or country!{/*this.state.query*/}</div>
+                    <div> No results found for <strong>{this.state.query}</strong>. Please try another search term!</div>
                 )
             }
 
             if (!data && !this.state.haveSearched){
                 return (
-                    <div> Search for meets by city, state, country, and name!</div>
+                    <div>
+                        <div>
+                            <p> Search for meets by city, state, country, and name!</p>
+                        </div>
+                        <div className="row searchRow">
+                            <div className="col-6 col-md-4">
+                                <p>.col-6 .col-md-4 </p>
+                            </div>
+                            <div className="col col-md-8">
+                                <p>.col .col-md-8</p>
+                            </div>
+                        </div>
+                        <div className="row searchRow">
+                            <div className="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                            <div className="col col-md-8"><p>.col .col-md-8</p></div>
+                        </div>
+                        <div className="row searchRow">
+                            <div className="col col-md-8"><p>.col .col-md-8</p></div>
+                            <div className="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
+                        </div>
+                    </div>
                 )
             }
 
@@ -88,7 +108,7 @@ class Search extends Component {
                                         <th>Meet Name</th>
                                         <th>Start Date</th>
                                         <th>Country</th>
-                                        <th>Edit Meet</th>
+                                        <th>Meet Info</th>
                                     </tr>
                                 </thead>
                                     <tbody>
@@ -118,25 +138,7 @@ class Search extends Component {
                 </div>
                 <div id="right" className="panel panel-default">
                 {SearchResults(this.state.meets)}
-                {/* From here
-                    <div className="panel-body">
-                        <h1>Available Meets</h1>
-                        <table id="searchResults" className="table">
-                            <thead>
-                                <tr>
-                                    <th></th>
-                                    <th>Meet Name</th>
-                                    <th>Start Date</th>
-                                    <th>Country</th>
-                                    <th>Edit Meet</th>
-                                </tr>
-                            </thead>
-                                <tbody>
-                                    {filteredMeets}
-                                </tbody>
-                            </table>
-                    </div>
-                    To here */}
+
                 </div>
             </div>
         )
