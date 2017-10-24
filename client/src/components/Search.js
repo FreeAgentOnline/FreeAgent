@@ -12,7 +12,8 @@ class Search extends Component {
 
         this.state = {
             query: this.props.query,
-            meets: []
+            meets: [],
+            haveSearched: false
 
         }
         console.log("this.state before fetch: ", this.state);
@@ -26,7 +27,7 @@ class Search extends Component {
     handleSearch = e => {
       // search for events
       e.preventDefault();
-      this.setState({ query: e.target.value })
+      this.setState({ query: e.target.value, haveSearched: true })
 
       fetch(`/api/search/meet/`+ this.state.query)
       .then(res => res.json())
@@ -62,20 +63,20 @@ class Search extends Component {
             )
         })
 
-        function SearchResults([data]){
-            if (!data){
+        let SearchResults = ([data]) =>{
+            if (!data && this.state.haveSearched){
                 return (
                     <div> No results found for  your query. Try searching by city or country!{/*this.state.query*/}</div>
                 )
             }
-            //
-            // if (!data && !this.state.query){
-            //     return (
-            //         <div> Search for meets by city, state, country, and name!</div>
-            //     )
-            // }
 
-            if (data) {
+            if (!data && !this.state.haveSearched){
+                return (
+                    <div> Search for meets by city, state, country, and name!</div>
+                )
+            }
+
+            else {
                 return (
 
                         <div className="panel-body">
