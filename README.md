@@ -10,7 +10,10 @@ FreeAgent is for professional athletes looking to make their mark in the world o
 - Mongoose
 
 ## Server
-To set up the API on your computer, create a new MongoDB database called `free-agent`. The collections will be created by the schema models when you run the application.
+To set up the API on your computer:
+- create a new MongoDB database called `free-agent`. The collections will be created by the schema models when you run the application.
+- run this in CLI from the `/client/src/data` folder to import meet data into database: `mongoimport --db free-agent --collection meets --file allMeets.json`
+- run this in mongo to set search fields in data: `db.meets.createIndex({ name: "text", venue: "text", city: "text", state: "text", country: "text"})`
 
 ### Endpoints
 All server endpoints are routed through `/api`. Beyond that, there is a specific path for each main API function:

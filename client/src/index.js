@@ -68,6 +68,7 @@ ReactDOM.render(
           <Route path="/dashboard" component={Dashboard} />
           <Route path="/meet/:meetId" component={ViewMeet} />
           <Route path="/:username" component={Profile} />
+
         </Switch>
       </BaseLayout>
     </BrowserRouter>

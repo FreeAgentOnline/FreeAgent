@@ -31,13 +31,13 @@ module.exports = function(app) {
       date_start: req.body.date_start,
       date_end: req.body.date_end,
       country: req.body.country,
-      location_name: req.body.location_name || '',
-      street: req.body.street || '',
+      venue: req.body.venue || '',
       city: req.body.city || '',
       state: req.body.state || '',
-      zip: req.body.zip || '',
-      cost: req.body.cost || '',
-      url: req.body.url || '',
+    //   url: req.body.url || '',
+    //   cost: req.body.cost || '',
+      lat: req.body.lat || '',
+      lng: req.body.lng || '',
     })
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })

@@ -12,7 +12,8 @@ class Search extends Component {
 
         this.state = {
             query: this.props.query,
-            meets: []
+            meets: [],
+            haveSearched: false
 
         }
         console.log("this.state before fetch: ", this.state);
@@ -26,7 +27,7 @@ class Search extends Component {
     handleSearch = e => {
       // search for events
       e.preventDefault();
-      this.setState({ query: e.target.value })
+      this.setState({ query: e.target.value, haveSearched: true })
 
       fetch(`/api/search/meet/`+ this.state.query)
       .then(res => res.json())
@@ -47,8 +48,6 @@ class Search extends Component {
       e.target.value = temp;
     }
 
-    fetchFilteredMeets = e => {
-    }
 
     render(){
         let filteredMeets = this.state.meets.map((meet, index)=>{
@@ -57,14 +56,51 @@ class Search extends Component {
                 <tr key= {index}>
                     <td scope="row">{index + 1}</td>
                     <td>{meet.name}</td>
-                    <td>{moment(meet.date_start).format("dddd, MMMM Do YYYY, h:mm:ss a")}</td>
+                    <td>{moment(meet.date_start).format("ddd, MMMM D, YYYY")}</td>
                     <td>{meet.country}</td>
-                    <td><button  className="btn btn-primary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
+                    <td><button  className="btn btn-secondary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
                 </tr>
             )
-    })
+        })
 
+        let SearchResults = ([data]) =>{
+            if (!data && this.state.haveSearched){
+                return (
+                    <div> No results found for  your query. Try searching by city or country!{/*this.state.query*/}</div>
+                )
+            }
 
+            if (!data && !this.state.haveSearched){
+                return (
+                    <div> Search for meets by city, state, country, and name!</div>
+                )
+            }
+
+            else {
+                return (
+
+                        <div className="panel-body">
+                            <h1>Available Meets</h1>
+                            <table id="searchResults" className="table">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Meet Name</th>
+                                        <th>Start Date</th>
+                                        <th>Country</th>
+                                        <th>Edit Meet</th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                        {filteredMeets}
+                                    </tbody>
+                                </table>
+                        </div>
+
+                )
+            }
+
+        }
 
         return (
             <div id="searchPage">
@@ -76,12 +112,13 @@ class Search extends Component {
                             <button type="submit" className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</button>
                         </div>
                         <div id="mapField">
-                            <MyFancyComponent/>
+                            <MyFancyComponent meets={this.state.meets}/>
                         </div>
                     </div>
                 </div>
-
                 <div id="right" className="panel panel-default">
+                {SearchResults(this.state.meets)}
+                {/* From here
                     <div className="panel-body">
                         <h1>Available Meets</h1>
                         <table id="searchResults" className="table">
@@ -99,6 +136,7 @@ class Search extends Component {
                                 </tbody>
                             </table>
                     </div>
+                    To here */}
                 </div>
             </div>
         )
@@ -106,7 +144,7 @@ class Search extends Component {
 }
 
 function mapStateToProps(state) {
-  console.log('state on Search', state);
+  // console.log('state on Search', state);
   return {
     query: state.query
   }

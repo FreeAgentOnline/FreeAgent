@@ -13,13 +13,13 @@ const meetSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-        venue: String,
-        city: String,
-        state: String,
-        country: {
-            type: String,
-            required: true
-        },
+    venue: String,
+    city: String,
+    state: String,
+    country: {
+        type: String,
+        required: true
+    },
     url: String,
     lat: Number,
     lng: Number
