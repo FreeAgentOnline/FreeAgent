@@ -11,6 +11,9 @@ html, body, #root {
   min-height: 100%;
   position: relative;
 }
+#contentWrapper {
+  padding-bottom: 4rem;
+}
 #site-header {
   background: #333;
   color: white;

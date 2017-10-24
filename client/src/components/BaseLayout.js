@@ -10,7 +10,7 @@ class BaseLayout extends Component {
     return (
       <div id="siteWrapper" className="">
         <Header />
-        <div className="">
+        <div id="contentWrapper" className="">
           {this.props.children}
 
         </div>
