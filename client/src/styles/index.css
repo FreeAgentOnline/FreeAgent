@@ -13,7 +13,11 @@
 }
 #site-footer {
   background: #999;
-  color: #666;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #333;
+  position: absolute;
 }
 .selected {
   background: black;
