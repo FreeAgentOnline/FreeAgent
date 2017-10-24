@@ -22,9 +22,9 @@ module.exports = function(app) {
     .catch(err => res.send(err))
   })
   // Create a new save
-  router.post('/meet/:meetId/save/user/:userId', (req, res) => {
+  router.post('/meet/:meetId/save/user/:username', (req, res) => {
     SavedMeet.create({
-      userId: req.params.userId,
+      username: req.params.username,
       meetId: req.params.meetId,
       isScheduled: false,
       name: req.body.name,
@@ -42,9 +42,9 @@ module.exports = function(app) {
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
   })
-  // View a save from specific user
-  router.get('/meet/save/user/:userId', (req, res) => {
-    SavedMeet.find({ userId: req.params.userId })
+  // View all saves from specific user
+  router.get('/meet/save/user/:username', (req, res) => {
+    SavedMeet.find({ username: req.params.username })
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.send(err) })
   })
