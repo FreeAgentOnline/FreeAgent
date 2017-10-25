@@ -46,17 +46,18 @@ module.exports = function(app) {
 
   router.post('/meet', (req, res) => {
     Meet.create({
-      name: req.body.name,
-      date_start: req.body.date_start,
-      date_end: req.body.date_end,
-      location_name: req.body.location_name,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state,
-      country: req.body.country,
-      zip: req.body.zip,
-      cost: req.body.cost,
-      url: req.body.url
+        name: req.body.name,
+        date_start: req.body.date_start,
+        date_end: req.body.date_end,
+        cost: req.body.cost,
+        venue: req.body.venue,
+        city: req.body.city,
+        state:req.body.state,
+        abrev: req.body.abrev,
+        country: req.body.country,
+        url: req.body.url,
+        lat: req.body.lat,
+        lng: req.body.url
     })
     .then(data => { res.status(200).send(data) })
     .catch(err => {
@@ -73,17 +74,18 @@ module.exports = function(app) {
 
   router.put('/meet/:id', (req, res) => {
     Meet.update({_id: req.params.id}, {
-      name: req.body.name,
-      date_start: req.body.date_start,
-      date_end: req.body.date_end,
-      location_name: req.body.location_name,
-      street: req.body.street,
-      city: req.body.city,
-      state: req.body.state,
-      country: req.body.country,
-      zip: req.body.zip,
-      cost: req.body.cost,
-      url: req.body.url
+        name: req.body.name,
+        date_start: req.body.date_start,
+        date_end: req.body.date_end,
+        cost: req.body.cost,
+        venue: req.body.venue,
+        city: req.body.city,
+        state:req.body.state,
+        abrev: req.body.abrev,
+        country: req.body.country,
+        url: req.body.url,
+        lat: req.body.lat,
+        lng: req.body.url
     }, { new: true })
     .then(data => { res.status(200).send(data) })
     .catch(err => { res.status(500). send(err) })

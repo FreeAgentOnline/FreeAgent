@@ -54,9 +54,12 @@ html, body, #root {
   border-top-right-radius: 0;
   border-right: 0;
 }
-#searchButton {
+.searchButton {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+  background: #F57C00;
+  border: 0;
+  color: white;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
@@ -68,22 +71,43 @@ h1, h2, h3, h4, h5, h6 {
     flex-direction: row;
     top: 0;
 }
-#searchPage #left {
-    width: 49.75%;
-    height: 60000px;
+#searchPage .left {
+    width: 50%;
+    border: solid red;
+    overflow: hidden;
+    /*height: 60000px;*/
 }
-
+.resultField{
+    padding: 10px;
+}
+#searchField{
+    background: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    padding: 1rem 0;
+    top: 0;
+    width: 105%;
+}
 #searchQuery{
     width: 80%;
 }
-
-#searchPage #right {
-    width: 49.75%;
-    height: 60000px;
+#searchPage .right {
+    width: 50%;
+    border: solid blue;
+    position: fixed;
+    right: 0;
+    top:0;
+    bottom: 0;
+    left: 50%;
+    z-index: -1;
+    transform: translateY(3%);
+    /*height: 100%;*/
+    /*height: 60000px;*/
 }
 
 .panel-body {
-    padding: 20px;
+    /*padding: 20px;*/
 }
 
 .p-3 {

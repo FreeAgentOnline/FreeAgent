@@ -15,28 +15,29 @@ const savedMeetSchema = new mongoose.Schema({
     default: false
   },
   name: {
-    type: String,
-    required: true
+      type: String,
+      required: true
   },
   date_start: {
-    type: String,
-    required: true
+      type: String,
+      required: true
   },
   date_end: {
-    type: String,
-    required: true
+      type: String,
+      required: true
   },
-  country: {
-    type: String,
-    required: true
-  },
-  location_name: String,
-  street: String,
+  cost: Number,
+  venue: String,
   city: String,
   state: String,
-  zip: String,
-  cost: Number,
-  url: String
+  abrev: String,
+  country: {
+      type: String,
+      required: true
+  },
+  url: String,
+  lat: Number,
+  lng: Number
 });
 
 const savedMeet = mongoose.model('savedMeet', savedMeetSchema);

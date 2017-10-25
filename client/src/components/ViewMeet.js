@@ -80,20 +80,26 @@ class ViewMeet extends Component {
 
     render(){
       let meet = this.state.currentMeet;
+      let meetLink = "https://www.google.com/maps/dir/?api=1&origin=" + "Atlanta" +","+ "USA" + "&destination=" + meet.city + "," + meet.country + "&travelmode=driving"
+
         return(
           <div className="container">
             <div className="card m-3">
                     <div className="card-block">
-                    Meet Information
-                          <h4 className="card-title"> Name: {this.state.currentMeet.name}</h4>
+                          <h3> Meet Information</h3>
+                          <h4 className="card-title"> <strong>Name: </strong> {meet.name}</h4>
 
-                          <p className="card-text">Date Start: <strong>{moment(this.state.currentMeet.date_start).format("ddd, MMMM D YYYY")}</strong></p>
-                          <p className="card-text">Date End: <strong>{moment(this.state.currentMeet.date_end).format("ddd, MMMM D YYYY")}</strong></p>
+                          <p className="card-text"><strong>Date Start: </strong>{moment(meet.date_start).format("ddd, MMMM D YYYY")}</p>
+                          <p className="card-text"><strong>Date End: </strong>{moment(meet.date_end).format("ddd, MMMM D YYYY")}</p>
+                          <p><strong>Cost: </strong>${meet.cost}</p>
+                          <p><strong>Venue: </strong>{meet.venue}</p>
+
                           <button onClick="handleSaveMeet" className="btn">Save Meet</button>
+                          <button className="btn"> <a href={meetLink} target="_blank"> Get Directions</a></button>
                     </div>
                     <div className="card-block">
                       <blockquote className="card-blockquote">
-                        <p>{this.state.currentMeet.city}, {this.state.currentMeet.country}</p>
+                        <p>{meet.city}, {meet.country}</p>
 
 
                       </blockquote>
