@@ -64,7 +64,7 @@
 #homeAbout {
   background: linear-gradient(#EF6C00, #FB8C00);
   color: white;
-  font-family: 'Nunito', sans-serif;
+  /*font-family: 'Nunito', sans-serif;*/
   font-size: 1.5em;
   font-weight: 300;
   padding: 2rem 1rem;
@@ -77,23 +77,26 @@
   color: white;
   display: flex;
   flex-flow: column nowrap;
-  font-family: 'Nunito', sans-serif;
+  /*font-family: 'Nunito', sans-serif;*/
   justify-content: center;
   padding: 2rem 1rem;
 }
 #homeAction h1 {
   margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
 }
 #homeAction a {
   background: linear-gradient(#EF6C00, #FB8C00);
   border-radius: 3px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
   color: white;
   font-size: 2em;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
   text-decoration: none;
 }
 #homeAction a:hover {
-  background: #FB8C00;
+  background: #EF6C00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
 /*Styles for home page*/
 
