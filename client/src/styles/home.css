@@ -1,5 +1,5 @@
 #homeHeader {
-  background: url('../images/100m_bw.jpg') center top no-repeat;
+  background: url('../images/100m_bw_overlay.jpg') center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
@@ -60,6 +60,40 @@
 }
 .homerow p {
   font-size: 1em;
+}
+#homeAbout {
+  background: linear-gradient(#EF6C00, #FB8C00);
+  color: white;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 2rem 1rem;
+}
+#homeAction {
+  align-items: center;
+  background: url('../images/5000m_bw.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  font-family: 'Nunito', sans-serif;
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+#homeAction h1 {
+  margin-bottom: 1rem;
+}
+#homeAction a {
+  background: linear-gradient(#EF6C00, #FB8C00);
+  border-radius: 3px;
+  color: white;
+  font-size: 2em;
+  padding: 1rem;
+  text-decoration: none;
+}
+#homeAction a:hover {
+  background: #FB8C00;
 }
 /*Styles for home page*/
 

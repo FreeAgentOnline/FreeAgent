@@ -40,7 +40,7 @@ class Home extends Component {
           <header id="homeHeader" className="container-fluid">
             <div className="container">
               <h2 className="display-2">Welcome to <span className="orange"><span className="fw300">Free</span>Agent</span></h2>
-              <p className="lead mb-0">FreeAgent is for professional athletes looking to make their mark in the world of track & field. FreeAgent helps you find meets in your area, provides registration information, and allows you to track and share your personal records with potential sponsors.</p>
+              <p className="lead mb-0">Represent yourself</p>
             </div>
         </header>
         <section id="homeSearchBanner" className="container-fluid">
@@ -92,7 +92,17 @@ class Home extends Component {
               <p>Keep track of your history and results; then graph them for potential sponsors</p></div>
             </div>*/}
         </main>
-
+        <section id="homeAbout" className="container-fluid">
+          <div className="container">
+            <h1 className="text-center">Be your own agent</h1>
+            <p>FreeAgent is for professional athletes looking to make their mark in the world of track & field.</p>
+            <p className="mb-0">FreeAgent helps you find meets in your area, provides registration information, and allows you to track and share your personal records with potential sponsors.</p>
+          </div>
+        </section>
+        <section id="homeAction" className="container-fluid">
+          <h1>Register today</h1>
+          <Link to="/register">Sign up</Link>
+        </section>
       </div>
     );
   }
