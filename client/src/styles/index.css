@@ -11,6 +11,9 @@ html, body, #root {
   min-height: 100%;
   position: relative;
 }
+#contentWrapper {
+  padding-bottom: 4rem;
+}
 #site-header {
   background: #333;
   color: white;
@@ -39,14 +42,6 @@ html, body, #root {
   text-decoration: none;
   padding: 1px 10px;
 }
-#site-footer {
-  background: #999;
-  bottom: 0;
-  color: #333;
-  left: 0;
-  position: absolute;
-  right: 0;
-}
 .selected {
   background: black;
 }
@@ -62,6 +57,10 @@ html, body, #root {
 #searchButton {
   border-bottom-left-radius: 0;
   border-top-left-radius: 0;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Nunito', sans-serif;
+  font-weight: 600;
 }
 /*Styles for the Search Page*/
 #searchPage {

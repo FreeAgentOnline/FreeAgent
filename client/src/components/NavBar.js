@@ -6,9 +6,10 @@ class NavBar extends Component {
     return (
       <nav className="d-flex col-10 justify-content-end pr-0" id="site-nav">
         <NavLink to="/dashboard" className="ml-3" activeClassName="selected">Dashboard</NavLink>
-        <NavLink to="/profile" className="ml-3" activeClassName="selected">Profile</NavLink>
-        <NavLink to="/register" className="ml-3" activeClassName="selected">Register</NavLink>
-        <NavLink to="/login" className="ml-3" activeClassName="selected">Login</NavLink>
+        <NavLink to="/imanioliver" className="ml-3" activeClassName="selected">Profile</NavLink>
+        <NavLink to="/logout" className="ml-3" activeClassName="selected">Logout</NavLink>
+        {/*<NavLink to="/register" className="ml-3" activeClassName="selected">Register</NavLink>
+        <NavLink to="/login" className="ml-3" activeClassName="selected">Login</NavLink>*/}
       </nav>
     );
   }

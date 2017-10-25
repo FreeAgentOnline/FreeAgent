@@ -12,6 +12,7 @@
   background-size: cover;
   display: flex;
   flex-basis: 25%;
+  font-family: 'Nunito', Helvetica, sans-serif;
   min-height: 600px;
 }
 .dashBox:hover {
@@ -27,16 +28,20 @@
   background: rgba(0, 0, 0, 0.75);
   border: none;
 }
+.dashBox h2 {
+  color: #F57C00;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
 #dashBasic {
-  background-image: url('../images/relay_action.jpg');
+  background-image: url('../images/relay_action_bw.jpg');
 }
 #dashResults {
-  background-image: url('../images/pole_vault_w.jpg');
+  background-image: url('../images/pole_vault_w_bw.jpg');
 }
 #dashTeam {
-  background-image: url('../images/relay.jpg');
+  background-image: url('../images/relay_bw.jpg');
   /*background-position: right;*/
 }
 #dashSettings {
-  background-image: url('../images/hurdles.jpg');
+  background-image: url('../images/hurdles_bw.jpg');
 }
