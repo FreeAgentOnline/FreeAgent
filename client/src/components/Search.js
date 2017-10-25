@@ -75,10 +75,31 @@ class Search extends Component {
             if (!data && !this.state.haveSearched){
                 return (
                     <div>
-                        <div>
-                            <p> Search for meets by city, state, country, and name!</p>
-                        </div>
-                        <main className="container">
+
+                        <main className="p-3">
+                            <div className="d-flex align-items-center">
+                                <i className="fa fa-map-marker fa-2x fa-fw" aria-hidden="true"></i>
+                                <p>Locate the best competitions around the world to improve your marks </p>
+                            </div>
+
+                            <div className="d-flex align-items-center">
+                                <i className="fa fa-money fa-2x fa-fw" aria-hidden="true"></i>
+                                <p>Compare meet costs and go to meet site for payments</p>
+
+                            </div>
+                            <div className="d-flex align-items-center">
+                                <i className="fa fa-calendar-plus-o fa-2x fa-fw" aria-hidden="true"></i>
+                                <p>Add meets to your personal calendar </p>
+
+                            </div>
+                            <div className="d-flex align-items-center">
+                                <i className="fa fa-car fa-2x fa-fw" aria-hidden="true"></i>
+                                <p>Get quick directions to meets based on your location!</p>
+
+                            </div>
+
+                        </main>
+                        {/*<main className="container">
                             <div className="column resultField">
                                 <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
                                     <div>
@@ -106,7 +127,9 @@ class Search extends Component {
                                 </div>
 
                             </div>
-                        </main>
+                        </main> */}
+
+
                     </div>
                 )
             }
@@ -146,7 +169,7 @@ class Search extends Component {
                         <div id="searchField" className="row">
                             <input type="text" className="form-control" id="searchQuery" placeholder="Search for meets" value={this.state.query} onChange={this.handleQuery} autoFocus onFocus={this.moveCursor}/>
                             {/* autoFocus selects the input field on page load */}
-                            <button type="submit" className="btn searchButton" id="searchButton" onClick={this.handleSearch}>Search</button>
+                            <button type="submit" className="btn searchButton   ``" id="searchButton" onClick={this.handleSearch}>Search</button>
                         </div>
                         <section className="results">
                             {SearchResults(this.state.meets)}
