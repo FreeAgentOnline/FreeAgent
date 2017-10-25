@@ -11,6 +11,9 @@
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
 }
+#homeHeader .lead {
+  font-size: 2em;
+}
 #homeSearchBanner {
   background: black;
   display: flex;
@@ -55,6 +58,9 @@
   font-weight: 600;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
+.homerow p {
+  font-size: 1em;
+}
 /*Styles for home page*/
 
 #home{
@@ -64,13 +70,14 @@
 
 .homerow {
     /*border: solid;*/
+    background: linear-gradient(orange, gold);
     height: 325px;
     width: 100%;
     margin: 10px;
 }
 
 #homeTop {
-  background-image: url(../images/800m.jpg);
+  /*background-image: url(../images/800m.jpg);*/
   /*opacity: .5;*/
 }
 
@@ -82,5 +89,4 @@
 #homeBottom {
   background-image: url(../images/MoUsain.jpg);
   /*opacity: .5;*/
-  z-index: -1;
 }

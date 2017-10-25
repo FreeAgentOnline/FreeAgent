@@ -48,18 +48,49 @@ class Home extends Component {
           <Link to="/search" className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</Link>
         </section>
         <main className="container">
-            <div id="homeTop" className="row homerow">
-              <div id="scheduleImg" className="col col-md-8 homerowLgBox">Find meets</div>
-              <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">Search for the best competitions around the world to improve your marks </div>
+          <div class="row mt-3">
+            <div className="col m-3">
+              <p className="text-center orange"><i className="fa fa-search fa-4x" aria-hidden="true"></i></p>
+              <h2 className="text-center">Find meets</h2>
+              <p>Search for the best competitions around the world to improve your marks</p>
+            </div>
+            <div className="col m-3">
+              <p className="text-center orange"><i className="fa fa-calendar fa-4x" aria-hidden="true"></i></p>
+              <h2 className="text-center">Plan your season</h2>
+              <p>Prepare for your year of competition by saving meets to your dashboard</p>
+            </div>
+            <div className="col m-3">
+              <p className="text-center orange"><i className="fa fa-line-chart fa-4x" aria-hidden="true"></i></p>
+              <h2 className="text-center">Display your talent</h2>
+              <p>Keep track of your history and results; then graph them for potential sponsors</p>
+            </div>
+          </div>
+            {/*<div id="homeTop" className="row homerow">
+              <div id="scheduleImg" className="col col-md-8 homerowLgBox">
+                <i className="fa fa-search fa-4x" aria-hidden="true"></i>
+              </div>
+              <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                <h2>Find meets</h2>
+                <p>Search for the best competitions around the world to improve your marks</p>
+              </div>
             </div>
             <div id="homeMiddle" className="row homerow">
-              <div id="profileInfo" className="col-6 col-md-4 homerowSmBox">Prepare for your year of competition by saving meets to your dashboard</div>
-              <div id="raceStart" className="col col-md-8 homerowLgBox">Plan your season</div>
+              <div id="profileInfo" className="col-6 col-md-4 homerowSmBox">
+                <h2>Plan your season</h2>
+                <p>Prepare for your year of competition by saving meets to your dashboard</p>
+              </div>
+              <div id="raceStart" className="col col-md-8 homerowLgBox">
+                <i className="fa fa-calendar fa-4x" aria-hidden="true"></i>
+              </div>
             </div>
             <div id="homeBottom" className="row homerow">
-              <div id="MoUsain" className="col col-md-8 homerowLgBox">Display your talent</div>
-              <div id="searchMeetsInfo" className="col-6 col-md-4 homerowSmBox">Keep track of your history and results; then graph them for potential sponsors</div>
-            </div>
+              <div id="MoUsain" className="col col-md-8 homerowLgBox">
+                <i className="fa fa-line-chart fa-4x" aria-hidden="true"></i>
+              </div>
+              <div id="searchMeetsInfo" className="col-6 col-md-4 homerowSmBox">
+              <h2>Display your talent</h2>
+              <p>Keep track of your history and results; then graph them for potential sponsors</p></div>
+            </div>*/}
         </main>
 
       </div>
