@@ -13,7 +13,7 @@
   display: flex;
   flex-basis: 25%;
   font-family: 'Nunito', Helvetica, sans-serif;
-  min-height: 600px;
+  min-height: 400px;
 }
 .dashBox:hover {
   text-decoration: none !important;
@@ -27,6 +27,9 @@
 .dashBox:hover > div {
   background: rgba(0, 0, 0, 0.75);
   border: none;
+}
+.dashBox i {
+  margin-bottom: 0.5rem;
 }
 .dashBox h2 {
   color: #F57C00;
