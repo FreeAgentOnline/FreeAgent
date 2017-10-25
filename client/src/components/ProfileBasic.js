@@ -23,7 +23,7 @@ class Profile extends Component {
     return (
       <div className="">
         <div className="text-center">
-          <h2>{profile.first_name} {profile.last_name}</h2>
+          <h1>{profile.first_name} {profile.last_name}</h1>
           <p className="lead">{profile.tagline}</p>
         </div>
         <h4>Biography</h4>

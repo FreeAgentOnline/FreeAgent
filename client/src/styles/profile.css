@@ -3,9 +3,20 @@
 ************************************/
 #profileBackground {
   background-attachment: fixed;
-  background-image: url('../images/track-bg.jpg');
+  background-image: url('../images/track_bg_bw.jpg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 200px;
+  height: 240px;
+}
+span.nav-link.button {
+  background: none;
+  border: 1px solid #D8D8DA;
+  cursor: pointer;
+  transition: all 0.1s ease-in-out;
+}
+span.nav-link.button:hover {
+  background: #EF6C00;
+  border-color: transparent;
+  color: white;
 }
