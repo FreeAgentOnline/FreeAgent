@@ -19,6 +19,13 @@ class ResultGraph extends Component {
       });
 
       let canvas = ReactDOM.findDOMNode(this.refs.myCanvas);
+
+      // Set colors manually because react-chartjs does not support chart.js v 2.0
+      Chart.defaults.global.defaultColor =
+      'rgba(249, 122, 44, 0.75)';
+      Chart.defaults.global.elements.line.backgroundColor = 'rgba(249, 122, 44, 0.75)';
+      Chart.defaults.global.elements.line.borderColor = 'rgba(249, 122, 44, 0.75)';
+
       let ctx = canvas.getContext('2d');
       let myLineChart = new Chart(ctx, {
         type: 'line',
@@ -27,8 +34,7 @@ class ResultGraph extends Component {
           datasets: [{
             label: key,
             data: dataArr
-          }],
-          backgroundColor: 'red'
+          }]
         },
         options: {}
       });
