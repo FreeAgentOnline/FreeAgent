@@ -12,7 +12,7 @@ html, body, #root {
   position: relative;
 }
 #contentWrapper {
-  padding-bottom: 4rem;
+  padding-bottom: 50px;
 }
 #site-header {
   background: #333;
