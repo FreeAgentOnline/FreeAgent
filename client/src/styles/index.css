@@ -73,8 +73,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 #searchPage .left {
     width: 50%;
-    border: solid red;
     overflow: hidden;
+    position: relative;
     /*height: 60000px;*/
 }
 .resultField{
@@ -94,14 +94,13 @@ h1, h2, h3, h4, h5, h6 {
 }
 #searchPage .right {
     width: 50%;
-    border: solid blue;
     position: fixed;
     right: 0;
-    top:0;
+    top:0px;
     bottom: 0;
     left: 50%;
     z-index: -1;
-    transform: translateY(3%);
+    /*transform: translateY(3%);*/
     /*height: 100%;*/
     /*height: 60000px;*/
 }
