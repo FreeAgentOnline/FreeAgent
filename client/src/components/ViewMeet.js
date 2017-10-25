@@ -21,7 +21,6 @@ class ViewMeet extends Component {
         e.preventDefault();
         let savedMeetBody = {
             username: this.state.user.username,
-            meetId: this.props.match.params.meetId,
             isScheduled: false,
             name: this.state.currentMeet.name,
             date_start: this.state.currentMeet.date_start,
@@ -33,7 +32,7 @@ class ViewMeet extends Component {
             lat: this.state.currentMeet.lat || '',
             lng: this.state.currentMeet.lng || '',
         }
-        fetch(`/api/meet/`+ this.state.currentMeet.meetId + `/save/user/` + this.state.user.username, {
+        fetch(`/api/meet/`+ this.props.match.params.meetId + `/save/user/` + this.state.user.username, {
           method: 'POST',
           body: JSON.stringify(savedMeetBody),
           headers: {
@@ -82,6 +81,7 @@ class ViewMeet extends Component {
     }
 
     render(){
+      console.log('props on ViewMeet', this.props.match.params.meetId);
       let meet = this.state.currentMeet;
       let meetLink = "https://www.google.com/maps/dir/?api=1&origin=" + "Atlanta" +","+ "USA" + "&destination=" + meet.city + "," + meet.country + "&travelmode=driving"
 

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import * as moment from 'moment';
 import user from '../data/user';
 
 import '../styles/dashboard.css';
@@ -8,54 +9,58 @@ class Dashboard extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      user
+      user,
+      saves: []
     }
   }
   // Fetch saved meets for user
-
+  componentDidMount() {
+    fetch(`/api/meet/save/user/imanioliver`)
+    .then(res => res.json())
+    .then(data => {
+      this.setState({ saves: data })
+    })
+    .catch(err => console.log(err))
+  }
+  // componentDidMount() {
+  //   fetch(`/api/team/user/${this.props.match.params.username}`)
+  //   .then(res => res.json())
+  //   .then(data => {
+  //     this.setState({ teams: data });
+  //   })
+  //   .catch(err => console.log(err))
+  // }
   render() {
-    return (
-      <div className="container mt-3">
-        <h2>Welcome back, {this.state.user.first_name}</h2>
-        <p>
-          <Link to={`/${this.state.user.username}`} className="btn btn-secondary mr-2">Profile</Link>
-          <Link to="/settings" className="btn btn-secondary">Settings</Link>
-        </p>
-        <h3>Saved meets</h3>
-        <div className="row font-weight-bold">
-          <div className="col">
-            Date
-          </div>
-          <div className="col">
-            Name
-          </div>
-          <div className="col">
-            Location
-          </div>
-          <div className="col">
-            Information
-          </div>
-          <div className="col">
-            Edit
-          </div>
-        </div>
-        <div className="row">
-          <div className="col">
-            10/26/2017
-          </div>
-          <div className="col">
-            The Iron Yard Demo Day
-          </div>
-          <div className="col">
-            The Gathering Spot - Atlanta, GA
-          </div>
-          <div className="col">
-            More information
-          </div>
-          <div className="col">
+    let savesArr = this.state.saves.map((save, i) => {
+      console.log('save', save);
+      return (
+        <div key={i} className="row mt-2">
+          <div className="col-2">{moment(save.date_start).format("ddd, M/D/YY")}</div>
+          <div className="col-3">{save.name}</div>
+          <div className="col-3">{save.city}, {save.state} ({save.country})</div>
+          <div className="col-2">{save.cost ? `$${save.cost}.00` : 'None listed'}</div>
+          <div className="col-1"><Link to={`/meet/${save.meetId}`}>Details</Link></div>
+          <div className="col-1">
             <button className="btn btn-outline-danger btn-sm">Remove</button>
           </div>
         </div>
+      )
+    })
+    return (
+      <div className="container mt-3">
+        <h1>Welcome back, {this.state.user.first_name}</h1>
+        <p>Your dashboard is the place to keep track of your saved meets, record results to be displayed on your profile, and edit your public and private information.</p>
+        <h2>Saved meets</h2>
+        <div className="row font-weight-bold">
+          <div className="col-2">Date</div>
+          <div className="col-3">Name</div>
+          <div className="col-3">City</div>
+          <div className="col-2">Cost</div>
+          <div className="col-1">Info</div>
+          <div className="col-1">Edit</div>
+        </div>
+        {savesArr}
+        <h2 className="mt-3">Update your information</h2>
         <div id="dashBoxContainer" className="mt-3">
           <Link to="/dashboard/info" id="dashBasic" className="dashBox">
             <div className="">

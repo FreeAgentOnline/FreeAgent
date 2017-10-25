@@ -4,7 +4,7 @@ import { NavLink } from 'react-router-dom';
 class NavBar extends Component {
   render() {
     return (
-      <nav className="d-flex col-10 justify-content-end pr-0" id="site-nav">
+      <nav className="d-flex col-10 justify-content-end" id="site-nav">
         <NavLink to="/dashboard" className="ml-3" activeClassName="selected">Dashboard</NavLink>
         <NavLink to="/imanioliver" className="ml-3" activeClassName="selected">Profile</NavLink>
         <NavLink to="/logout" className="ml-3" activeClassName="selected">Logout</NavLink>
