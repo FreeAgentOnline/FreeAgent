@@ -50,7 +50,7 @@ class Dashboard extends Component {
       <div className="container mt-3">
         <h1>Welcome back, {this.state.user.first_name}</h1>
         <p>Your dashboard is the place to keep track of your saved meets, record results to be displayed on your profile, and edit your public and private information.</p>
-        <h2>Saved meets</h2>
+        <h2 className="mt-5">Saved meets</h2>
         <div className="row font-weight-bold">
           <div className="col-2">Date</div>
           <div className="col-3">Name</div>
@@ -60,7 +60,7 @@ class Dashboard extends Component {
           <div className="col-1">Edit</div>
         </div>
         {savesArr}
-        <h2 className="mt-3">Update your information</h2>
+        <h2 className="mt-5">Update your information</h2>
         <div id="dashBoxContainer" className="mt-3">
           <Link to="/dashboard/info" id="dashBasic" className="dashBox">
             <div className="">
