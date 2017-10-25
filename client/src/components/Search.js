@@ -57,8 +57,10 @@ class Search extends Component {
                     <td scope="row">{index + 1}</td>
                     <td>{meet.name}</td>
                     <td>{moment(meet.date_start).format("ddd, MMMM D, YYYY")}</td>
+                    <td>${meet.cost}</td>
+                    <td>{meet.city}</td>
                     <td>{meet.country}</td>
-                    <td><button  className="btn btn-secondary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
+                    <td><button className="btn btn-secondary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
                 </tr>
             )
         })
@@ -76,22 +78,35 @@ class Search extends Component {
                         <div>
                             <p> Search for meets by city, state, country, and name!</p>
                         </div>
-                        <div className="row searchRow">
-                            <div className="col-6 col-md-4">
-                                <p>.col-6 .col-md-4 </p>
+                        <main className="container">
+                            <div className="column resultField">
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Search for the best competitions around the world to improve your marks </p>
+                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Compare meet costs and go to meet site for payments</p>
+                                    <i className="fa fa-money" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Add meets to your personal calendar </p>
+                                    <i className="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Get quick directions to meets based on your location!</p>
+                                    <i className="fa fa-car" aria-hidden="true"></i>
+                                </div>
+                                </div>
+
                             </div>
-                            <div className="col col-md-8">
-                                <p>.col .col-md-8</p>
-                            </div>
-                        </div>
-                        <div className="row searchRow">
-                            <div className="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-                            <div className="col col-md-8"><p>.col .col-md-8</p></div>
-                        </div>
-                        <div className="row searchRow">
-                            <div className="col col-md-8"><p>.col .col-md-8</p></div>
-                            <div className="col-6 col-md-4"><p>.col-6 .col-md-4</p></div>
-                        </div>
+                        </main>
                     </div>
                 )
             }
@@ -99,14 +114,16 @@ class Search extends Component {
             else {
                 return (
 
-                        <div className="panel-body">
+                        <div className=" resultField panel-body">
                             <h1>Available Meets</h1>
-                            <table id="searchResults" className="table">
+                            <table className="table">
                                 <thead>
                                     <tr>
                                         <th></th>
                                         <th>Meet Name</th>
                                         <th>Start Date</th>
+                                        <th>Cost</th>
+                                        <th>City</th>
                                         <th>Country</th>
                                         <th>Meet Info</th>
                                     </tr>
@@ -124,20 +141,20 @@ class Search extends Component {
 
         return (
             <div id="searchPage">
-                <div id="left" className="panel panel-default">
-                    <div className="panel-body"> Search Page Left.
+                <div className="panel left panel-default">
+                    <div className="panel-body">
                         <div id="searchField" className="row">
                             <input type="text" className="form-control" id="searchQuery" placeholder="Search for meets" value={this.state.query} onChange={this.handleQuery} autoFocus onFocus={this.moveCursor}/>
                             {/* autoFocus selects the input field on page load */}
-                            <button type="submit" className="btn btn-primary" id="searchButton" onClick={this.handleSearch}>Search</button>
+                            <button type="submit" className="btn searchButton" id="searchButton" onClick={this.handleSearch}>Search</button>
                         </div>
-                        <div id="mapField">
-                            <MyFancyComponent meets={this.state.meets}/>
-                        </div>
+                        <section className="results">
+                            {SearchResults(this.state.meets)}
+                        </section>
                     </div>
                 </div>
-                <div id="right" className="panel panel-default">
-                {SearchResults(this.state.meets)}
+                <div className="panel panel-default right">
+                    <MyFancyComponent meets={this.state.meets}/>
 
                 </div>
             </div>

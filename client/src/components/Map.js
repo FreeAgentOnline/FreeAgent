@@ -5,6 +5,7 @@ import { withScriptjs, withGoogleMap, GoogleMap, Marker } from 'react-google-map
 import { geocodeAddress } from '../actions'
 // import meets from '../data/meets'
 import { connect } from 'react-redux';
+import MapStyles from "../data/MapStyles.js"
 
 
 const MyMapComponent = compose( withProps({
@@ -28,7 +29,7 @@ const MyMapComponent = compose( withProps({
 
 
         return (
-            <GoogleMap defaultZoom={4} defaultCenter={{ lat: 37.09024, lng: -95.712891 }}>
+            <GoogleMap defaultZoom={4} defaultOptions={{ styles: MapStyles }} defaultCenter={{ lat: 37.09024, lng: -95.712891 }}>
             {newMarker}
             </GoogleMap>
 )
