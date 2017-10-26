@@ -139,7 +139,7 @@ class Search extends Component {
 
                         <div className=" resultField panel-body">
                             <h1>Available Meets</h1>
-                            <table className="table">
+                            <table className="table pr-5">
                                 <thead>
                                     <tr>
                                         <th></th>
