@@ -59,15 +59,15 @@ class Search extends Component {
                   <div className="col-2">
                     <p className="border-0 bg-light">{meet.name}</p>
                   </div><div className="col-2">
-                    <p className="border-0 bg-light">{moment(meet.date_start).format("D/M/YYYY")}</p>
+                    <p className="border-0 bg-light">{moment(meet.date_start).format("M/D/YY")}</p>
                   </div><div className="col-1">
                     <p className="border-0 bg-light">{meet.cost ? `$${meet.cost}` : 'None listed'}</p>
                   </div><div className="col-2">
                     <p className="border-0 bg-light">{meet.city}</p>
-                  </div><div className="col-2">
+                  </div><div className="col-1">
                     <p className="border-0 bg-light">{meet.country}</p>
                   </div><div className="col-2">
-                    <Link to={viewMeetLink}><button className="btn btn-secondary"> View Meet </button></Link>
+                    <Link to={viewMeetLink}><button className="btn btn-outline-primary ml-3"><i class="fa fa-info-circle" aria-hidden="true"></i> Info</button></Link>
                   </div>
 
 
@@ -109,35 +109,7 @@ class Search extends Component {
                             </div>
 
                         </main>
-                        {/*<main className="container">
-                            <div className="column resultField">
-                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
-                                    <div>
-                                    <p>Search for the best competitions around the world to improve your marks </p>
-                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
-                                    <div>
-                                    <p>Compare meet costs and go to meet site for payments</p>
-                                    <i className="fa fa-money" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
-                                    <div>
-                                    <p>Add meets to your personal calendar </p>
-                                    <i className="fa fa-calendar-plus-o" aria-hidden="true"></i>
-                                    </div>
-                                </div>
-                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
-                                    <div>
-                                    <p>Get quick directions to meets based on your location!</p>
-                                    <i className="fa fa-car" aria-hidden="true"></i>
-                                </div>
-                                </div>
 
-                            </div>
-                        </main> */}
                     </div>
                 )
             }
@@ -158,7 +130,7 @@ class Search extends Component {
                                     <p className="border-0 bg-light">Cost</p>
                                   </div><div className="col-2">
                                     <p className="border-0 bg-light">City</p>
-                                  </div><div className="col-2">
+                                  </div><div className="col-1">
                                     <p className="border-0 bg-light">Country</p>
                                   </div><div className="col-2">
                                     <p className="border-0 bg-light">Meet Info</p>
