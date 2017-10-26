@@ -128,8 +128,6 @@ class Search extends Component {
 
                             </div>
                         </main> */}
-
-
                     </div>
                 )
             }
