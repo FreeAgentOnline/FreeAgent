@@ -67,6 +67,9 @@ html, body, #root {
   border: 0;
   color: white;
 }
+.searchButton:hover {
+  background: #EF6C00;
+}
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Nunito', sans-serif;
   font-weight: 600;
@@ -85,7 +88,7 @@ h1, h2, h3, h4, h5, h6 {
     /*height: 60000px;*/
 }
 .resultField{
-    padding: 10px;
+    padding-left: 8%;
 }
 #searchField{
     background: black;
