@@ -1,8 +1,13 @@
 #site-footer {
+  align-items: center;
   background: #666;
   bottom: 0;
   color: #333;
+  display: flex;
+  flex-flow: row nowrap;
   font-size: 0.9em;
+  height: 50px;
+  justify-content: space-between;
   left: 0;
   position: absolute;
   right: 0;

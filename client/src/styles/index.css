@@ -12,7 +12,7 @@ html, body, #root {
   position: relative;
 }
 #contentWrapper {
-  padding-bottom: 4rem;
+  padding-bottom: 50px;
 }
 #site-header {
   background: #333;
@@ -42,7 +42,13 @@ html, body, #root {
   text-decoration: none;
   padding: 1px 10px;
 }
+#site-header nav a:hover {
+  background: rgba(0, 0, 0, 0.25);
+}
 .selected {
+  background: black;
+}
+#site-header a.selected:hover {
   background: black;
 }
 .window {

@@ -1,5 +1,5 @@
 #homeHeader {
-  background: url('../images/100m_bw.jpg') center top no-repeat;
+  background: url('../images/100m_bw_overlay.jpg') center top no-repeat;
   background-attachment: fixed;
   background-size: cover;
   color: white;
@@ -10,6 +10,9 @@
 #homeHeader h2 {
   font-weight: 600;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+#homeHeader .lead {
+  font-size: 2em;
 }
 #homeSearchBanner {
   background: black;
@@ -25,6 +28,8 @@
 #homeSearchBanner a {
   background: #F57C00;
   border: 0;
+  border-bottom-left-radius: 0;
+  border-top-left-radius: 0;
   color: white;
 }
 #homeSearchBanner a:hover {
@@ -55,6 +60,47 @@
   font-weight: 600;
   text-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
 }
+.homerow p {
+  font-size: 1em;
+}
+#homeAbout {
+  background: linear-gradient(#EF6C00, #FB8C00);
+  color: white;
+  /*font-family: 'Nunito', sans-serif;*/
+  font-size: 1.5em;
+  font-weight: 300;
+  padding: 2rem 1rem;
+}
+#homeAction {
+  align-items: center;
+  background: url('../images/5000m_bw.jpg') center top no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: white;
+  display: flex;
+  flex-flow: column nowrap;
+  /*font-family: 'Nunito', sans-serif;*/
+  justify-content: center;
+  padding: 2rem 1rem;
+}
+#homeAction h1 {
+  margin-bottom: 1rem;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.75);
+}
+#homeAction a {
+  background: #F57C00;
+  border-radius: 0.25rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-size: 2em;
+  padding: 0.5rem 1.5rem;
+  text-decoration: none;
+  transition: background 0.1s ease-in-out;
+}
+#homeAction a:hover {
+  background: #EF6C00;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 /*Styles for home page*/
 
 #home{
@@ -64,13 +110,14 @@
 
 .homerow {
     /*border: solid;*/
+    background: linear-gradient(orange, gold);
     height: 325px;
     width: 100%;
     margin: 10px;
 }
 
 #homeTop {
-  background-image: url(../images/800m.jpg);
+  /*background-image: url(../images/800m.jpg);*/
   /*opacity: .5;*/
 }
 
@@ -82,5 +129,4 @@
 #homeBottom {
   background-image: url(../images/MoUsain.jpg);
   /*opacity: .5;*/
-  z-index: -1;
 }

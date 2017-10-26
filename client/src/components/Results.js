@@ -37,31 +37,36 @@ class Results extends Component {
     //   </li>
     // )
     // Iterate through object to create buttons for each result event category
+    let tempIndex = 0;
     for (var property in eventsObj) {
       if (eventsObj.hasOwnProperty(property)) {
         linkRender.push(
-          <li className="nav-item">
-            <span className="nav-link" onClick={this.changeFilter}>{property}</span>
+          <li key={tempIndex} className="nav-item">
+            <span className="nav-link button mr-2" onClick={this.changeFilter}>{property}</span>
           </li>
         )
-
+        tempIndex++;
       }
     }
     // Change this to prevent results from rendering if none saved
-    let resultRender = [<div>No results saved</div>];
+    let resultRender = [];
     if (data.length > 0) {
       if (this.props.filter === 'All') {
         // Automatically set the filter to the first index's event
         this.props.setFilter(data[0].event);
         resultRender = data.map((one, i) => {
           return (
-            <ResultRow index={i} data={one} />
+            <div key={i}>
+              <ResultRow index={i} data={one} />
+            </div>
           )
         })
       } else {
         resultRender = eventsObj[this.props.filter].map((one, i) => {
           return (
-            <ResultRow index={i} data={one} />
+            <div key={i}>
+              <ResultRow index={i} data={one} />
+            </div>
           )
         })
       }
@@ -70,12 +75,12 @@ class Results extends Component {
     return (
       <div className="card mb-3">
         <div className="card-header">
-          <ul className="nav nav-tabs card-header-tabs">
+          <ul className="nav nav-pills card-header-pills">
             {linkRender}
           </ul>
         </div>
         <div className="card-body p-3">
-        <h4 className="text-center">{this.props.filter}</h4>
+        <h3 className="text-center">{this.props.filter}</h3>
         <ResultGraph />
           <div className="">
             <div className="row font-weight-bold p-2">
