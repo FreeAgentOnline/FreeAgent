@@ -53,25 +53,15 @@ class Search extends Component {
         let filteredMeets = this.state.meets.map((meet, index)=>{
             let viewMeetLink = "/meet/" + meet._id;
             return(
-
-                <div key={index} className="row mt-2 columnTable">
-
-                  <div className="col-2">
-                    <p className="border-0 bg-light">{meet.name}</p>
-                  </div><div className="col-2">
-                    <p className="border-0 bg-light">{moment(meet.date_start).format("M/D/YY")}</p>
-                  </div><div className="col-1">
-                    <p className="border-0 bg-light">{meet.cost ? `$${meet.cost}` : 'None listed'}</p>
-                  </div><div className="col-2">
-                    <p className="border-0 bg-light">{meet.city}</p>
-                  </div><div className="col-1">
-                    <p className="border-0 bg-light">{meet.country}</p>
-                  </div><div className="col-2">
-                    <Link to={viewMeetLink}><button className="btn btn-outline-primary ml-3"><i class="fa fa-info-circle" aria-hidden="true"></i> Info</button></Link>
-                  </div>
-
-
-                </div>
+                <tr key= {index}>
+                    <td scope="row">{index + 1}</td>
+                    <td>{meet.name}</td>
+                    <td>{moment(meet.date_start).format("ddd, MMMM D, YYYY")}</td>
+                    <td>${meet.cost}</td>
+                    <td>{meet.city}</td>
+                    <td>{meet.country}</td>
+                    <td><button className="btn btn-secondary"> <Link to={viewMeetLink}>View Meet</Link> </button></td>
+                </tr>
             )
         })
 
@@ -109,6 +99,36 @@ class Search extends Component {
                             </div>
 
                         </main>
+                        {/*<main className="container">
+                            <div className="column resultField">
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Search for the best competitions around the world to improve your marks </p>
+                                    <i className="fa fa-map-marker" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Compare meet costs and go to meet site for payments</p>
+                                    <i className="fa fa-money" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Add meets to your personal calendar </p>
+                                    <i className="fa fa-calendar-plus-o" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                                <div id="scheduleInfo" className="col-6 col-md-4 homerowSmBox">
+                                    <div>
+                                    <p>Get quick directions to meets based on your location!</p>
+                                    <i className="fa fa-car" aria-hidden="true"></i>
+                                </div>
+                                </div>
+
+                            </div>
+                        </main> */}
+
 
                     </div>
                 )
@@ -119,25 +139,22 @@ class Search extends Component {
 
                         <div className=" resultField panel-body">
                             <h1>Available Meets</h1>
-
-                                <div id="columnTable" className="row mt-2 font-weight-bold">
-
-                                  <div className="col-2">
-                                    <p className="border-0 bg-light">Meet Name</p>
-                                  </div><div className="col-2">
-                                    <p className="border-0 bg-light">Date</p>
-                                  </div><div className="col-1">
-                                    <p className="border-0 bg-light">Cost</p>
-                                  </div><div className="col-2">
-                                    <p className="border-0 bg-light">City</p>
-                                  </div><div className="col-1">
-                                    <p className="border-0 bg-light">Country</p>
-                                  </div><div className="col-2">
-                                    <p className="border-0 bg-light">Meet Info</p>
-                                  </div>
-
-                                </div>
-                                {filteredMeets}
+                            <table className="table pr-5">
+                                <thead>
+                                    <tr>
+                                        <th></th>
+                                        <th>Meet Name</th>
+                                        <th>Start Date</th>
+                                        <th>Cost</th>
+                                        <th>City</th>
+                                        <th>Country</th>
+                                        <th>Meet Info</th>
+                                    </tr>
+                                </thead>
+                                    <tbody>
+                                        {filteredMeets}
+                                    </tbody>
+                                </table>
                         </div>
 
                 )
@@ -152,7 +169,7 @@ class Search extends Component {
                         <div id="searchField" className="row">
                             <input type="text" className="form-control" id="searchQuery" placeholder="Search for meets" value={this.state.query} onChange={this.handleQuery} autoFocus onFocus={this.moveCursor}/>
                             {/* autoFocus selects the input field on page load */}
-                            <button type="submit" className="btn searchButton" id="searchButton" onClick={this.handleSearch}>Search</button>
+                            <button type="submit" className="btn searchButton   ``" id="searchButton" onClick={this.handleSearch}>Search</button>
                         </div>
                         <section className="results">
                             {SearchResults(this.state.meets)}
