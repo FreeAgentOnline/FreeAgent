@@ -1,9 +1,9 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "FreeAgent",
+  "name": "FreeAgent",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "../src/images/freeagent_logo.ico",
       "sizes": "192x192",
       "type": "image/png"
     }
